@@ -28,12 +28,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<table align="left">
 	<tr>
 	<td align="left">
-	<a>
-                        <xsl:attribute name="href">
-                          @@email_contact_us@@
-                        </xsl:attribute>
-						@@contact_us@@
-					</a>
+		<a>
+            <xsl:attribute name="href">@@email_contact_us@@</xsl:attribute>
+			@@contact_us@@
+		</a>
 	</td>
 </tr>
 	</table>
@@ -42,12 +40,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<table align="right">
 	<tr>
 	<td align="right">
-	<a>
-                        <xsl:attribute name="href">
-                          @@email_my_account@@
-                        </xsl:attribute>
-						@@my_account@@
-					</a>
+		<a>
+            <xsl:attribute name="href">@@email_my_account@@</xsl:attribute>
+			@@my_account@@
+		</a>
 	</td>
 </tr>
 	</table>
