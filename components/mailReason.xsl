@@ -10,7 +10,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<tr>
 		<td>
 			<xsl:for-each select="notification_data">
-				<h3>@@dear@@ &#160;<xsl:value-of select="receivers/receiver/user/last_name"/></h3>
+				<!--include receiver first name-->
+				<h3>@@dear@@&#160;<xsl:value-of select="receivers/receiver/user/first_name"/>&#160;<xsl:value-of select="receivers/receiver/user/last_name"/></h3>
 			</xsl:for-each>
 		</td>
 	</tr>
