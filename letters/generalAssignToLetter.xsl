@@ -31,18 +31,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<td>
 					@@you_are_assign@@	<xsl:value-of select="/notification_data/assigned_object"/>&#160;<xsl:value-of select="/notification_data/assigned_object_name"/><br />
 					   </td>
+							<strong>@@note@@:</strong>&#160;
+							<xsl:value-of select="/notification_data/note" />
+						</td>
 					</tr>
 				</table>
-				<xsl:if test="notification_data/note">
 
-
-				<br />
-							<strong>@@note@@:</strong>&#160;<xsl:value-of select="/notification_data/note" />
-							</xsl:if>
-				<table>
-		<xsl:attribute name="style">
-			<xsl:call-template name="listStyleCss" /> <!-- style.xsl -->
-		</xsl:attribute>
 
 			</xsl:if>
 			<table cellspacing="0" cellpadding="5" border="0">
