@@ -44,19 +44,19 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:call-template name="listStyleCss" /> <!-- style.xsl -->
 		</xsl:attribute>
 
-	 <tr><td>@@sincerely@@</td></tr>
+			</xsl:if>
+			<table cellspacing="0" cellpadding="5" border="0">
+				<tr>
+					<td>
+						<a href="https://caccl-lrccd.alma.exlibrisgroup.com/SAML/idpCode/LRCCD">Go to Alma</a>
+					</td>
+				</tr>
+			</table>
+			<xsl:call-template name="lastFooter" />
+			<!-- footer.xsl -->
+		</body>
 
-    <xsl:for-each select="notification_data/owner">
-	 	<tr><td><b>@@mr_mrs@@</b></td><td><xsl:value-of select="last_name"/></td><td><xsl:value-of select="first_name"/> </td></tr>
-  </xsl:for-each>
-  <xsl:for-each select="notification_data/organization_unit">
-	 <tr><td><xsl:value-of select="name"/> </td></tr>
-  </xsl:for-each>
-   </table>
-
-				<xsl:call-template name="lastFooter" /> <!-- footer.xsl -->
-			</body>
-	</html>
-</xsl:template>
+		</html>
+	</xsl:template>
 
 </xsl:stylesheet>
