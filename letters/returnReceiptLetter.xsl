@@ -28,7 +28,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         <div class="messageBody">
 
 
-        	<table cellspacing="0" cellpadding="5" border="0">
+        	<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; table-layout:fixed; word-wrap:break-word;">
 				<tr>
 				<td style="font-size:100%; padding:12px;">
 					The <xsl:value-of select="notification_data/organization_unit/name"/>&#160;<xsl:value-of select="notification_data/circ_desk_name"/> @@inform_returned_items@@&#58;
