@@ -30,9 +30,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	 <td>
 		<h1><xsl:value-of select="letter_name"/></h1>
 	</td>
-	<td align="right">
+<!--	<td align="right">
 		<xsl:value-of select="current_date"/>
-	</td>
+	</td> -->
   </xsl:for-each>
 
 </tr>
