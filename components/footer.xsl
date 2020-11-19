@@ -7,6 +7,26 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:template name="salutation">
 
 </xsl:template>
+
+<xsl:template name="lrPatronFooter"> 
+	<table align="center">
+		<xsl:attribute name="style">
+			<xsl:call-template name="footerTableStyleCss" />
+			<!-- style.xsl -->
+		</xsl:attribute>
+		<tr>
+
+			<td>
+				<hr style="border:1px solid #ccc;" />Sent by the <a href="https://www.library.losrios.edu/">Los Rios Libraries</a></td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://answers.library.losrios.edu/">Library FAQs</a>
+			</td>
+		</tr>
+	</table>
+</xsl:template>
+
 <xsl:template name="lrStaffFooter"> 
 	<table align="center">
 		<xsl:attribute name="style">
