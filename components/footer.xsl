@@ -8,6 +8,17 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 </xsl:template>
 
+<xsl:template name="lrGoToAlma">
+	<!-- used in body of staff letters -->
+	<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 0 12px 15px;">
+		<tr>
+			<td>
+				<a href="https://caccl-lrccd.alma.exlibrisgroup.com/SAML/idpCode/LRCCD"><span style="background-color:#252d65;	border:1px solid #252d65;display:inline-block;cursor:pointer;color:#ffffff;font-size:13px;font-weight:bold;	padding:6px 12px;text-decoration:none;">Go to Alma</span></a>
+			</td>
+		</tr>
+	</table>
+</xsl:template>
+
 <xsl:template name="lrGoToAccount">
 	<!-- used in body of patron letters -->
 	<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 0 12px 15px;">
