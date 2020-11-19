@@ -6,7 +6,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 
 <xsl:template name="head">
-<table cellspacing="0" cellpadding="5" border="0">
+<table cellspacing="0" cellpadding="5" border="0" align="center">
 	<xsl:attribute name="style">
 		<xsl:call-template name="headerTableStyleCss" /> <!-- style.xsl -->
 	</xsl:attribute>
