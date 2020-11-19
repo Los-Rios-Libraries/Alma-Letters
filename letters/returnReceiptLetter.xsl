@@ -79,8 +79,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</tr>
 					
 				</xsl:for-each>
-				<br />
-				<br />
+			
 			</table>
 
 			<table>
