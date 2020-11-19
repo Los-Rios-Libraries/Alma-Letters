@@ -30,8 +30,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
         	<table cellspacing="0" cellpadding="5" border="0">
 				<tr>
-				<td>
-					<h>@@inform_returned_items@@ <xsl:value-of select="notification_data/organization_unit/name"/>&#44;&#160;<xsl:value-of select="notification_data/circ_desk_name"/></h>
+				<td style="font-size:100%; padding:12px;">
+					The <xsl:value-of select="notification_data/organization_unit/name"/>&#160;<xsl:value-of select="notification_data/circ_desk_name"/> @@inform_returned_items@@&#58;
 				</td>
 				</tr>
 <!--
