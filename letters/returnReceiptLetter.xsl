@@ -44,7 +44,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
               	<xsl:for-each select="notification_data/loans_by_library/library_loans_for_display">
 					<tr>
 						<td>
-							<table cellpadding="5" class="listing">
+							<table cellpadding="2" class="listing">
 								<xsl:attribute name="style">
 									<xsl:call-template name="mainTableStyleCss" />
 								</xsl:attribute>
