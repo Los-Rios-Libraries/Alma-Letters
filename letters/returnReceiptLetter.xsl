@@ -93,7 +93,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         </div>
 <xsl:call-template name="lrGoToAccount" />
         <!-- footer.xsl -->
-        <xsl:call-template name="lastFooter" />
+        <xsl:call-template name="lrPatronFooter" />
       </body>
     </html>
   </xsl:template>
