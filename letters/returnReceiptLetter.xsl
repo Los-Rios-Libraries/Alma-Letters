@@ -49,29 +49,31 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 									<xsl:call-template name="mainTableStyleCss" />
 								</xsl:attribute>
 								<tr align="center" bgcolor="#f5f5f5">
-									<td colspan="7">
+									<td colspan="5">
 										<h3><xsl:value-of select="organization_unit/name" /></h3>
 									</td>
 								</tr>
 								<tr>
 									<th>@@title@@</th>
-									<th>@@description@@</th>
-									<th>@@author@@</th>
+									<!-- <th>@@description@@</th> -->
+                  <th>Barcode</th>
+									<!-- th>@@author@@</th> -->
 									<th>@@due_date@@</th>
 									<th>@@return_date@@</th>
 									<th>@@fine@@</th>
-									<th>@@library@@</th>
+								<!--	<th>@@library@@</th> -->
 								</tr>
 
 								<xsl:for-each select="item_loans/overdue_and_lost_loan_notification_display/item_loan">
 									<tr>
 										<td><xsl:value-of select="title"/></td>
-										<td><xsl:value-of select="description"/></td>
-										<td><xsl:value-of select="author"/></td>
+										<!-- <td><xsl:value-of select="description"/></td> -->
+                    <td><xsl:value-of select="barcode"/></td>
+										<!-- <td><xsl:value-of select="author"/></td> -->
 										<td><xsl:value-of select="new_due_date_str"/></td>
 										<td><xsl:value-of select="return_date_str"/></td>
 										<td><xsl:value-of select="normalized_fine"/></td>
-										<td><xsl:value-of select="library_name"/></td>
+										<!-- <td><xsl:value-of select="library_name"/></td> -->
 									</tr>
 								</xsl:for-each>
 							</table>
