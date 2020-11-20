@@ -54,14 +54,8 @@
 
 
 			</xsl:if>
-			<table cellspacing="0" cellpadding="5" border="0">
-				<tr>
-					<td>
-						<a href="https://caccl-lrccd.alma.exlibrisgroup.com/SAML/idpCode/LRCCD">Go to Alma</a>
-					</td>
-				</tr>
-			</table>
-			<xsl:call-template name="lastFooter" />
+			 <xsl:call-template name="lrGoToAlma" />
+			<xsl:call-template name="lrStaffFooter" />
 			<!-- footer.xsl -->
 		</body>
 

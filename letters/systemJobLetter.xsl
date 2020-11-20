@@ -369,13 +369,11 @@
 		  </tr>
 		</table>
 
-		<br />
 
-		<table>
-		  <tr><td>@@sincerely@@</td></tr>
-		</table>
+		<xsl:call-template name="lrGoToAlma" />
 
-		<xsl:call-template name="lastFooter" />
+		<xsl:call-template name="lrPatronFooter" />
+			<!-- footer.xsl -->
 	  </body>
 	</html>
   </xsl:template>
