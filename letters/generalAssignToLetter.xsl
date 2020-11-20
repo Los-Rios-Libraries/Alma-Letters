@@ -26,7 +26,6 @@
 			<xsl:call-template name="senderReceiver" />
 			<!-- SenderReceiver.xsl -->
 
-			<br />
 			<xsl:call-template name="toWhomIsConcerned" />
 			<!-- mailReason.xsl -->
 
@@ -41,7 +40,6 @@
 			<xsl:if test="notification_data/note">
 
 
-				<br />
 				<table cellspacing="0" cellpadding="5" border="0">
 					<tr>
 						<td>
