@@ -23,10 +23,11 @@
 		<xsl:call-template name="senderReceiver" />
 
 
-		<xsl:call-template name="toWhomIsConcerned" />
+
+		<!-- <xsl:call-template name="toWhomIsConcerned" /> -->
 		<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff;">
 		  <tr>
-		    <td>
+		    <td >
 
 				<xsl:for-each select="notification_data/system_job_report_container">
 
