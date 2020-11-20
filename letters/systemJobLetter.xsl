@@ -30,7 +30,8 @@
 
 				<xsl:for-each select="notification_data/system_job_report_container">
 
-					<h1><xsl:value-of select="translated_strings_map/map_entry/systemjobs.report/value"/></h1>
+					<h2 style="margin:8px 4px 8px 13px;"><xsl:value-of select="translated_strings_map/map_entry/systemjobs.report/value"/></h2>
+					
 					<table cellpadding="5" class="listing">
 						<xsl:attribute name="style">
 							<xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
@@ -105,7 +106,8 @@
 					<xsl:choose>
 						<xsl:when test="'true'=job_parameters_section_visible">
 							<xsl:for-each select="report_parameters">
-								<h2><xsl:value-of select="../translated_strings_map/map_entry/c.systemjobs.schedule.jobParametersSection/value"/></h2>
+								<h2  style="margin:8px 4px 8px 13px;"><xsl:value-of select="../translated_strings_map/map_entry/c.systemjobs.schedule.jobParametersSection/value"/></h2>
+								
 								<table cellpadding="5" class="listing">
 									<xsl:attribute name="style">
 										<xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
@@ -126,7 +128,8 @@
 					<xsl:choose>
 						<xsl:when test="event_links_label/string">
 							<xsl:for-each select="event_links_label">
-								<h2><xsl:value-of select="../translated_strings_map/map_entry/c.systemjobs.schedule.jobEvents/value"/></h2>
+								<h2  style="margin:8px 4px 8px 13px;"><xsl:value-of select="../translated_strings_map/map_entry/c.systemjobs.schedule.jobEvents/value"/></h2>
+								
 								<table cellpadding="5" class="listing">
 									<xsl:attribute name="style">
 										<xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
@@ -146,7 +149,8 @@
 					<xsl:choose>
 						<xsl:when test="'true'=entities_section_visible">
 							<xsl:for-each select="report_entities">
-								<h2><xsl:value-of select="../translated_strings_map/map_entry/c.systemjobs.report.countersSection/value"/></h2>
+								<h2  style="margin:8px 4px 8px 13px;"><xsl:value-of select="../translated_strings_map/map_entry/c.systemjobs.report.countersSection/value"/></h2>
+								
 								<table cellpadding="5" class="listing">
 									<xsl:attribute name="style">
 										<xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
@@ -167,8 +171,8 @@
 					<xsl:choose>
 						<xsl:when test="'true'=statistics_section_visible">
 							<xsl:for-each select="report_statistics">
-								<h2><xsl:value-of select="../translated_strings_map/map_entry/c.systemjobs.report.statisticsSection/value"/></h2>
-								<br/>
+								<h2  style="margin:8px 4px 8px 13px;"><xsl:value-of select="../translated_strings_map/map_entry/c.systemjobs.report.statisticsSection/value"/></h2>
+								
 								<table cellpadding="5" class="listing">
 									<xsl:attribute name="style">
 										<xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
@@ -182,15 +186,15 @@
 									</xsl:for-each>
 								</table>
 							</xsl:for-each>
-							<br/><br/>
+							
 						</xsl:when>
 					</xsl:choose>
 
 					<xsl:choose>
 						<xsl:when test="'true'=errors_section_visible">
 							<xsl:for-each select="report_errors">
-								<h2><xsl:value-of select="../translated_strings_map/map_entry/c.systemjobs.report.errorsSection/value"/></h2>
-								<br/>
+								<h2  style="margin:8px 4px 8px 13px;"><xsl:value-of select="../translated_strings_map/map_entry/c.systemjobs.report.errorsSection/value"/></h2>
+								
 								<table cellpadding="5" class="listing">
 									<xsl:attribute name="style">
 										<xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
@@ -211,7 +215,8 @@
 					<xsl:choose>
 						<xsl:when test="'true'=report_table_visible">
 							<xsl:for-each select="report_table">
-								<h2><xsl:value-of select="../translated_strings_map/map_entry/c.systemjobs.report.reportTable/value"/></h2>
+								<h2  style="margin:8px 4px 8px 13px;"><xsl:value-of select="../translated_strings_map/map_entry/c.systemjobs.report.reportTable/value"/></h2>
+								
 								<table cellpadding="5" class="listing">
 									<xsl:attribute name="style">
 										<xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
@@ -244,7 +249,8 @@
 					<xsl:choose>
 						<xsl:when test="'true'=report_table_secondary_visible">
 							<xsl:for-each select="report_table_secondary">
-								<h2><xsl:value-of select="../translated_strings_map/map_entry/c.systemjobs.report.reportTable/value"/></h2>
+								<h2  style="margin:8px 4px 8px 13px;"><xsl:value-of select="../translated_strings_map/map_entry/c.systemjobs.report.reportTable/value"/></h2>
+								
 								<table cellpadding="5" class="listing">
 									<xsl:attribute name="style">
 										<xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
@@ -277,7 +283,8 @@
 					<xsl:choose>
 						<xsl:when test="'true'=report_table_third_visible">
 							<xsl:for-each select="report_table_third">
-								<h2><xsl:value-of select="../translated_strings_map/map_entry/c.systemjobs.report.reportTable/value"/></h2>
+								<h2  style="margin:8px 4px 8px 13px;"><xsl:value-of select="../translated_strings_map/map_entry/c.systemjobs.report.reportTable/value"/></h2>
+								
 								<table cellpadding="5" class="listing">
 									<xsl:attribute name="style">
 										<xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
@@ -310,7 +317,8 @@
 					<xsl:choose>
 						<xsl:when test="'true'=report_total_results_summary_visible">
 							<xsl:for-each select="report_total_results_summary">
-								<h2><xsl:value-of select="../translated_strings_map/map_entry/c.systemjobs.report.totalResultsSummaryTable/value"/></h2>
+								<h2  style="margin:8px 4px 8px 13px;"><xsl:value-of select="../translated_strings_map/map_entry/c.systemjobs.report.totalResultsSummaryTable/value"/></h2>
+								
 								<table cellpadding="5" class="listing">
 									<xsl:attribute name="style">
 										<xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
@@ -332,7 +340,8 @@
 						<xsl:when test="'true'=many_report_tables_visible">
 							<xsl:for-each select="many_report_tables">
 								<xsl:for-each select="report_table">
-									<h2><xsl:value-of select="name"/></h2>
+									<h2  style="margin:8px 4px 8px 13px;"><xsl:value-of select="name"/></h2>
+									
 									<table cellpadding="5" class="listing">
 										<xsl:attribute name="style">
 											<xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
