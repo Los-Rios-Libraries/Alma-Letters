@@ -33,7 +33,9 @@
 				<tr>
 					<td>
 						@@you_are_assign@@
-						<xsl:value-of select="/notification_data/assigned_object_name" /><br />
+						<!-- <xsl:value-of select="/notification_data/assigned_object" />&#160; -->
+						<br /><br />
+<xsl:value-of select="/notification_data/assigned_object_name" /><br />
 					</td>
 				</tr>
 			</table>
