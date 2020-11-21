@@ -22,40 +22,33 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         <xsl:call-template name="head" /><!-- header.xsl -->
         <xsl:call-template name="senderReceiver" /> <!-- SenderReceiver.xsl -->
 
-
-		<br />
 		<xsl:call-template name="toWhomIsConcerned" /> <!-- mailReason.xsl -->
-
 
         <div class="messageArea">
           <div class="messageBody">
-			<table cellspacing="0" cellpadding="5" border="0">
+			<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 0 12px 15px;">
               <tr>
               	<td>
-					@@title@@ &#160;<xsl:value-of select="notification_data/item_loan/title"/>
+					<!--@@title@@ &#160;-->
+					<xsl:value-of select="notification_data/item_loan/title"/>
 					@@due_back@@ &#160;<xsl:value-of select="notification_data/due_date"/>
 					<xsl:if test="notification_data/has_fine_value='TRUE'">
 					@@fine_policy@@ &#160;<xsl:value-of select="notification_data/amount"/>&#160;
 					<xsl:value-of select="notification_data/currency_symbol"/>
 					@@per@@ &#160;<xsl:value-of select="notification_data/uom"/>&#46;
 					</xsl:if>
-					<br/><br/>
                 </td>
               </tr>
-
-
              </table>
-				<br />
-			<table>
-				<tr><td>@@sincerely@@</td></tr>
-				<tr><td>@@department@@</td></tr>
-			</table>
 
           </div>
         </div>
 
-        <!-- footer.xsl -->
-        <xsl:call-template name="lastFooter" />
+        <xsl:call-template name="lrGoToAccount" />
+		
+		<!-- footer.xsl -->
+        
+		<xsl:call-template name="lrPatronFooter" />
       </body>
     </html>
   </xsl:template>
