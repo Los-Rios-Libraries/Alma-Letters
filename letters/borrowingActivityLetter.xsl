@@ -29,13 +29,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         <div class="messageArea">
           <div class="messageBody">
 
-			<table cellspacing="0" cellpadding="5" border="0">
+			<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 0 12px 15px;">
 
 			  <xsl:if test="notification_data/item_loans/item_loan or notification_data/overdue_item_loans/item_loan">
 
 	              <tr>
 	              	<td>
-						<b>@@reminder_message@@</b>
+						@@reminder_message@@
 						<br/><br/>
 	                </td>
 	              </tr>
@@ -44,7 +44,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 		              <tr>
 		              	<td>
-							<b>@@overdue_loans@@</b>
+							@@overdue_loans@@
 		                </td>
 		              </tr>
 
@@ -90,7 +90,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 				  <tr>
 					<td>
-						<b>@@loans@@</b>
+						@@loans@@
 					</td>
 				  </tr>
 
@@ -133,7 +133,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			  <xsl:if test="notification_data/organization_fee_list/string">
 	              <tr>
 	              	<td>
-						<b>@@debt_message@@</b>
+						@@debt_message@@
 	                </td>
 	              </tr>
 
@@ -145,15 +145,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 				  <tr>
 	              	<td>
-						<b>
+						
 						@@total@@ <xsl:value-of select="notification_data/total_fee"/>
-						</b>
+						
 	                </td>
 	              </tr>
 
 	              <tr>
 	              	<td>
-						<b>@@please_pay_message@@</b>
+						@@please_pay_message@@
 						<br/><br/>
 	                </td>
 	              </tr>
@@ -161,20 +161,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			  </xsl:if>
             </table>
 
-			<br />
-
-			<table>
-				<tr><td>@@sincerely@@</td></tr>
-				<tr><td>@@department@@</td></tr>
-			</table>
-
           </div>
         </div>
 
         <!-- footer.xsl -->
-        <xsl:call-template name="lastFooter" />
-        <xsl:call-template name="myAccount" />
-		<xsl:call-template name="contactUs" />
+		<xsl:call-template name="lrGoToAccount" />
+		<xsl:call-template name="lrPatronFooter" />
       </body>
     </html>
   </xsl:template>
