@@ -11,7 +11,17 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template match="/">
 	<html>
+			<xsl:if test="notification_data/languages/string">
+				<xsl:attribute name="lang">
+					<xsl:value-of select="notification_data/languages/string"/>
+				</xsl:attribute>
+			</xsl:if>
+
 		<head>
+				<title>
+					<xsl:value-of select="notification_data/general_data/subject"/>
+				</title>
+
 		<xsl:call-template name="generalStyle" />
 		</head>
 
@@ -25,29 +35,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 				<br />
 				<xsl:call-template name="toWhomIsConcerned" /> <!-- mailReason.xsl -->
-					@@You_were_specify@@:
-				<br />
-				<table cellspacing="0" cellpadding="5" border="0">
+				
+				<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 0 12px 15px;">
+				<tr>
+					<td colspan="2">@@You_were_specify@@</td>
+				</tr>
 				<tr>
 					<td>
 				<br />
-				@@orderNumber@@	:
-
-						<br />
-
-					</td>
-						<td>
-				<br />
-				<xsl:value-of  select="notification_data/line_number"/>
-
-						<br />
-
-					</td>
-					</tr>
-				<tr>
-					<td>
-				<br />
-				@@title@@ :
+				@@title@@
 
 						<br />
 
@@ -63,7 +59,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<tr>
 					<td>
 				<br />
-				@@mmsId@@ :
+				@@mmsId@@:
 
 						<br />
 
@@ -79,7 +75,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<tr>
 					<td>
 				<br />
-				@@callNumber@@	:
+				@@callNumber@@:
 
 						<br />
 
@@ -92,32 +88,32 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 					</td>
 					</tr>
-				<tr>
-					<td>
-				<br />
-				@@receivingNote@@ :
-
-						<br />
-
-					</td>
-						<td>
-				<br />
-				<xsl:value-of  select="notification_data/receiving_note"/>
-						<br />
-
-					</td>
-				</tr>
 					<tr>
 					<td>
 				<br />
-				@@message@@	:
+				@@message@@:
 
 						<br />
 
 					</td>
 						<td>
 				<br />
-				<xsl:value-of  select="notification_data/message"/>
+				
+				<!-- Display patron-friendly message based on content of "message" in XML -->
+				<xsl:choose>
+					<xsl:when test="notification_data/message = 'E-resource was activated.'">
+						The above resource will be available within the next 24 hours.
+					</xsl:when>
+					<xsl:when test= "contains(notification_data/message, 'Will be available in 48 hours')">
+						The above item will be available in 48 hours.
+					</xsl:when>
+					<xsl:when test="notification_data/message = 'Item was received.'">
+						The above item is now in stock.
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="notification_data/message"/>
+					</xsl:otherwise>
+				</xsl:choose>
 
 						<br />
 
@@ -126,12 +122,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 				</table>
 				<br />
-				<table>
-						<tr><td>@@sincerely@@</td></tr>
-						<tr><td>@@department@@</td></tr>
-				</table>
 
-				<xsl:call-template name="lastFooter" /> <!-- footer.xsl -->
+				<!-- footer.xsl -->
+				<xsl:call-template name="lrPatronFooter" />
 			</body>
 	</html>
 </xsl:template>
