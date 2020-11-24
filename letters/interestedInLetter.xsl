@@ -11,17 +11,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template match="/">
 	<html>
-			<xsl:if test="notification_data/languages/string">
-				<xsl:attribute name="lang">
-					<xsl:value-of select="notification_data/languages/string"/>
-				</xsl:attribute>
-			</xsl:if>
-
 		<head>
-				<title>
-					<xsl:value-of select="notification_data/general_data/subject"/>
-				</title>
-
 		<xsl:call-template name="generalStyle" />
 		</head>
 
