@@ -37,19 +37,19 @@ list-style: none; margin:0 0 0 1em; padding:0;
 </xsl:template>
 
 <xsl:template name="mainTableStyleCss">
-width:600px; text-align:left; background-color:#fff; padding-left:8px; padding-right:8px; font-size:100%;
+width:600px; text-align:left; background:#fff; padding-left:8px; padding-right:8px; font-size:100%;
 </xsl:template>
 
 <xsl:template name="headerLogoStyleCss">
-background-color:#ffffff;  width:100%;
+background:#ffff;  width:600px; text-align:left;
 </xsl:template>
 
 <xsl:template name="headerTableStyleCss">
-background-color:#fff;  width:600px; height:30px; padding-left:8px; padding-right:8px;
+background:#fff;  width:600px; height:30px; padding-left:8px; padding-right:8px;
 </xsl:template>
 
 <xsl:template name="footerTableStyleCss">
-padding:8px 0 20px 0 ; width:600px; color:#444;  font-size:80%; background:#fff; padding-left:8px; padding-right:8px;
+padding:8px 0 20px 12px; width:600px; color:#444;  font-size:80%; background:#fff;
 </xsl:template>
 
 
