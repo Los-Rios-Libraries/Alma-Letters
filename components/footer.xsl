@@ -68,6 +68,11 @@
 					<a href="https://answers.library.losrios.edu/">Library FAQs</a>
 				</td>
 			</tr>
+			<tr>
+				<td style="text-align:center; padding-top:12px;">
+					Please do not reply to this email. Instead, <a href="https://www.library.losrios.edu/ask-us">contact your library</a>.
+				</td>
+			</tr>
 		</table>
 	</xsl:template>
 
