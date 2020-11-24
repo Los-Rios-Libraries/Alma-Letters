@@ -29,7 +29,7 @@
 		<!-- used in body of patron letters -->
 		<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 0 12px 15px;">
 			<tr>
-				<td>For more details about your library activity, please visit your library account.
+				<td style="padding-bottom:1em;">For more details about your library activity, please visit your library account.
 				</td>
 			</tr>
 			<tr>
