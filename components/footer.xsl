@@ -40,9 +40,14 @@
 				<!-- style.xsl -->
 			</xsl:attribute>
 			<tr>
+				<td>
+					<hr style="border:1px solid #ccc;" />
+				</td>
+			</tr>
+			<tr>
 
 				<td>
-					<hr style="border:1px solid #ccc;" />Sent by the <a href="https://www.library.losrios.edu/">Los Rios Libraries</a></td>
+					Sent by the <a href="https://www.library.losrios.edu/">Los Rios Libraries</a> on <xsl:value-of select="notification_data/general_data/current_date"/></td>
 			</tr>
 			<tr>
 				<td>
@@ -59,9 +64,14 @@
 				<!-- style.xsl -->
 			</xsl:attribute>
 			<tr>
+				<td>
+					<hr style="border:1px solid #ccc;" />
+				</td>
+			</tr>
+			<tr>
 
 				<td>
-					<hr style="border:1px solid #ccc;" />Sent by the <a href="https://www.library.losrios.edu/">Los Rios Libraries</a></td>
+					Sent by the <a href="https://www.library.losrios.edu/">Los Rios Libraries</a> on <xsl:value-of select="notification_data/general_data/current_date"/></td>
 			</tr>
 			<tr>
 				<td>
