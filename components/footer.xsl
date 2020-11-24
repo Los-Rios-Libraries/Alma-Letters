@@ -12,7 +12,14 @@
 		<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 0 12px 15px;">
 			<tr>
 				<td>
-					<a style="background-color:#252d65;	border:1px solid #252d65;display:inline-block;cursor:pointer;color:#ffffff;font-size:13px;font-weight:bold;	padding:6px 12px;margin-top:8px;text-decoration:none;" href="https://caccl-lrccd.alma.exlibrisgroup.com/SAML/idpCode/LRCCD">Go to Alma</a>
+					<table align="center" cellpadding="0" style="width:auto !important;">
+						<tr>
+							<td>
+								<a style="display:block;color:#ffffff;background:#252d65;font-size:13px;font-weight:bold;text-decoration:none;border:12px solid #252d65;border-radius: 4px;" href="https://caccl-lrccd.alma.exlibrisgroup.com/SAML/idpCode/LRCCD">Go to Alma</a>
+							</td>
+						</tr>
+					</table>
+					
 				</td>
 			</tr>
 		</table>
@@ -27,7 +34,14 @@
 			</tr>
 			<tr>
 				<td>
-					<a style="background-color:#252d65;	border:1px solid #252d65;	display:inline-block;cursor:pointer;color:#ffffff;font-size:13px;font-weight:bold;padding:6px 12px; margin-top:8px;text-decoration:none;" href="https://www.library.losrios.edu/my-account">My Library Account</a>
+					<table align="center" cellpadding="0" style="width:auto !important;">
+						<tr>
+							<td>
+								<a style="display:block;color:#ffffff;background:#252d65;font-size:13px;font-weight:bold;text-decoration:none;border:12px solid #252d65;border-radius: 4px;" href="https://www.library.losrios.edu/my-account">My Library Account</a>
+							</td>
+						</tr>
+					</table>
+					
 				</td>
 			</tr>
 		</table>
