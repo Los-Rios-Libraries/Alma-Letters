@@ -48,7 +48,7 @@
 	</xsl:template>
 
 	<xsl:template name="lrPatronFooter">
-		<table align="center">
+		<table cellspacing="5" cellpadding="0" border="0" align="center" width="600">
 			<xsl:attribute name="style">
 				<xsl:call-template name="footerTableStyleCss" />
 				<!-- style.xsl -->
@@ -77,7 +77,7 @@
 	</xsl:template>
 
 	<xsl:template name="lrStaffFooter">
-		<table align="center">
+		<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" >
 			<xsl:attribute name="style">
 				<xsl:call-template name="footerTableStyleCss" />
 				<!-- style.xsl -->
