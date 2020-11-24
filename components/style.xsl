@@ -5,7 +5,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template name="generalStyle">
  <style>
- body {@@language_related_body_css@@ background-color:#EEEDF2}  /* darken this?*/
+  /* for Outlook clients */
+table{ mso-table-lspace:0pt;   mso-table-rspace:0pt;}
+/* resets */
+ img{ border:0 none; height:auto; line-height:100%;outline:none; text-decoration:none; }
+ a img{border:0 none;  }
+ .imageFix{  display:block;  }
+/* for gmail */
+ #bodyTable{ height:100% !important;  margin:0; padding:0;   width:100% !important;  }
+ body {@@language_related_body_css@@ background:#EEEDF2; margin:0; padding:0; -webkit-text-size-adjust:100%; /* recommended for Apple devices */}
  .listing td {border-bottom: 1px solid #eee}
 /* .listing tr:hover td {background-color:#eee} */
  .listing th {background-color:#f5f5f5 }
