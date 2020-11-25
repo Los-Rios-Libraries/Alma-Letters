@@ -59,6 +59,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						
 						</td>
 					</tr>
+					<tr>
+						<td style="padding-left:15px;"><p>@@charged_with_fines_fees@@ </p></td>
+					</tr>
 				</table>
 				</xsl:for-each>
 
@@ -87,6 +90,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						</td>
 					</tr>
 				</table>
+				
+				<!--@@additional_info_2@@-->
 
 				</table>
 	
