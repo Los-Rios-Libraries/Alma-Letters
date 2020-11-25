@@ -33,7 +33,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<xsl:for-each select="notification_data/labels_list">
 				<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; table-layout:fixed; word-wrap:break-word;">
 					<tr>
-						<td><xsl:value-of select="letter.fineFeePaymentReceiptLetter.message"/></td>
+						<td style="font-size:100%; padding:12px;"><xsl:value-of select="letter.fineFeePaymentReceiptLetter.message"/></td>
 					</tr>
 				</table>
 

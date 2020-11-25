@@ -33,7 +33,7 @@
 								</td>
 							</tr>
 							<tr>
-								<td>
+								<td style="padding-left:20px;">
 									<xsl:call-template name="recordTitle" /> <!-- recordTitle.xsl -->
 								</td>
 							</tr>

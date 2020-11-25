@@ -40,13 +40,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<table align="center" cellpadding="0" class="listing" style="width:600px; text-align:left; background-color:#fff; padding:0; font-size:100%;">
 				
 					<tr>
-						<th>@@fee_type@@</th>
+						<th style="padding-left:15px;">@@fee_type@@</th>
 						<th>@@fee_amount@@</th>
 						<th>@@note@@</th>
 					</tr>
 					<xsl:for-each select="notification_data/fines_fees_list/user_fines_fees">
 					<tr>
-						<td><xsl:value-of select="fine_fee_type_display"/></td>
+						<td style="padding-left:15px;"><xsl:value-of select="fine_fee_type_display"/></td>
 						<td><xsl:value-of select="fine_fee_ammount/normalized_sum"/>&#160;<xsl:value-of select="fine_fee_ammount/currency"/></td>
 						<td><xsl:value-of select="fine_comment"/></td>
 					</tr>
