@@ -51,8 +51,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						</xsl:attribute>
 						<tr>
 							<th>@@title@@</th>
-							<th>@@description@@</th>
-							<th>@@author@@</th>
+							<th>Barcode</th>
 							<th>@@due_date@@</th>
 							<th>@@library@@</th>
 						</tr>
@@ -60,8 +59,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                 		<xsl:for-each select="notification_data/item_loans/item_loan">
 						<tr>
 							<td><xsl:value-of select="title"/></td>
-							<td><xsl:value-of select="description"/></td>
-							<td><xsl:value-of select="author"/></td>
+	
+							<td><xsl:value-of select="barcode"/></td>
 							<td><xsl:value-of select="due_date"/></td>
 							<td><xsl:value-of select="library_name"/></td>
 
