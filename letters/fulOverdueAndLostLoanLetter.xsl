@@ -87,11 +87,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					@@additional_info_2@@
 					
 
-					<table>
-						<tr><td>@@sincerely@@</td></tr>
-						<tr><td>@@department@@</td></tr>
-					</table>
-				</table>
 
 				<xsl:call-template name="lastFooter" /> <!-- footer.xsl -->
 			</body>

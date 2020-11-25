@@ -77,12 +77,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</xsl:for-each>
 
 				</table>
-				<table>
-
-						<tr><td>@@sincerely@@</td></tr>
-						<tr><td>@@department@@</td></tr>
-
-				</table>
 				<table cellspacing="0" cellpadding="5" border="0" align="center" width="600" style="width:600px; background:#fff;">
 					<tr>
 						<td style="padding:15px;">

@@ -78,16 +78,8 @@
 								</tr>
 							</xsl:if>
 						</table>
-						<table>
-
-							<tr>
-								<td>@@sincerely@@</td>
-							</tr>
-							<tr>
-								<td>@@department@@</td>
-							</tr>
-
-						</table>
+						
+					
 					</div>
 				</div>
 				<xsl:call-template name="lastFooter" /> <!-- footer.xsl -->
