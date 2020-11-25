@@ -85,7 +85,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</tr>
 				</table>
 
-				<xsl:call-template name="lastFooter" /> <!-- footer.xsl -->
+				</table>
+	
+				<xsl:call-template name="lrPatronFooter" /> <!-- footer.xsl -->
 			</body>
 	</html>
 </xsl:template>

@@ -75,16 +75,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				@@additional_info_1@@
 
 			@@additional_info_2@@
-			<table>
-				<tr><td>@@sincerely@@</td></tr>
-				<tr><td>@@department@@</td></tr>
-			</table>
+
+
 
           </div>
         </div>
 
+<xsl:call-template name="lrGoToAccount" />
         <!-- footer.xsl -->
-        <xsl:call-template name="lastFooter" />
+        <xsl:call-template name="lrPatronFooter" />
       </body>
     </html>
   </xsl:template>

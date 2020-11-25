@@ -68,8 +68,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</table>
 
 
-				<xsl:call-template name="lastFooter" /> <!-- footer.xsl -->
-				<xsl:call-template name="contactUs" />
+				<xsl:call-template name="lrGoToAccount" />
+        <!-- footer.xsl -->
+        <xsl:call-template name="lrPatronFooter" />
 			</body>
 	</html>
 </xsl:template>

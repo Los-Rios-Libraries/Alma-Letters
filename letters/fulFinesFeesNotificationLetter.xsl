@@ -63,14 +63,17 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		        </xsl:if>
 				<h><b>@@please_settle@@</b></h>
 
-				<table>
-						<tr><td>@@sincerely@@</td></tr>
-						<tr><td>@@department@@</td></tr>
+						</td>
+					</tr>
+					
 				</table>
+				
 				</table>
 				 
 
-				<xsl:call-template name="lastFooter" /> <!-- footer.xsl -->
+				<xsl:call-template name="lrGoToAccount" />
+        <!-- footer.xsl -->
+        <xsl:call-template name="lrPatronFooter" />
 			</body>
 	</html>
 </xsl:template>
