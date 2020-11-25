@@ -68,7 +68,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
           </div>
         </div>
 		
-        <!--<xsl:call-template name="" /> footer.xsl -->
+		<xsl:call-template name="lrGoToAlma" />
+		
+        <xsl:call-template name="lrStaffFooter" /> <!--footer.xsl -->
       </body>
     </html>
   </xsl:template>
