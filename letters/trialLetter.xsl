@@ -19,19 +19,16 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       </head>
       <body>
         <xsl:attribute name="style">
-          <xsl:call-template name="bodyStyleCss" />
-          <!-- style.xsl -->
+          <xsl:call-template name="bodyStyleCss" /><!-- style.xsl -->
         </xsl:attribute>
-        <xsl:call-template name="head" />
-        <!-- header.xsl -->
-        <xsl:call-template name="senderReceiver" />
-        <!-- SenderReceiver.xsl -->
+        <xsl:call-template name="head" /><!-- header.xsl -->
 		<xsl:call-template name="toWhomIsConcerned" /> <!-- mailReason.xsl -->
-        <div class="messageArea">
+        
+		<div class="messageArea">
           <div class="messageBody">
-            <table cellspacing="0" cellpadding="5" border="0">
+            <table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 0 12px 15px;">
 				<tr>
-					<td>@@introduction_body_thanks@@ : <xsl:value-of select="notification_data/trial/title" /> .</td>
+					<td>@@introduction_body_thanks@@ <xsl:value-of select="notification_data/trial/title" />.</td>
 				</tr>
 				<tr>
 					<td>@@link@@ :
@@ -43,40 +40,35 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</a>
 					</td>
 				</tr>
+				
 				<xsl:if  test="notification_data/trial/electronic_collection != ''" >
-					<tr>
-						<td>@@linkToCollection@@ :
-						<a>
-                        	<xsl:attribute name="href">
-                          	  <xsl:value-of select="notification_data/trial/electronic_collection" />
-                        	</xsl:attribute>
-							<xsl:value-of select="notification_data/poline_description" />
-						</a>
-						</td>
-					</tr>
+				<tr>
+					<td>@@linkToCollection@@ :
+					<a>
+                        <xsl:attribute name="href">
+                         	<xsl:value-of select="notification_data/trial/electronic_collection" />
+                       	</xsl:attribute>
+						<xsl:value-of select="notification_data/poline_description" />
+					</a>
+					</td>
+				</tr>
 				</xsl:if>
-					<tr>
-						<td>@@schedule@@ <xsl:value-of select="notification_data/trial/start_date" />  - <xsl:value-of select="notification_data/trial/end_date" />  .</td>
-					</tr>
-					<xsl:choose >
-						<xsl:when test="/notification_data/reminder='true'">
-							<tr><td>@@reminder_end_thanks@@</td></tr>
-							<tr><td>@@reminder_register_opinion@@</td></tr>
-						</xsl:when>
-					</xsl:choose>
-
+				
+				<tr>
+					<td>@@schedule@@ <xsl:value-of select="notification_data/trial/start_date" />  to <xsl:value-of select="notification_data/trial/end_date" />.</td>
+				</tr>
+					
+				<xsl:choose >
+					<xsl:when test="/notification_data/reminder='true'">
+						<tr><td>@@reminder_end_thanks@@</td></tr>
+						<tr><td>@@reminder_register_opinion@@</td></tr>
+					</xsl:when>
+				</xsl:choose>
 			</table>
-			<br />
-				<table>
-
-						<tr><td>@@sincerely@@</td></tr>
-						<tr><td>@@department@@</td></tr>
-
-				</table>
           </div>
         </div>
-        <xsl:call-template name="lastFooter" />
-        <!-- footer.xsl -->
+		
+        <!--<xsl:call-template name="" /> footer.xsl -->
       </body>
     </html>
   </xsl:template>
