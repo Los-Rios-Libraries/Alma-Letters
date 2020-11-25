@@ -32,7 +32,7 @@
 			<table cellspacing="0" cellpadding="5" border="0" width="600" style="width:600px; background:#fff; padding:0 8px 0 8px;" align="center">
 				<tr>
 					<td>
-						@@you_are_assign@@
+						@@you_are_assign@@ by <xsl:value-of select="/notification_data/owner/first_name" />&#160;<xsl:value-of select="/notification_data/owner/last_name" />:
 						<!-- <xsl:value-of select="/notification_data/assigned_object" />&#160; -->
 						<br /><br />
 <xsl:value-of select="/notification_data/assigned_object_name" /><br />
