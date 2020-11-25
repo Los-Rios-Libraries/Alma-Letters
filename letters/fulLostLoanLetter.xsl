@@ -22,7 +22,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<xsl:call-template name="head" /> <!-- header.xsl -->
 				<xsl:call-template name="senderReceiver" /> <!-- SenderReceiver.xsl -->
 
-				<br />
 
 
 				<table cellspacing="0" cellpadding="5" border="0">
@@ -83,8 +82,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</xsl:for-each>
 
 				</table>
-				<br />
-				<br />
 				@@additional_info_1@@
 				<br />
 				@@additional_info_2@@

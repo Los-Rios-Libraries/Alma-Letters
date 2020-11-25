@@ -294,7 +294,6 @@
 								</tr>
 							</xsl:if>
 						</table>
-						<br />
 						<table>
 
 							<tr>

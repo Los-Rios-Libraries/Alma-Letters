@@ -23,8 +23,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<xsl:call-template name="head" /> <!-- header.xsl -->
 				<xsl:call-template name="senderReceiver" /> <!-- SenderReceiver.xsl -->
 
-				<br />
-
 		<table cellspacing="0" cellpadding="5" border="0">
 				<tr>
 				<td>
@@ -57,7 +55,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</tr>
 					</xsl:for-each>
 
-				</table><br />
+				</table>
 				<xsl:if test="notification_data/fine_fee_notification_fee_amount/sum !=''">
 		        	<tr>
 		            	<td>
@@ -68,14 +66,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		        </xsl:if>
 				<h><b>@@please_settle@@</b></h>
 
-				<br />
-				<br />
 				<table>
 						<tr><td>@@sincerely@@</td></tr>
 						<tr><td>@@department@@</td></tr>
 				</table>
 				</table>
-				<br />
+				 
 
 				<xsl:call-template name="lastFooter" /> <!-- footer.xsl -->
 			</body>

@@ -36,7 +36,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<td><xsl:value-of select="letter.fineFeePaymentReceiptLetter.message"/></td>
 					</tr>
 				</table>
-				<br />
 
 				</xsl:for-each>
 				<table cellpadding="5" class="listing">
@@ -67,7 +66,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</tr>
 
 				</table>
-				<br />
 				<table>
 
 						<tr><td>@@sincerely@@</td></tr>

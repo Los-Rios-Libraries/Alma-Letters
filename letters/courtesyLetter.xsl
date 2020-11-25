@@ -22,7 +22,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         <xsl:call-template name="head" /><!-- header.xsl -->
         <xsl:call-template name="senderReceiver" /> <!-- SenderReceiver.xsl -->
 
-		<br />
+	
 		<xsl:call-template name="toWhomIsConcerned" /> <!-- mailReason.xsl -->
 
 
@@ -76,12 +76,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                 </td>
               </tr>
              </table>
-				<br />
-				<br />
+	
 				@@additional_info_1@@
-			<br />
+
 			@@additional_info_2@@
-				<br />
 			<table>
 				<tr><td>@@sincerely@@</td></tr>
 				<tr><td>@@department@@</td></tr>
