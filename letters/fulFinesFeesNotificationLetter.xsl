@@ -26,10 +26,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
 		<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; table-layout:fixed; word-wrap:break-word;">
 				<tr>
-				<td>
-					<h>@@dear@@ </h> <br />
-					<h>@@we_would_like@@ <xsl:value-of select="notification_data/organization_unit/name"/> @@debt_of@@ <b><xsl:value-of select="notification_data/total_fines_amount"/>
-					&#160;<xsl:value-of select="notification_data/total_fines_currency"/></b></h>
+				<td style="padding:16px 0 16px 15px;">
+					@@we_would_like@@  @@debt_of@@ &#36;<xsl:value-of select="notification_data/total_fines_amount"/> because of fines or fees incurred at the <xsl:value-of select="notification_data/organization_unit/name"/>. Details&#58;
 				</td>
 				</tr>
 				</table>

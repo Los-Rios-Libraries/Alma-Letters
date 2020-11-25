@@ -26,10 +26,10 @@
 							<tr>
 								<td>
 									@@on@@
-									<xsl:value-of select="notification_data/general_data/current_date" />
-									@@we_cancel_y_req_of@@
 									<xsl:value-of select="notification_data/request/create_date" />
-									@@detailed_below@@ :
+									you requested the following item(s):
+									
+									
 								</td>
 							</tr>
 							<tr>
@@ -65,6 +65,7 @@
 							</xsl:if>
 							<tr>
 								<td>
+									@@we_cancel_y_req_of@@ <br/><br/>
 									<b> @@reason_deleting_request@@: </b>
 									<xsl:value-of select="notification_data/request/status_note_display" />
 								</td>
