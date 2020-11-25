@@ -29,7 +29,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         <div class="messageArea">
           <div class="messageBody">
 
-			<table cellspacing="0" cellpadding="5" border="0">
+			<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; table-layout:fixed; word-wrap:break-word;">
               <tr>
               	<td>
 					<xsl:if test="notification_data/short_loans='true'">
@@ -49,7 +49,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
               <tr>
                 <td>
-                	<table cellpadding="5" class="listing">
+                	<table cellpadding="2" class="listing">
 						<xsl:attribute name="style">
 							<xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
 						</xsl:attribute>

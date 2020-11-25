@@ -22,7 +22,7 @@
 
 				<div class="messageArea">
 					<div class="messageBody">
-						<table cellspacing="0" cellpadding="5" border="0">
+						<table cellspacing="0" cellpadding="5" border="0" align="center" width="600" style="width:600px; background:#fff; table-layout:fixed; word-wrap:break-word; padding-left:8px;">
 							<tr>
 								<td>
 									@@on@@

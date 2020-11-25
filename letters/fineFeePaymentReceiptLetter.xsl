@@ -31,14 +31,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</xsl:if>
 
 				<xsl:for-each select="notification_data/labels_list">
-				<table cellspacing="0" cellpadding="5" border="0">
+				<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; table-layout:fixed; word-wrap:break-word;">
 					<tr>
 						<td><xsl:value-of select="letter.fineFeePaymentReceiptLetter.message"/></td>
 					</tr>
 				</table>
 
 				</xsl:for-each>
-				<table cellpadding="5" class="listing">
+				<table cellpadding="2" align="center" class="listing">
 				<xsl:attribute name="style">
 					<xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
 				</xsl:attribute>

@@ -24,7 +24,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 
 
-				<table cellspacing="0" cellpadding="5" border="0">
+				<table cellspacing="0" cellpadding="5" border="0" align="center" width="600" style="width:600px; background:#fff;">
 				<tr>
 				<td>
 					<h>@@inform_you_item_below@@ </h>
@@ -33,10 +33,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</tr>
 				</table>
 
-				<table cellpadding="5" class="listing">
-					<xsl:attribute name="style">
-						<xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
-					</xsl:attribute>
+				<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; table-layout:fixed; word-wrap:break-word;">
 
 					<xsl:for-each select="notification_data/loans_by_library/library_loans_for_display">
 						<tr>

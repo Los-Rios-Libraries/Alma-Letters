@@ -23,8 +23,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<xsl:call-template name="senderReceiver" /> <!-- SenderReceiver.xsl -->
 
 
-
-				<table cellspacing="0" cellpadding="5" border="0">
+				<table cellspacing="0" cellpadding="5" border="0" align="center" width="600" style="width:600px; background:#fff;">
 				<tr>
 				<td>
 					<h>@@inform_you_item_below@@ </h>
@@ -33,13 +32,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</tr>
 				</table>
 
-				<table cellpadding="5" class="listing">
-				<xsl:attribute name="style">
-					<xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
-				</xsl:attribute>
-
+				<table class="listing" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; table-layout:fixed; word-wrap:break-word;">
+				
 				<xsl:for-each select="notification_data">
-				<table>
+				<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; table-layout:fixed; word-wrap:break-word;">
 					<tr>
 						<td>
 						<b>@@lost_item@@ :</b> <xsl:value-of select="item_loan/title"/>
@@ -64,7 +60,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</table>
 				</xsl:for-each>
 
-				<table cellpadding="5" class="listing">
+				<table cellspacing="0" cellpadding="5" border="0" align="center" width="600" class="listing">
 				<xsl:attribute name="style">
 					<xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
 				</xsl:attribute>
@@ -82,18 +78,19 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</xsl:for-each>
 
 				</table>
-				@@additional_info_1@@
-				<br />
-				@@additional_info_2@@
-				<br />
 				<table>
 
 						<tr><td>@@sincerely@@</td></tr>
 						<tr><td>@@department@@</td></tr>
 
 				</table>
+				<table cellspacing="0" cellpadding="5" border="0" align="center" width="600" style="width:600px; background:#fff;">
+					<tr>
+						<td style="padding:15px;">
+							@@additional_info_1@@
+						</td>
+					</tr>
 				</table>
-				<br />
 
 				<xsl:call-template name="lastFooter" /> <!-- footer.xsl -->
 			</body>

@@ -23,7 +23,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<xsl:call-template name="head" /> <!-- header.xsl -->
 				<xsl:call-template name="senderReceiver" /> <!-- SenderReceiver.xsl -->
 
-		<table cellspacing="0" cellpadding="5" border="0">
+	
+		<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; table-layout:fixed; word-wrap:break-word;">
 				<tr>
 				<td>
 					<h>@@dear@@ </h> <br />
@@ -33,15 +34,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</tr>
 				</table>
 
-				<table cellpadding="5" class="listing">
-				<xsl:attribute name="style">
-					<xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
-				</xsl:attribute>
+				<table align="center" cellpadding="0" class="listing" style="width:600px;text-align:left;background-color:#fff;padding:0;font-size:100%">
+				
 
-				<table cellpadding="5" class="listing">
-				<xsl:attribute name="style">
-					<xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
-				</xsl:attribute>
+				<table align="center" cellpadding="0" class="listing" style="width:600px; text-align:left; background-color:#fff; padding:0; font-size:100%;">
+				
 					<tr>
 						<th>@@fee_type@@</th>
 						<th>@@fee_amount@@</th>
