@@ -22,6 +22,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 				<xsl:call-template name="head" /> <!-- header.xsl -->
 				<xsl:call-template name="senderReceiver" /> <!-- SenderReceiver.xsl -->
+				<xsl:call-template name="toWhomIsConcerned" />
 
 	
 		<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; table-layout:fixed; word-wrap:break-word;">
