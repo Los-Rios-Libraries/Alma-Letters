@@ -71,7 +71,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								</table>
 							</td>
 						</tr>
-						<hr/><br/>
+					
 					</xsl:for-each>
 					<xsl:if test="notification_data/overdue_notification_fee_amount/sum !=''">
 						<tr>
