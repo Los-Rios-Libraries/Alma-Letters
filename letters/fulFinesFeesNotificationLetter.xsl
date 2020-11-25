@@ -60,7 +60,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		                </td>
 		            </tr>
 		        </xsl:if>
-				<h><b>@@please_settle@@</b></h>
+				<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; table-layout:fixed; word-wrap:break-word;">
+					<tr>
+						<td style="padding:16px 0 16px 15px;">
+							<b>@@please_settle@@</b>
 
 						</td>
 					</tr>

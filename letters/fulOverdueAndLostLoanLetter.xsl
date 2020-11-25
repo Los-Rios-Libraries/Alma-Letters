@@ -84,7 +84,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							</td>
 						</tr>
 					</xsl:if>
-					@@additional_info_1@@
+					
+					<table cellspacing="0" cellpadding="5" border="0" align="center" width="600" style="width:600px; background:#fff;">
+					<tr>
+						<td style="padding:15px;">
+							@@additional_info_1@@
+						</td>
+					</tr>
+				</table>
+					
 					@@additional_info_2@@
 					
 
