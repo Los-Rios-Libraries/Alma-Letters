@@ -27,7 +27,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 			<div class="messageArea">
 				<div class="messageBody">
-					 <table cellspacing="0" cellpadding="5" border="0">
+					 <table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; table-layout:fixed; word-wrap:break-word;">
+						<tr>
+							<td style="padding-left:15px;">
+								@@message@@
+							</td>
+						</tr>
 
 						<tr>
 							<td>
@@ -43,7 +48,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 
 
-	<xsl:call-template name="lastFooter" /> <!-- footer.xsl -->
+	<xsl:call-template name="lrGoToAccount" />
+        <!-- footer.xsl -->
+        <xsl:call-template name="lrPatronFooter" />
 
 
 

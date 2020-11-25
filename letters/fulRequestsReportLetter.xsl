@@ -23,36 +23,28 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<xsl:call-template name="head" /> <!-- header.xsl -->
 				<xsl:call-template name="senderReceiver" /> <!-- SenderReceiver.xsl -->
 				<br />
+				<xsl:call-template name="toWhomIsConcerned" /> <!-- mailReason.xsl -->
 
-				<table cellspacing="0" cellpadding="5" border="0"  style="float:left">
-				<xsl:attribute name="style">
-					<xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
-				</xsl:attribute>
+				<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 0 12px 15px;">
 					<tr>
 						<td>
-							<h>@@dear@@</h><br />
-							<h>@@please_find_below@@</h><br /><br />
+							<p>@@please_find_below@@</p><br />
 						</td>
 					</tr>
 
 					<xsl:if test="notification_data/non_active_requests/ful_request_interpated">
 					<tr>
+						<td>
 						<h3>@@not_active@@</h3>
-					</tr>
-					<tr>
-						<h>@@not_active_description@@</h>
+						</td>
 					</tr>
 					<tr>
 						<td>
-							<table>
-							<xsl:attribute name="style">
-								<xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
-							</xsl:attribute>
+							<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 0 12px 15px;">
 								<tr>
 								<xsl:attribute name="style">
 									<xsl:call-template name="headerTableStyleCss" /> <!-- style.xsl -->
 								</xsl:attribute>
-									<th>@@type@@</th>
 									<th>@@title@@</th>
 									<th>@@author@@</th>
 									<th>@@place_in_queue@@</th>
@@ -60,7 +52,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								</tr>
 								<xsl:for-each select="notification_data/non_active_requests/ful_request_interpated">
 								<tr>
-									<td><xsl:value-of select="request_type_display"/></td>
 									<td><xsl:value-of select="title_display"/></td>
 									<td><xsl:value-of select="author_display"/></td>
 									<td><xsl:value-of select="place_in_queue"/></td>
@@ -73,22 +64,17 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</xsl:if>
 					<xsl:if test="notification_data/process_requests/ful_request_interpated">
 					<tr>
+						<td>
 						<h3>@@in_process@@</h3>
-					</tr>
-					<tr>
-						<h>@@in_process_description@@</h>
+						</td>
 					</tr>
 					<tr>
 						<td>
-							<table>
-							<xsl:attribute name="style">
-								<xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
-							</xsl:attribute>
+							<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 0 12px 15px;">
 								<tr>
 								<xsl:attribute name="style">
 									<xsl:call-template name="headerTableStyleCss" /> <!-- style.xsl -->
 								</xsl:attribute>
-									<th>@@type@@</th>
 									<th>@@title@@</th>
 									<th>@@author@@</th>
 									<th>@@status@@</th>
@@ -97,7 +83,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 								<xsl:for-each select="notification_data/process_requests/ful_request_interpated">
 								<tr>
-									<td><xsl:value-of select="request_type_display"/></td>
 									<td><xsl:value-of select="title_display"/></td>
 									<td><xsl:value-of select="author_display"/></td>
 									<td><xsl:value-of select="request_status_display"/></td>
@@ -111,22 +96,17 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 					<xsl:if test="notification_data/hold_shelf_requests/ful_request_interpated">
 					<tr>
+						<td>
 						<h3>@@on_hold_shelf@@</h3>
-					</tr>
-					<tr>
-						<h>@@on_hold_shelf_description@@</h>
+						</td>
 					</tr>
 					<tr>
 						<td>
-							<table>
-							<xsl:attribute name="style">
-								<xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
-							</xsl:attribute>
+							<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 0 12px 15px;">
 								<tr>
 								<xsl:attribute name="style">
 									<xsl:call-template name="headerTableStyleCss" /> <!-- style.xsl -->
 								</xsl:attribute>
-									<th >@@type@@</th>
 									<th>@@title@@</th>
 									<th>@@author@@</th>
 									<th>@@status@@</th>
@@ -134,7 +114,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								</tr>
 								<xsl:for-each select="notification_data/hold_shelf_requests/ful_request_interpated">
 								<tr>
-									<td><xsl:value-of select="request_type_display"/></td>
 									<td><xsl:value-of select="title_display"/></td>
 									<td><xsl:value-of select="author_display"/></td>
 									<td><xsl:value-of select="request_status_display"/></td>
@@ -147,7 +126,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</xsl:if>
 				</table>
 
-				<xsl:call-template name="lastFooter" /> <!-- footer.xsl -->
+				<!-- footer.xsl -->
+				<xsl:call-template name="lrGoToAccount" />
+				<xsl:call-template name="lrPatronFooter" />
 			</body>
 	</html>
 </xsl:template>

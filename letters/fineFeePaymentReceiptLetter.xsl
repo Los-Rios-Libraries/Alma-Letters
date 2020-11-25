@@ -31,15 +31,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</xsl:if>
 
 				<xsl:for-each select="notification_data/labels_list">
-				<table cellspacing="0" cellpadding="5" border="0">
+				<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; table-layout:fixed; word-wrap:break-word;">
 					<tr>
-						<td><xsl:value-of select="letter.fineFeePaymentReceiptLetter.message"/></td>
+						<td style="font-size:100%; padding:12px;"><xsl:value-of select="letter.fineFeePaymentReceiptLetter.message"/></td>
 					</tr>
 				</table>
-				<br />
 
 				</xsl:for-each>
-				<table cellpadding="5" class="listing">
+				<table cellpadding="2" align="center" class="listing">
 				<xsl:attribute name="style">
 					<xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
 				</xsl:attribute>
@@ -67,16 +66,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</tr>
 
 				</table>
-				<br />
-				<table>
 
-						<tr><td>@@sincerely@@</td></tr>
-						<tr><td>@@department@@</td></tr>
 
-				</table>
-
-				<xsl:call-template name="lastFooter" /> <!-- footer.xsl -->
-				<xsl:call-template name="contactUs" />
+				<xsl:call-template name="lrGoToAccount" />
+        <!-- footer.xsl -->
+        <xsl:call-template name="lrPatronFooter" />
 			</body>
 	</html>
 </xsl:template>

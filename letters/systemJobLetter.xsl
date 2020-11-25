@@ -25,6 +25,12 @@
 
 
 		<!-- <xsl:call-template name="toWhomIsConcerned" /> -->
+    <table cellspacing="0" cellpadding="5" border="0" align="center" width="600" style="width:600px; background:#fff;">
+		  <tr>
+		    <td style="padding-left:15px;"><p>Alma did its thing again!</p>
+        </td>
+      </tr>
+    </table>
 		<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff;">
 		  <tr>
 		    <td >
@@ -378,6 +384,13 @@
 			</td>
 		  </tr>
 		</table>
+    <table cellspacing="0" cellpadding="5" border="0" align="center" width="600" style="width:600px; background:#fff; padding-top:18px;">
+		  <tr>
+		    <td style="padding-left:15px;">
+          <p style="text-align:center;">Need proof?</p>
+        </td>
+      </tr>
+    </table>
 
 
 		<xsl:call-template name="lrGoToAlma" />

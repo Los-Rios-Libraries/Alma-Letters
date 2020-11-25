@@ -22,42 +22,36 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 				<xsl:call-template name="head" /> <!-- header.xsl -->
 				<xsl:call-template name="senderReceiver" /> <!-- SenderReceiver.xsl -->
+				<xsl:call-template name="toWhomIsConcerned" />
 
-				<br />
-
-		<table cellspacing="0" cellpadding="5" border="0">
+	
+		<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; table-layout:fixed; word-wrap:break-word;">
 				<tr>
-				<td>
-					<h>@@dear@@ </h> <br />
-					<h>@@we_would_like@@ <xsl:value-of select="notification_data/organization_unit/name"/> @@debt_of@@ <b><xsl:value-of select="notification_data/total_fines_amount"/>
-					&#160;<xsl:value-of select="notification_data/total_fines_currency"/></b></h>
+				<td style="padding:16px 0 16px 15px;">
+					@@we_would_like@@  @@debt_of@@ &#36;<xsl:value-of select="notification_data/total_fines_amount"/> because of fines or fees incurred at the <xsl:value-of select="notification_data/organization_unit/name"/>. Details&#58;
 				</td>
 				</tr>
 				</table>
 
-				<table cellpadding="5" class="listing">
-				<xsl:attribute name="style">
-					<xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
-				</xsl:attribute>
+				<table align="center" cellpadding="0" class="listing" style="width:600px;text-align:left;background-color:#fff;padding:0;font-size:100%">
+				
 
-				<table cellpadding="5" class="listing">
-				<xsl:attribute name="style">
-					<xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
-				</xsl:attribute>
+				<table align="center" cellpadding="0" class="listing" style="width:600px; text-align:left; background-color:#fff; padding:0; font-size:100%;">
+				
 					<tr>
-						<th>@@fee_type@@</th>
+						<th style="padding-left:15px;">@@fee_type@@</th>
 						<th>@@fee_amount@@</th>
 						<th>@@note@@</th>
 					</tr>
 					<xsl:for-each select="notification_data/fines_fees_list/user_fines_fees">
 					<tr>
-						<td><xsl:value-of select="fine_fee_type_display"/></td>
+						<td style="padding-left:15px;"><xsl:value-of select="fine_fee_type_display"/></td>
 						<td><xsl:value-of select="fine_fee_ammount/normalized_sum"/>&#160;<xsl:value-of select="fine_fee_ammount/currency"/></td>
 						<td><xsl:value-of select="fine_comment"/></td>
 					</tr>
 					</xsl:for-each>
 
-				</table><br />
+				</table>
 				<xsl:if test="notification_data/fine_fee_notification_fee_amount/sum !=''">
 		        	<tr>
 		            	<td>
@@ -66,18 +60,22 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		                </td>
 		            </tr>
 		        </xsl:if>
-				<h><b>@@please_settle@@</b></h>
+				<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; table-layout:fixed; word-wrap:break-word;">
+					<tr>
+						<td style="padding:16px 0 16px 15px;">
+							<b>@@please_settle@@</b>
 
-				<br />
-				<br />
-				<table>
-						<tr><td>@@sincerely@@</td></tr>
-						<tr><td>@@department@@</td></tr>
+						</td>
+					</tr>
+					
 				</table>
+				
 				</table>
-				<br />
+				 
 
-				<xsl:call-template name="lastFooter" /> <!-- footer.xsl -->
+				<xsl:call-template name="lrGoToAccount" />
+        <!-- footer.xsl -->
+        <xsl:call-template name="lrPatronFooter" />
 			</body>
 	</html>
 </xsl:template>
