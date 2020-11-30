@@ -23,7 +23,7 @@
 
 				<div class="messageArea">
 					<div class="messageBody">
-						<table cellspacing="0" cellpadding="5" border="0">
+						<table cellspacing="0" cellpadding="5" border="0" align="center" width="600" style="width:600px; background:#fff; padding:8px; ">
 							<tr>
 								<td>
 									@@letterText@@

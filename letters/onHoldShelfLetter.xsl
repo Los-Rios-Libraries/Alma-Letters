@@ -30,7 +30,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 					<div class="messageArea">
 				<div class="messageBody">
-					<table cellspacing="0" cellpadding="5" border="0">
+					<table cellspacing="0" cellpadding="5" border="0" align="center" width="600" style="width:600px; text-align:left; background:#fff; padding-left:8px; padding-right:8px;">
 						<tr>
 							<td>@@following_item_requested_on@@ <xsl:value-of select="notification_data/request/create_date"/>, @@can_picked_at@@ <xsl:value-of select="notification_data/request/assigned_unit_name"/> @@circulation_desk@@.</td>
 						</tr>
