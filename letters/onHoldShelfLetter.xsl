@@ -45,7 +45,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<tr>
 							<td><xsl:call-template name="recordTitle" /> <!-- recordTitle.xsl --></td>
 						</tr>
-						<xsl:if test="notification_data/request/system_notes">
+						</xsl:if>
+						<xsl:if test="notification_data/request/system_notes != ''">
 						<tr>
 							<td><b>@@notes_affect_loan@@:</b></td>
 						</tr>
