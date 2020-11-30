@@ -27,10 +27,20 @@
 							<tr>
 								<td>
 									@@letterText@@
-									&#160;
+									&#160;Now, what was it you ordered up? Oh, right:
+									
+								</td>
+							</tr>
+							<tr>
+								<td>
 									<b>
 										<xsl:value-of select="/notification_data/report_name" />
 									</b>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Happy analyzing!
 								</td>
 							</tr>
 						</table>
