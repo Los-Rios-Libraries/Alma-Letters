@@ -10,7 +10,17 @@
 
     <xsl:template match="/">
         <html>
+			<xsl:if test="notification_data/languages/string">
+				<xsl:attribute name="lang">
+					<xsl:value-of select="notification_data/languages/string"/>
+				</xsl:attribute>
+			</xsl:if>
+
             <head>
+				<title>
+					<xsl:value-of select="notification_data/general_data/subject"/>
+				</title>
+
                 <xsl:call-template name="generalStyle" />
             </head>
             <body>
@@ -22,7 +32,7 @@
 
                 <div class="messageArea">
                     <div class="messageBody">
-                        <table cellspacing="0" cellpadding="5" border="0">
+                        <table role='presentation'  cellspacing="0" cellpadding="5" border="0">
                             <tr>
                                 <td>
                                     @@welcome_message@@
@@ -33,7 +43,7 @@
                             </tr>
                         </table>
                         <br />
-                        <table>
+                        <table role='presentation' >
                             <tr>
                                 <td>@@sincerely@@</td>
                             </tr>
