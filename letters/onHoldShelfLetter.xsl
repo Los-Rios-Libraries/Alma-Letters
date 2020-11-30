@@ -34,16 +34,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<tr>
 							<td>@@following_item_requested_on@@ <xsl:value-of select="notification_data/request/create_date"/>, @@can_picked_at@@ <xsl:value-of select="notification_data/request/assigned_unit_name"/> @@circulation_desk@@.</td>
 						</tr>
-
+						<tr>
+							<td style="padding:16px;"><xsl:call-template name="recordTitle" /> <!-- recordTitle.xsl --></td>
+						</tr>
 						<xsl:if test="notification_data/request/work_flow_entity/expiration_date">
 						<tr>
 							<td>
 							 @@note_item_held_until@@ <xsl:value-of select="notification_data/request/work_flow_entity/expiration_date"/>.
 							 </td>
-						</tr>
-							</xsl:if>
-						<tr>
-							<td><xsl:call-template name="recordTitle" /> <!-- recordTitle.xsl --></td>
 						</tr>
 						</xsl:if>
 						<xsl:if test="notification_data/request/system_notes != ''">
