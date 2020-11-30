@@ -100,12 +100,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 						<b></b>
 						<tr>
-							<td><h2><b>@@location@@: </b><xsl:value-of select="notification_data/phys_item_display/location_name"/></h2></td>
+							<td><b>@@location@@: </b><xsl:value-of select="notification_data/phys_item_display/location_name"/></td>
 							<xsl:if test="notification_data/phys_item_display/call_number != ''">
-								<td><h2><b>@@call_number@@: </b><xsl:value-of select="notification_data/phys_item_display/call_number"/></h2></td>
+								<td><b>@@call_number@@: </b><xsl:value-of select="notification_data/phys_item_display/call_number"/></td>
 							</xsl:if>
 							<xsl:if test="notification_data/phys_item_display/accession_number != ''">
-								<td><h2><b>@@accession_number@@: </b><xsl:value-of select="notification_data/phys_item_display/accession_number"/></h2></td>
+								<td><b>@@accession_number@@: </b><xsl:value-of select="notification_data/phys_item_display/accession_number"/></td>
 							</xsl:if>
 						</tr>
 						<xsl:if  test="notification_data/phys_item_display/shelving_location/string" >
