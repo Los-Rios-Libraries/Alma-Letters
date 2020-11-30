@@ -21,36 +21,38 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<xsl:call-template name="bodyStyleCss" /> <!-- style.xsl -->
 					</xsl:attribute>
 					<xsl:call-template name="head" /> <!-- header.xsl -->
-					<xsl:call-template name="senderReceiver" /> <!-- SenderReceiver.xsl -->
 					<xsl:call-template name="toWhomIsConcerned" />
-            		<table cellspacing="0" cellpadding="5" border="0">
-            		<tr><td>&#160;@@jobCompletion@@</td></tr>
-            		<xsl:if test="/notification_data/report_type  !=''">
-						<tr><td>
-							<br /><a>&#160;@@reportType@@ </a>
-							<xsl:value-of select="/notification_data/report_type" />
-						</td></tr>
-					</xsl:if>
-					<xsl:if test="/notification_data/report_name  !=''">
-						<tr><td>
-							<br /><a>&#160;@@reportName@@ </a>
-							<xsl:value-of select="/notification_data/report_name" />
-						</td></tr>
-					</xsl:if>
-					<xsl:if test="/notification_data/report_description  !=''">
-						<tr><td>
-							<a>&#160;@@reportDescription@@ </a>
-							<xsl:value-of select="/notification_data/report_description" />
-						</td></tr>
-					</xsl:if>
+            		
+					<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 0 12px 15px;">
+
+						<tr><td>@@jobCompletion@@</td></tr>
+						
+						<xsl:if test="/notification_data/report_type  !=''">
+							<tr><td><a>@@reportType@@ </a>
+								<xsl:value-of select="/notification_data/report_type" />
+							</td></tr>
+						</xsl:if>
+						
+						<xsl:if test="/notification_data/report_name  !=''">
+							<tr><td><a>@@reportName@@ </a>
+								<xsl:value-of select="/notification_data/report_name" />
+							</td></tr>
+						</xsl:if>
+					
+						<xsl:if test="/notification_data/report_description  !=''">
+							<tr><td><a>@@reportDescription@@ </a>
+								<xsl:value-of select="/notification_data/report_description" />
+							</td></tr>
+						</xsl:if>
+						
 						<tr>
 							<td>
 								<xsl:choose >
 									<xsl:when test="/notification_data/file  !=''">
-										<br /><a>&#160;@@reportsAttached@@</a>
+										<a>@@reportsAttached@@</a>
 									</xsl:when>
 									<xsl:otherwise>
-										<br /><a>&#160;@@reportsNotAttached@@</a>
+										<a>@@reportsNotAttached@@</a>
 									</xsl:otherwise>
 								</xsl:choose>
 							</td>
@@ -58,10 +60,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</table>
           		</div>
       	 	</div>
-			<table>
-				<tr><td>@@sincerely@@</td></tr>
-			</table>
-			<xsl:call-template name="lastFooter" /> <!-- footer.xsl -->
+			
+			<xsl:call-template name="lrGoToAlma" />
+			
+			<xsl:call-template name="lrStaffFooter" /> <!-- footer.xsl -->
 		</body>
 	</html>
 </xsl:template>
