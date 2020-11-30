@@ -13,22 +13,30 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<html>
 		<head>
 		<xsl:call-template name="generalStyle" />
-		</head>
+      </head>
+      <body>
+        <xsl:attribute name="style">
+          <xsl:call-template name="bodyStyleCss" />
+          <!-- style.xsl -->
+        </xsl:attribute>
+ <h1>@@letterName@@</h1>
+	
+		
 
-			<body>
-			<h1>
-				<b>@@requested_for@@ :
-							<xsl:value-of select="notification_data/user_for_printing/name"/>
-				</b>
-			</h1>
 
-
-				<xsl:call-template name="head" /> <!-- header.xsl -->
+				<!--<xsl:call-template name="head" />--> <!-- header.xsl -->
 
 
 
 			<div class="messageArea">
 				<div class="messageBody">
+					<p>
+				@@requested_for@@ :
+							<xsl:value-of select="notification_data/user_for_printing/name"/>
+				
+
+			</p>
+
 					 <table cellspacing="0" cellpadding="5" border="0">
 						<xsl:if  test="notification_data/request/selected_inventory_type='ITEM'" >
 						<tr>

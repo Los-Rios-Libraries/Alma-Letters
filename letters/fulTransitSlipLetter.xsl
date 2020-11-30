@@ -17,8 +17,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
           <xsl:call-template name="bodyStyleCss" />
           <!-- style.xsl -->
         </xsl:attribute>
-        <xsl:call-template name="head" />
+       <!-- <xsl:call-template name="head" />-->
         <!-- header.xsl -->
+        <h1>@@letterName@@</h1>
         <div class="messageArea">
           <div class="messageBody">
             <table cellspacing="0" cellpadding="5" border="0">
