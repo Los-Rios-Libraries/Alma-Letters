@@ -20,7 +20,8 @@ table{ mso-table-lspace:0pt;   mso-table-rspace:0pt;}
 h1 {font-size:140%; margin:0; }
 h2{font-size:120%; margin:0;}
 h3 {font-size:100%; margin:0;}
- h4{line-height: 0.2em}
+ h4{line-height: 0.2em;}
+ a, a:visited {color:#252d65;}
  @media only screen and (max-width:480px){
    body {background: #fff !important; padding:0 !important;}
    table {width:100% !important;}
