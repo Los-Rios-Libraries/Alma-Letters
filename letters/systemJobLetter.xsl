@@ -395,7 +395,7 @@
 
 		<xsl:call-template name="lrGoToAlma" />
 
-		<xsl:call-template name="lrPatronFooter" />
+		<xsl:call-template name="lrStaffFooter" />
 			<!-- footer.xsl -->
 	  </body>
 	</html>
