@@ -32,10 +32,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<td>
 						<xsl:choose >
 							<xsl:when test="/notification_data/order_now_succed='true'">
-								<b>@@order_now_succed@@.</b>
+								@@order_now_succed@@.
 							</xsl:when>
 							<xsl:otherwise>
-								<b>@@order_now_failed@@ <xsl:value-of select="notification_data/need_review_entity" />.</b>
+								@@order_now_failed@@ <xsl:value-of select="notification_data/need_review_entity" />.
 							</xsl:otherwise>
 						</xsl:choose>
 
