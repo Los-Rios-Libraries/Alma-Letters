@@ -24,23 +24,22 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<xsl:call-template name="toWhomIsConcerned" />
             		
 					<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 0 12px 15px;">
-
 						<tr><td>@@jobCompletion@@</td></tr>
 						
 						<xsl:if test="/notification_data/report_type  !=''">
-							<tr><td><a>@@reportType@@ </a>
+							<tr><td>@@reportType@@
 								<xsl:value-of select="/notification_data/report_type" />
 							</td></tr>
 						</xsl:if>
 						
 						<xsl:if test="/notification_data/report_name  !=''">
-							<tr><td><a>@@reportName@@ </a>
+							<tr><td>@@reportName@@ 
 								<xsl:value-of select="/notification_data/report_name" />
 							</td></tr>
 						</xsl:if>
 					
 						<xsl:if test="/notification_data/report_description  !=''">
-							<tr><td><a>@@reportDescription@@ </a>
+							<tr><td>@@reportDescription@@
 								<xsl:value-of select="/notification_data/report_description" />
 							</td></tr>
 						</xsl:if>
@@ -49,10 +48,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							<td>
 								<xsl:choose >
 									<xsl:when test="/notification_data/file  !=''">
-										<a>@@reportsAttached@@</a>
+										@@reportsAttached@@
 									</xsl:when>
 									<xsl:otherwise>
-										<a>@@reportsNotAttached@@</a>
+										@@reportsNotAttached@@
 									</xsl:otherwise>
 								</xsl:choose>
 							</td>
