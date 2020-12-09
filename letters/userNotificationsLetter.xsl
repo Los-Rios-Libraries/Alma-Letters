@@ -22,7 +22,6 @@
 
 				<!--<xsl:call-template name="senderReceiver" />--> <!-- SenderReceiver.xsl -->
 
-				<br />
 				<xsl:call-template name="toWhomIsConcerned" /><!-- mailReason.xsl -->
 
 				<div class="messageArea">
@@ -125,70 +124,6 @@
 
 
 							</xsl:choose>
-						</table>
-						<br />
-						<table>
-
-							<!--<tr>
-								<td>@@Sincerely@@</td>
-							</tr>-->
-							<tr>
-								<td>
-									<!--<xsl:value-of select="notification_data/organization_unit/name" />-->
-									<span style="font-size:120%; font-weight:bold;"><a href="https://www.library.losrios.edu">The Los Rios Libraries</a></span>
-								</td>
-							</tr>
-							<xsl:if test="notification_data/organization_unit/address/line1 !=''">
-								<tr>
-									<td>
-										<xsl:value-of select="notification_data/organization_unit/address/line1" />
-									</td>
-								</tr>
-							</xsl:if>
-							<xsl:if test="notification_data/organization_unit/address/line2 !=''">
-								<tr>
-									<td>
-										<xsl:value-of select="notification_data/organization_unit/address/line2" />
-									</td>
-								</tr>
-							</xsl:if>
-							<xsl:if test="notification_data/organization_unit/address/line3 !=''">
-								<tr>
-									<td>
-										<xsl:value-of select="notification_data/organization_unit/address/line3" />
-									</td>
-								</tr>
-							</xsl:if>
-							<xsl:if test="notification_data/organization_unit/address/line4 !=''">
-								<tr>
-									<td>
-										<xsl:value-of select="notification_data/organization_unit/address/line4" />
-									</td>
-								</tr>
-							</xsl:if>
-							<xsl:if test="notification_data/organization_unit/address/line5 !=''">
-								<tr>
-									<td>
-										<xsl:value-of select="notification_data/organization_unit/address/line5" />
-									</td>
-								</tr>
-							</xsl:if>
-							<xsl:if test="notification_data/organization_unit/address/city !=''">
-								<tr>
-									<td>
-										<xsl:value-of select="notification_data/organization_unit/address/city" />
-									</td>
-								</tr>
-							</xsl:if>
-							<xsl:if test="notification_data/organization_unit/address/country !=''">
-								<tr>
-									<td>
-										<xsl:value-of select="notification_data/organization_unit/address/country" />
-									</td>
-								</tr>
-
-							</xsl:if>
-
 						</table>
 					</div>
 				</div>

@@ -84,11 +84,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 			</table>
 
-			<table align="center" width="600" style="width:600px; background:#fff; padding:12px;">
-				<tr><td>@@sincerely@@</td></tr>
-				<!-- <tr><td>@@department@@</td></tr> -->
-			</table>
-
 	  		</div>
         </div>
 <xsl:call-template name="lrGoToAccount" />
