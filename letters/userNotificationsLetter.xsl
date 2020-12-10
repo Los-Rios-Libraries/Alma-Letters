@@ -49,31 +49,17 @@
 								<xsl:when test="notification_data/notification_type = 'RETURN_DAYS'">
 									<tr>
 										<td>
-											<h3>Another Opportunity to Return Borrowed Items</h3>
-											<p style="margin-bottom:10px;">If you have borrowed books, videos, or technology, you can return them at specified times over the next two weeks.</p>
-  
-											<p style="margin-bottom:10px;">When returning a laptop or other device, you must return it to the college where you checked it out. If you have library books or videos, you may return them to any Los Rios college.</p>
-											
-											<table style="border:1px solid #ccc; width:80%; max-width:800px;margin-bottom:10px; padding:8px;"><caption style="text-align:left; font-weight:bold;">Schedule</caption>
-											<thead style="text-align:left;">
-												<tr>
-													<th style="text-align:left; width:35%;">Days</th>
-													<th style="text-align:left;">Times</th>
-												</tr>
-												<tr style="margin-bottom:10px;">
-													<td style="text-align:left; width:35%;">Monday, August 10 - Thursday, August 13 </td>
-													<td>10:00 am to 1:00 pm</td>
-												</tr>
-												<tr>
-													<td style="text-align:left; width:35%;">Monday, August 17 - Thursday, August 20 </td>
-													<td>10:00 am to 1:00 pm</td>
-												</tr>
-											</thead>
-											</table>
-											<p style="margin-bottom:10px;">In addition, evening opportunities will be available on <strong>Tuesday, August 11 and 18, from 6:00 to 8:00 pm at ARC, CRC and SCC only</strong>. Remember: you can return books and videos to any of the colleges.</p>
-											<p style="margin-bottom:10px;">Exact drop-off locations vary by college. Students should have received email with college-specific information in their Los Rios Gmail. <strong>We recommend you check your Los Rios Gmail regularly since all plans are subject to change.</strong></p>
-											<p style="margin-bottom:10px;">If you are receiving this email, we believe you currently have at least one item on loan. To find out what you have checked out, go to your <a href="https://www.library.losrios.edu/my-account">Library Account</a>. Note that when you return items, your account might continue to show that you have it borrowed for a week or longer.</p>
-											 
+											<p>If you have borrowed library materials, including technology such as laptops or Chromebooks, you may return them at specified times during Finals week.</p>
+											<p><strong>If you are not continuing as a student for the spring 2021 semester:</strong></p>
+											<p style="padding-left:1em;">Please return your device and any other library materials to the college you checked them out from.</p>
+											<p><strong>If you are continuing as a student for the spring 2021 semester:</strong> </p>
+											<p style="padding-left:1em;">Please keep the device if you still need it. Your due date will be extended.</p>
+											<p>Visit the web pages linked below for information on how to return any devices or library materials:</p>
+											<ul>
+												<li><a href="https://answers.library.losrios.edu/arc/faq/334191">ARC Library returns</a></li>
+												<li><a href="https://answers.library.losrios.edu/crc/faq/320267">CRC Library returns</a></li>
+												<li><a href="https://answers.library.losrios.edu/flc/faq/327551">FLC Library returns</a> </li>
+												<li><a href="https://answers.library.losrios.edu/scc/faq/316527">SCC Library returns</a></li></ul>
 										</td>
 									</tr>
 									
