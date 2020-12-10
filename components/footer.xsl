@@ -99,6 +99,29 @@
 			</tr>
 		</table>
 	</xsl:template>
+	<xsl:template name="lrDOFooter">
+		<table cellspacing="5" cellpadding="0" border="0" align="center" width="600">
+			<xsl:attribute name="style">
+				<xsl:call-template name="footerTableStyleCss" />
+				<!-- style.xsl -->
+			</xsl:attribute>
+			<tr>
+				<td>
+					<hr style="border:1px solid #ccc;" />
+				</td>
+			</tr>
+			<tr>
+
+				<td style="text-align:center;">
+					Sent by the <a href="https://losrios.edu/">Los Rios Community College District</a> on <xsl:value-of select="notification_data/general_data/current_date"/></td>
+			</tr>
+			<tr>
+				<td style="text-align:center; padding-top:12px;">
+					Please do not reply to this email. Responses will not be monitored.
+				</td>
+			</tr>
+		</table>
+	</xsl:template>
 
 
 	<xsl:template name="lastFooter">
