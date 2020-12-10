@@ -127,7 +127,8 @@
 						</table>
 					</div>
 				</div>
-				<xsl:call-template name="lastFooter" />
+				<xsl:call-template name="lrGoToAccount" />
+				<xsl:call-template name="lrPatronFooter" />
 				<!-- footer.xsl -->
 			</body>
 		</html>
