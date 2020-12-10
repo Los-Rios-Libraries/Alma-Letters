@@ -17,7 +17,8 @@
 					<xsl:call-template name="bodyStyleCss" />
 					<!-- style.xsl -->
 				</xsl:attribute>
-				<xsl:call-template name="head" />
+				<!--<xsl:call-template name="head" />-->
+				<xsl:call-template name="head-do" />
 				<!-- header.xsl -->
 
 				<!--<xsl:call-template name="senderReceiver" />--> <!-- SenderReceiver.xsl -->
@@ -45,6 +46,36 @@
 											<h3>@@Line_2@@</h3>
 										</td>
 									</tr>
+								</xsl:when>
+								<xsl:when test="notification_data/notification_type = 'DO_CHROMEBOOK_EXCHANGE'">
+									<tr>
+										<td>
+											<p>The Los Rios district has a limited number of refurbished desktop computers. You may be eligible to trade your Chromebook loan in for a desktop computer that will be yours to keep.</p>
+											<p>Desktop specs:</p>
+											<ul>
+												<li>23&quot; screen</li>
+												<li>30 lbs.</li>
+												<li>compact, all-in-one device (no separate tower)</li>
+												<li>Windows 10</li>
+												<li>enough memory and disk space for additional software.</li>
+											</ul>
+											<p>If you are interested in exchanging your Chromebook for a desktop, please fill out a request form.</p>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<table align="center" cellpadding="0" style="width:auto !important;">
+												<tr>
+													<td>
+														<a style="display:block;color:#ffffff;background:#252d65;font-size:13px;font-weight:bold;text-decoration:none;border:12px solid #252d65;border-radius: 4px; text-align:center;" href="https://hub.losrios.edu/secure/forms/studentDeviceRequest/exchange.php">Computer Exchange Request</a>
+													</td>
+												</tr>
+											</table>
+											<p>If desktops are available we will make arrangements for you to come in to pick it up.</p>
+
+										</td>
+									</tr>
+									
 								</xsl:when>
 								<xsl:when test="notification_data/notification_type = 'RETURN_DAYS'">
 									<tr>
@@ -113,8 +144,10 @@
 						</table>
 					</div>
 				</div>
-				<xsl:call-template name="lrGoToAccount" />
-				<xsl:call-template name="lrPatronFooter" />
+				<!--<xsl:call-template name="lrGoToAccount" />
+				<xsl:call-template name="lrPatronFooter" />-->
+				<xsl:call-template name="lrDOFooter" />
+
 				<!-- footer.xsl -->
 			</body>
 		</html>
