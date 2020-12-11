@@ -27,19 +27,19 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<tr><td>@@jobCompletion@@</td></tr>
 						
 						<xsl:if test="/notification_data/report_type  !=''">
-							<tr><td>@@reportType@@
+							<tr><td><strong>@@reportType@@</strong>
 								<xsl:value-of select="/notification_data/report_type" />
 							</td></tr>
 						</xsl:if>
 						
 						<xsl:if test="/notification_data/report_name  !=''">
-							<tr><td>@@reportName@@ 
+							<tr><td><strong>@@reportName@@</strong> 
 								<xsl:value-of select="/notification_data/report_name" />
 							</td></tr>
 						</xsl:if>
 					
 						<xsl:if test="/notification_data/report_description  !=''">
-							<tr><td>@@reportDescription@@
+							<tr><td><strong>@@reportDescription@@</strong>
 								<xsl:value-of select="/notification_data/report_description" />
 							</td></tr>
 						</xsl:if>
