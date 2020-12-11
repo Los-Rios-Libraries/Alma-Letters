@@ -32,63 +32,18 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</tr>
 				<tr>
 					<td>
-				<br />
-				@@title@@
-
-						<br />
-
+						<ul>
+							<li><strong>@@title@@ </strong> <xsl:value-of select="notification_data/title"/></li>
+							<xsl:if test="notification_data/poline_inventory/call_number">
+								<li style="padding-top:10px;"><strong>Location: </strong> <xsl:value-of select="notification_data/organization_unit/name"/> - <xsl:value-of select="notification_data/poline_inventory/location/location_name_for_display"/></li>
+								<li style="padding-top:10px;"><strong>@@callNumber@@ </strong> <xsl:value-of select="notification_data/poline_inventory/call_number"/></li>
+							</xsl:if>
+						</ul>
+													
 					</td>
-						<td>
-				<br />
-				<xsl:value-of  select="notification_data/title"/>
-
-						<br />
-
-					</td>
-					</tr>
+				</tr>
 				<tr>
 					<td>
-				<br />
-				@@mmsId@@:
-
-						<br />
-
-					</td>
-						<td>
-				<br />
-				<xsl:value-of  select="notification_data/mms_id"/>
-
-						<br />
-
-					</td>
-					</tr>
-					<tr>
-					<td>
-				<br />
-				@@callNumber@@:
-
-						<br />
-
-					</td>
-						<td>
-				<br />
-				<xsl:value-of  select="notification_data/poline_inventory/call_number"/>
-
-						<br />
-
-					</td>
-					</tr>
-					<tr>
-					<td>
-				<br />
-				@@message@@:
-
-						<br />
-
-					</td>
-						<td>
-				<br />
-				
 				<!-- Display patron-friendly message based on content of "message" in XML -->
 				<xsl:choose>
 					<xsl:when test="notification_data/message = 'E-resource was activated.'">
