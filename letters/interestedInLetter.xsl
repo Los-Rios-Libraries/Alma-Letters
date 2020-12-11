@@ -44,16 +44,18 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</tr>
 				<tr>
 					<td>
-				<!-- Display patron-friendly message based on content of "message" in XML -->
+						<!-- Display patron-friendly message based on content of "message" in XML -->
 				<xsl:choose>
 					<xsl:when test="notification_data/message = 'E-resource was activated.'">
-						The above resource will be available within the next 24 hours.
+						This resource should be available within 15 minutes.
 					</xsl:when>
 					<xsl:when test= "contains(notification_data/message, 'Will be available in 48 hours')">
 						The above item will be available in 48 hours.
 					</xsl:when>
 					<xsl:when test="notification_data/message = 'Item was received.'">
-						The above item is now in stock.
+						<p>This item has been received and will be viewable in OneSearch within 15 minutes.</p>
+						
+						<p>It may take some time for this item to get to the shelf. Shelving location and call number are subject to change. If you would like to request this item, please follow the prompts in OneSearch.</p>
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:value-of select="notification_data/message"/>
