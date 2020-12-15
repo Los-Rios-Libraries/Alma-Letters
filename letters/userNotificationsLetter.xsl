@@ -17,8 +17,8 @@
 					<xsl:call-template name="bodyStyleCss" />
 					<!-- style.xsl -->
 				</xsl:attribute>
-				<!--<xsl:call-template name="head" />-->
-				<xsl:call-template name="head-do" />
+				<xsl:call-template name="head" />
+				<!--<xsl:call-template name="head-do" />-->
 				<!-- header.xsl -->
 
 				<!--<xsl:call-template name="senderReceiver" />--> <!-- SenderReceiver.xsl -->
@@ -144,9 +144,9 @@
 						</table>
 					</div>
 				</div>
-				<!--<xsl:call-template name="lrGoToAccount" />
-				<xsl:call-template name="lrPatronFooter" />-->
-				<xsl:call-template name="lrDOFooter" />
+				<xsl:call-template name="lrGoToAccount" />
+				<xsl:call-template name="lrPatronFooter" />
+				<!--<xsl:call-template name="lrDOFooter" />-->
 
 				<!-- footer.xsl -->
 			</body>
