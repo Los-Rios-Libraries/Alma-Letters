@@ -80,7 +80,7 @@
 								<xsl:when test="notification_data/notification_type = 'RETURN_DAYS'">
 									<tr>
 										<td>
-											<p>If you have borrowed library materials, including technology such as laptops or Chromebooks, you may return them at specified times during Finals week.</p>
+											<p>If you have borrowed library materials, including technology such as laptops or Chromebooks, you may return them at specified times this week.</p>
 											<p><strong>If you are not continuing as a student for the spring 2021 semester:</strong></p>
 											<p style="padding-left:1em;">Please return your device and any other library materials to the college you checked them out from.</p>
 											<p><strong>If you are continuing as a student for the spring 2021 semester:</strong> </p>
