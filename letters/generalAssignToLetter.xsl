@@ -39,10 +39,9 @@
 					</td>
 				</tr>
 			</table>
-			<xsl:if test="notification_data/note">
 
-
-				
+			<xsl:if test="notification_data/note != ''">
+			
 				<table cellspacing="0" cellpadding="5" border="0"  width="600" style="width:600px; background:#fff; padding:0 8px 0 8px;" align="center">
 					<tr>
 						<td>
