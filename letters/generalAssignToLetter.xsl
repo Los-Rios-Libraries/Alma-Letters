@@ -65,6 +65,11 @@
 
 
 			</xsl:if>
+			<table cellspacing="0" cellpadding="5" border="0"  width="600" style="width:600px; background:#fff; padding:12px 8px 0 8px; text-align:center;" align="center">
+				<tr>
+					<td>Ready to work on it?</td>
+				</tr>
+			</table>
 			 <xsl:call-template name="lrGoToAlma" />
 			<xsl:call-template name="lrStaffFooter" />
 			<!-- footer.xsl -->
