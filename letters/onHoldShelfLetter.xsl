@@ -32,7 +32,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<div class="messageBody">
 					<table cellspacing="0" cellpadding="5" border="0" align="center" width="600" style="width:600px; text-align:left; background:#fff; padding-left:8px; padding-right:8px;">
 						<tr>
-							<td>@@following_item_requested_on@@ <xsl:value-of select="notification_data/request/create_date"/>, @@can_picked_at@@ <xsl:value-of select="notification_data/request/assigned_unit_name"/> @@circulation_desk@@.</td>
+							<td>The following item, which you requested on <xsl:value-of select="notification_data/request/create_date"/>, can be picked up at <xsl:value-of select="notification_data/request/assigned_unit_name"/> Circulation Desk.</td>
 						</tr>
 						<tr>
 							<td style="padding:16px;"><xsl:call-template name="recordTitle" /> <!-- recordTitle.xsl --></td>
@@ -40,13 +40,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<xsl:if test="notification_data/request/work_flow_entity/expiration_date">
 						<tr>
 							<td>
-							 @@note_item_held_until@@ <xsl:value-of select="notification_data/request/work_flow_entity/expiration_date"/>.
+							 The item will be held for you until <xsl:value-of select="notification_data/request/work_flow_entity/expiration_date"/>.
 							 </td>
 						</tr>
 						</xsl:if>
 						<xsl:if test="notification_data/request/system_notes != ''">
 						<tr>
-							<td><b>@@notes_affect_loan@@:</b></td>
+							<td><b>Notes on this loan:</b></td>
 						</tr>
 
 						<tr>
