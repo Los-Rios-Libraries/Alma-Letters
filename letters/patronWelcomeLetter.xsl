@@ -38,18 +38,7 @@
                                     @@welcome_message@@
                                 </td>
                             </tr>
-                            <tr>
-                                <td>@@closing_message@@</td>
-                            </tr>
-                        </table>
-                        <br />
-                        <table role='presentation' >
-                            <tr>
-                                <td>@@sincerely@@</td>
-                            </tr>
-                            <tr>
-                                <td>@@department@@</td>
-                            </tr>
+                            
                         </table>
                     </div>
                 </div>
