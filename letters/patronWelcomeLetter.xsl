@@ -32,7 +32,7 @@
 
                 <div class="messageArea">
                     <div class="messageBody">
-                        <table role='presentation'  cellspacing="0" cellpadding="5" border="0">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 12px 12px 15px;">
                             <tr>
                                 <td>
                                     @@welcome_message@@
