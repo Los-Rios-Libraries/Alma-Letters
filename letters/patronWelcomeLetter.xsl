@@ -35,7 +35,37 @@
                         <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 12px 12px 15px;">
                             <tr>
                                 <td>
-                                    @@welcome_message@@
+                                    <p>As
+                                    <xsl:choose>
+                                        <xsl:when test="/notification_data/receivers/receiver/user/user_group = 'STUDENT'">
+                                            a student
+                                        </xsl:when>
+                                        
+                                   
+                                     <xsl:when test="/notification_data/receivers/receiver/user/user_group = 'EMPLOYEE'">
+                                         an employee
+                                    </xsl:when>
+                                     <xsl:otherwise>
+                                        a student or employee
+                                     </xsl:otherwise>
+                                      </xsl:choose>
+                                    in the Los Rios Community College District, you have access to services and resources from your college library.
+                                    </p>
+                                    <p>
+                                        Take a minute to explore:
+                                        <ul>
+                                            <li>Your <a href="https://library.losrios.edu">library website</a>, where you&apos;ll find current information regarding availability of services. Note that during the pandemic, libraries are not open for browsing, studying or computer use.</li>
+                                            <li><a href="https://library.losrios.edu/onesearch">OneSearch</a>, your main search tool for finding books, articles, video and other library materials.</li>
+                                            <li><a href="https://library.losrios.edu/resources/databases/">Research Databases</a> providing online resources in various subject areas.
+                                            <xsl:if test="/notification_data/receivers/receiver/user/user_group = 'STUDENT'">
+                                                <em>Note:</em> access to databases may not be available between semesters.
+                                            </xsl:if> </li>
+                                            <li>Your <a href="https://library.losrios.edu/my-account">library account</a>, which will allow you to monitor your loans, renew items, and store favorite searches and articles.</li>
+                                        </ul>
+                                    </p>
+                                    <p>Once the semester has started, you can ask librarians questions 24/7 using the Ask a Librarian icons you&apos;ll find on your library&apos;s website, in OneSearch, and certain other places. If a Los Rios librarian is not available when you ask, a professional librarian from another college will field your questions. </p>
+                                    <p>During the pandemic, access to print library materials is more limited than normal. Please check your library website and read messages in OneSearch for updated information.</p>
+                                    <p>@@closing_message@@</p>
                                 </td>
                             </tr>
                             
