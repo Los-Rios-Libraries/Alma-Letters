@@ -45,7 +45,9 @@
 								<!--Reorder table columns, loan and due dates to the right; remove description column-->
 								<tr align="left">
 									<th>@@title@@</th>
-									<th>@@author@@</th>
+                  <xsl:if test="item_loans/overdue_and_lost_loan_notification_display/item_loan/author !=''">
+                    <th>@@author@@</th>
+                  </xsl:if>
 									<th>@@library@@</th>
 									<th>@@loan_date@@</th>
 									<th>@@due_date@@</th>
@@ -55,7 +57,9 @@
 								<xsl:for-each select="item_loans/overdue_and_lost_loan_notification_display/item_loan">
 									<tr>
 										<td><xsl:value-of select="title"/></td>
-										<td><xsl:value-of select="author"/></td>
+                    <xsl:if test="author !=''">
+                      <td><xsl:value-of select="author"/></td>
+                    </xsl:if>
 										<td><xsl:value-of select="library_name"/></td>
 										<td><xsl:value-of select="loan_date"/></td>
 										<td><xsl:value-of select="new_due_date_str"/></td>
