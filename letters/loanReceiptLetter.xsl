@@ -25,7 +25,7 @@
 		<div class="messageArea">
         <div class="messageBody">
 
-        	<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 0 12px 15px;">
+        	<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 0 12px 15px;table-layout:fixed; word-wrap:break-word;">
 				<tr>
 					<td>
 						<p>@@inform_loaned_items@@ <xsl:value-of select="notification_data/organization_unit/name" />:</p>
@@ -35,10 +35,7 @@
               	<xsl:for-each select="notification_data/loans_by_library/library_loans_for_display">
 					<tr>
 						<td>
-							<table cellpadding="5" class="listing">
-								<xsl:attribute name="style">
-									<xsl:call-template name="mainTableStyleCss" />
-								</xsl:attribute>
+							<table  cellspacing="0" cellpadding="5" border="0" align="center" style="background:#fff; table-layout:fixed;">
 								<tr align="center" bgcolor="#f5f5f5">
 									<td colspan="6">
 										<h3><xsl:value-of select="organization_unit/name" /></h3>
