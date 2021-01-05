@@ -43,7 +43,7 @@
 								</tr>
 								
 								<!--Reorder table columns, loan and due dates to the right; remove description column-->
-								<tr>
+								<tr align="left">
 									<th>@@title@@</th>
 									<th>@@author@@</th>
 									<th>@@library@@</th>
