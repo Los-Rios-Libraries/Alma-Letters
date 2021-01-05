@@ -65,7 +65,6 @@
 							</table>
 						</td>
 					</tr>
-					<hr/>
 				</xsl:for-each>
 			</table>
 
