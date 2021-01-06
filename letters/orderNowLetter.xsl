@@ -42,6 +42,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<br />
 					<br /><b>@@pol_reference@@: </b><xsl:value-of select="notification_data/line_reference" />
 					<br /><b>@@order_number@@: </b><xsl:value-of select="notification_data/number" />
+          <br /><b>Title: </b><xsl:value-of select="notification_data/line_title" />
 					</td>
 				</tr>
 					<tr>
