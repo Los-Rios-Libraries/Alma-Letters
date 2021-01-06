@@ -48,9 +48,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<tr>
 					<td>
 
-					<br />
+            <br />
             <xsl:if test="notification_data/vendor_note != ''">
-					<b>@@vendor_note@@: </b><xsl:value-of select="notification_data/vendor_note" />
+              <b>@@vendor_note@@: </b><xsl:value-of select="notification_data/vendor_note" />
             </xsl:if>
 					<xsl:choose >
 							<xsl:when test="/notification_data/rush='true'">
@@ -65,7 +65,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</table>
           </div>
         </div>
-				
+				<table cellspacing="0" cellpadding="5" border="0"  width="600" style="width:600px; background:#fff; padding:12px 8px 0 8px; text-align:center;" align="center">
+				<tr>
+					<td>Need to check up on it?</td>
+				</tr>
+			</table>
 		<xsl:call-template name="lrGoToAlma" /> <!--staff call to action-->
 		
 		<xsl:call-template name="lrStaffFooter" /><!-- footer.xsl -->
