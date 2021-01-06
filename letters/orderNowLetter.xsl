@@ -49,8 +49,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<td>
 
 					<br />
+            <xsl:if test="notification_data/vendor_note != ''">
 					<b>@@vendor_note@@: </b><xsl:value-of select="notification_data/vendor_note" />
-
+            </xsl:if>
 					<xsl:choose >
 							<xsl:when test="/notification_data/rush='true'">
 								<br /><b>@@rush@@.</b>
