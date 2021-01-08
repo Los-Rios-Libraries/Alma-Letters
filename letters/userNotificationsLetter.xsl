@@ -80,11 +80,10 @@
 								<xsl:when test="notification_data/notification_type = 'RETURN_DAYS'">
 									<tr>
 										<td>
-											<p>If you have borrowed library materials, including technology such as laptops or Chromebooks, you may return them at specified times this week.</p>
-											<p><strong>If you are not continuing as a student for the spring 2021 semester:</strong></p>
-											<p style="padding-left:1em;">Please return your device and any other library materials to the college you checked them out from.</p>
-											<p><strong>If you are continuing as a student for the spring 2021 semester:</strong> </p>
-											<p style="padding-left:1em;">Please keep the device if you still need it. Your due date will be extended.</p>
+											<p>According to our records, you currently have a Chromebook or laptop on loan from the college, and so far you have not enrolled for the spring 2021 semester. There will be opportunities to return this device beginning next week.</p>
+											<p><em>By returning your device, you will be helping other students during this difficult time.</em></p>
+											<p>Please return your device and any other library materials to the college you checked them out from.</p>
+											<p>If you are continuing as a student for the spring 2021 semester, please keep the device if you still need it. Your due date will be extended.</p>
 											<p>Visit the web pages linked below for information on how to return any devices or library materials:</p>
 											<ul>
 												<li><a href="https://answers.library.losrios.edu/arc/faq/334191">ARC Library returns</a></li>
