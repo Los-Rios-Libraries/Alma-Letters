@@ -34,14 +34,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					The <xsl:value-of select="notification_data/organization_unit/name"/>&#160;<xsl:value-of select="notification_data/circ_desk_name"/> @@inform_returned_items@@&#58;
 				</td>
 				</tr>
-<!--
-				<tr>
-              	<td>
-					<b>@@loans@@</b>
-                </td>
-              	</tr>
--->
-              	<xsl:for-each select="notification_data/loans_by_library/library_loans_for_display">
+        <xsl:for-each select="notification_data/loans_by_library/library_loans_for_display">
 					<tr>
 						<td>
 							<table cellpadding="2" class="listing">
