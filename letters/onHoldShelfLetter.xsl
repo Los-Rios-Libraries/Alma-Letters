@@ -32,11 +32,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<div class="messageBody">
 					<table cellspacing="0" cellpadding="5" border="0" align="center" width="600" style="width:600px; text-align:left; background:#fff; padding-left:8px; padding-right:8px;">
 						<tr>
-							<td>The following item, which you requested on <xsl:value-of select="notification_data/request/create_date"/>, can be picked up at <xsl:value-of select="notification_data/request/assigned_unit_name"/> Circulation Desk.</td>
+							<td>
+								The following library material(s) you requested  on <xsl:value-of select="notification_data/request/create_date"/> are now available for pickup from the <!--<xsl:value-of select="notification_data/request/assigned_unit_name"/>-->
+								<xsl:value-of select="/notification_data/organization_unit/name" />.
+							</td>
 						</tr>
 						<tr>
 							<td style="padding:16px;"><xsl:call-template name="recordTitle" /> <!-- recordTitle.xsl --></td>
 						</tr>
+
 						<xsl:if test="notification_data/request/work_flow_entity/expiration_date">
 						<tr>
 							<td>
