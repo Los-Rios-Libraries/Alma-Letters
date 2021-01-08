@@ -48,17 +48,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							 </td>
 						</tr>
 						</xsl:if>
-						<xsl:if test="notification_data/request/system_notes != ''">
+						<!-- pickup schedule -->
 						<tr>
-							<td><b>Notes on this loan:</b></td>
 						</tr>
-
 						<tr>
 							<td><xsl:value-of select="notification_data/request/system_notes"/></td>
 						</tr>
 
 						</xsl:if>
 
+						<xsl:if test="notification_data/request/system_notes != ''">
+						<tr>
+							<td><b>Note: </b><xsl:value-of select="notification_data/request/system_notes"/></td>
+						</tr>
+						</xsl:if>
 					</table>
 					<xsl:call-template name="lrGoToAccount" />
         <!-- footer.xsl -->
