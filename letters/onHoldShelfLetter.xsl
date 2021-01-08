@@ -52,7 +52,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<tr>
 						</tr>
 						<tr>
-							<td><xsl:value-of select="notification_data/request/system_notes"/></td>
 						</tr>
 
 						</xsl:if>
