@@ -139,7 +139,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								<xsl:when test="/notification_data/organization_unit/name = 'Folsom Lake College Library'">
 									<!-- FLC details -->
 									<p>Pick up your items in front of Aspen Hall. When you arrive, call the library at (916) 608-6613 so we can bring your items to the table outside.</p>
-									<!--<p>For more details about curbside pickup, please visit [FAQ page here]</p>-->
+									<p>For more details about curbside pickup, please see the <a href="https://answers.library.losrios.edu/flc/faq/334580">curbside pickup FAQ</a>.</p>
 									
 								</xsl:when>
 								<xsl:when test="/notification_data/organization_unit/name = 'Sacramento City College Library'">
