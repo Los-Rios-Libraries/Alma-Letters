@@ -77,7 +77,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								</table>
 							</td>
 						</tr>
-						<hr/><br/>
 					</xsl:for-each>
 					<xsl:if test="notification_data/overdue_notification_fee_amount/sum !=''">
 						<tr>
@@ -87,21 +86,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							</td>
 						</tr>
 					</xsl:if>
-					<br />
-					<br />
-					@@additional_info_1@@
-					<br />
-					@@additional_info_2@@
-					<br />
 
-					<table>
-						<tr><td>@@sincerely@@</td></tr>
-						<tr><td>@@department@@</td></tr>
-					</table>
+					
+
 				</table>
-				<br />
 
-				<xsl:call-template name="lastFooter" /> <!-- footer.xsl -->
+				<xsl:call-template name="lrGoToAccount" />
+        <!-- footer.xsl -->
+        <xsl:call-template name="lrPatronFooter" />
 			</body>
 	</html>
 </xsl:template>
