@@ -74,8 +74,21 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								<xsl:for-each select="notification_data/process_requests/ful_request_interpated">
 								<tr>
 									<td><xsl:value-of select="title_display"/></td>
-									<td><xsl:value-of select="request_status_display"/></td>
-									<td><xsl:value-of select="pickup_location_display"/></td>
+									<td>
+										<xsl:choose>
+											<xsl:when test="request_status_display = 'Pickup From Shelf'">
+												Staff have not yet retrieved this item for pickup
+											</xsl:when>
+											
+											<xsl:otherwise>
+												<xsl:value-of select="request_status_display"/>
+											</xsl:otherwise>
+										</xsl:choose>
+										
+										</td>
+									<td>
+										<xsl:value-of select="pickup_location_display"/>
+									</td>
 								</tr>
 								</xsl:for-each>
 							</table>
