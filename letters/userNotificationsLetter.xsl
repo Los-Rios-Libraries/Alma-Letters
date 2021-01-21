@@ -97,20 +97,10 @@
 								<xsl:when test="notification_data/notification_type = 'CUSTOM_LETTER_SCC'">
 									<tr>
 										<td>
-											<p>Do you need help finding materials for your research paper or projects?</p>
-  
-											<p>Do you have questions about citations?</p>
-											<p style="margin-bottom:10px;">Do you have other general questions?</p>
-											<p>Friendly SCC faculty librarians are here to help you!</p>
-											<ul>
-												<li>Chat with a librarian 24/7 by clicking the "Ask a Librarian" button on the <a href="https://www.scc.losrios.edu/library">SCC Library website</a> or <a href="https://caccl-lrccd.primo.exlibrisgroup.com/discovery/search?vid=01CACCL_LRCCD&#58;scc">OneSearch</a></li>
-												<li><a href="https://www.library.losrios.edu/ask-us/?scc">Send us an email</a></li>
-												<li><a href="https://caccl-lrccd.primo.exlibrisgroup.com/discovery/search?vid=01CACCL_LRCCD&#58;scc">Use OneSearch</a> to find online resources like ebooks, articles, and videos.</li>
-												<li>For more in-depth reference, research, or citations questions, students can book a <a href="https://www.supersaas.com/schedule/SCC_Library/Research_Appointments?m=0">Zoom Research Appointment</a> with a librarian.</li>
-												<li><a href="https://www.scc.losrios.edu/student-resources/library/research/pilot-tutorials">PILOT Tutorials</a> (Pathway to Information Literacy) will improve your research skills, including finding sources, evaluating sources for reliability, and MLA or APA citation. You can self-enroll through Canvas and choose which modules to complete.</li>
-												<li>Also: <a href="https://researchguides.scc.losrios.edu/election-2020">Election 2020 Guide</a> for the presidential, CA State and local elections.</li>
-											</ul>
-											<p>Please do not reply to this email. Responses will not be monitored.</p>
+											<p>Thank you for submitting a request for library materials from Sacramento City College.</p>
+											<p>We are working on getting these ready, but given the large number of tasks library personnel are working on in limited hours, we have determined that <strong>your request will not be ready until next week</strong>.</p>
+											<p>When your items are ready for pickup, you will receive a separate email, which will explain the pickup process in more detail.</p>
+											<p>We apologize for the inconvenience and wish you a good start to your semester.</p>
 										</td>
 									</tr>
 									
