@@ -24,7 +24,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<xsl:call-template name="senderReceiver" /> <!-- SenderReceiver.xsl -->
 				<xsl:call-template name="toWhomIsConcerned" /> <!-- mailReason.xsl -->
 
-				<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 0 12px 15px;">
+				<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 12px 12px 15px;table-layout:fixed; word-wrap:break-word;">
 					<tr>
 						<td>
 							<p>@@please_find_below@@</p><br />
@@ -39,11 +39,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</tr>
 					<tr>
 						<td>
-							<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 0 12px 15px;">
-								<tr>
-								<xsl:attribute name="style">
-									<xsl:call-template name="headerTableStyleCss" /> <!-- style.xsl -->
-								</xsl:attribute>
+							<table cellspacing="0" cellpadding="0" border="0" align="center" style="background:#fff; padding: 12px 0 12px 15px; ">
+								<tr style="text-align:left;">
 									<th>@@title@@</th>
 									<th>@@author@@</th>
 									<th>@@place_in_queue@@</th>
@@ -69,11 +66,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</tr>
 					<tr>
 						<td>
-							<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 0 12px 15px;">
-								<tr>
-								<xsl:attribute name="style">
-									<xsl:call-template name="headerTableStyleCss" /> <!-- style.xsl -->
-								</xsl:attribute>
+							<table cellspacing="0" cellpadding="0" border="0" align="center" style="background:#fff; padding: 12px 0 12px 15px;">
+								<tr style="text-align:left;">
 									<th>@@title@@</th>
 									<th>@@author@@</th>
 									<th>@@status@@</th>
@@ -101,11 +95,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</tr>
 					<tr>
 						<td>
-							<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 0 12px 15px;">
-								<tr>
-								<xsl:attribute name="style">
-									<xsl:call-template name="headerTableStyleCss" /> <!-- style.xsl -->
-								</xsl:attribute>
+							<table cellspacing="0" cellpadding="0" border="0" align="center" style="background:#fff; padding: 12px 0 12px 15px;">
+								<tr style="text-align:left;">
 									<th>@@title@@</th>
 									<th>@@author@@</th>
 									<th>@@status@@</th>
@@ -119,7 +110,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 									<td><xsl:value-of select="pickup_location_display"/></td>
 								</tr>
 								</xsl:for-each>
-							</table><hr/><br />
+							</table>
 						</td>
 					</tr>
 					</xsl:if>
