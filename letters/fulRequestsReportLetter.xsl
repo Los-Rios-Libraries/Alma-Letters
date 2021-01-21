@@ -42,14 +42,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							<table cellspacing="0" cellpadding="0" border="0" align="center" style="background:#fff; padding: 12px 0 12px 15px; ">
 								<tr style="text-align:left;">
 									<th>@@title@@</th>
-									<th>@@author@@</th>
 									<th>@@place_in_queue@@</th>
 									<th>@@pickup_location@@</th>
 								</tr>
 								<xsl:for-each select="notification_data/non_active_requests/ful_request_interpated">
 								<tr>
 									<td><xsl:value-of select="title_display"/></td>
-									<td><xsl:value-of select="author_display"/></td>
 									<td><xsl:value-of select="place_in_queue"/></td>
 									<td><xsl:value-of select="pickup_location_display"/></td>
 								</tr>
@@ -69,7 +67,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							<table cellspacing="0" cellpadding="0" border="0" align="center" style="background:#fff; padding: 12px 0 12px 15px;">
 								<tr style="text-align:left;">
 									<th>@@title@@</th>
-									<th>@@author@@</th>
 									<th>@@status@@</th>
 									<th>@@pickup_location@@</th>
 								</tr>
@@ -77,7 +74,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								<xsl:for-each select="notification_data/process_requests/ful_request_interpated">
 								<tr>
 									<td><xsl:value-of select="title_display"/></td>
-									<td><xsl:value-of select="author_display"/></td>
 									<td><xsl:value-of select="request_status_display"/></td>
 									<td><xsl:value-of select="pickup_location_display"/></td>
 								</tr>
@@ -98,14 +94,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							<table cellspacing="0" cellpadding="0" border="0" align="center" style="background:#fff; padding: 12px 0 12px 15px;">
 								<tr style="text-align:left;">
 									<th>@@title@@</th>
-									<th>@@author@@</th>
 									<th>@@status@@</th>
 									<th>@@pickup_location@@</th>
 								</tr>
 								<xsl:for-each select="notification_data/hold_shelf_requests/ful_request_interpated">
 								<tr>
 									<td><xsl:value-of select="title_display"/></td>
-									<td><xsl:value-of select="author_display"/></td>
 									<td><xsl:value-of select="request_status_display"/></td>
 									<td><xsl:value-of select="pickup_location_display"/></td>
 								</tr>
