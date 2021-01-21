@@ -141,6 +141,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						</td>
 					</tr>
 					</xsl:if>
+					<tr>
+						<td style="padding:12px 12px 12px 15px;">
+							<p>Please follow your library&apos;s guidance on picking up library materials during the temporary library closures. You should receive a separate email when items become ready for pickup.</p>
+						</td>
+					</tr>
 				</table>
 
 				<!-- footer.xsl -->
