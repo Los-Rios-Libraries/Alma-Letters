@@ -114,7 +114,27 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								<tr>
 									<td><xsl:value-of select="title_display"/></td>
 									<td><xsl:value-of select="request_status_display"/></td>
-									<td><xsl:value-of select="pickup_location_display"/></td>
+									<td>
+										<!--Some changes for closure situation below - get rid of "circulation desk"-->
+										<!--<xsl:value-of select="pickup_location_display"/>-->
+										<xsl:choose>
+											<xsl:when test="pickup_location_display = 'American River College Library - Circulation Desk'">
+												American River College Library
+											</xsl:when>
+											<xsl:when test="pickup_location_display = 'Cosumnes River College Library - Circulation Desk'">
+												Cosumnes River College Library
+											</xsl:when>
+											<xsl:when test="pickup_location_display = 'Folsom Lake College Library - Circulation Desk'">
+												Folsom Lake College Library
+											</xsl:when>
+											<xsl:when test="pickup_location_display = 'Sacramento City College Library - Circulation Desk'">
+												Sacramento City College Library
+											</xsl:when>
+											<xsl:otherwise>
+												<xsl:value-of select="pickup_location_display"/>
+											</xsl:otherwise>
+										</xsl:choose>
+									</td>
 								</tr>
 								</xsl:for-each>
 							</table>
