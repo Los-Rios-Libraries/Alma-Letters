@@ -68,7 +68,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								<tr style="text-align:left;">
 									<th>@@title@@</th>
 									<th>@@status@@</th>
-									<th>@@pickup_location@@</th>
+									<th>Processed by</th>
 								</tr>
 
 								<xsl:for-each select="notification_data/process_requests/ful_request_interpated">
