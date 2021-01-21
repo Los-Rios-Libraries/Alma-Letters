@@ -31,50 +31,37 @@
 			</xsl:attribute>
 
 				<xsl:call-template name="head" /> <!-- header.xsl -->
-				<table role='presentation'  cellspacing="0" cellpadding="5" border="0">
-					<tr>
-						<td>
-							<h3>@@dear@@</h3>
-						</td>
-					</tr>
+				<xsl:call-template name="toWhomIsConcerned" /> <!-- mailReason.xsl -->
 
-				</table>
 				<div class="messageArea">
 					<div class="messageBody">
-						<table role='presentation'  cellspacing="0" cellpadding="5" border="0">
+						<table role="presentation"  cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; table-layout:fixed; word-wrap:break-word;">
 							<tr>
-								<td>
-									<h>@@find_attached@@ </h>
+								<td style="font-size:100%; padding:12px;">
+									@@find_attached@@
 								</td>
 							</tr>
 						</table>
-
-						<br />
-						<br />
-						<table role='presentation' >
-							<tr>
-								<td>@@sincerely@@</td>
-							</tr>
-							<tr>
-								<td>@@from@@</td>
-							</tr>
-						</table>
-						<br />
-					</div>
-				</div>
-
-				<xsl:call-template name="lastFooter" /> <!-- footer.xsl -->
-				<br />
-				<table role='presentation' >
-					<xsl:if test="notification_data/file_name !=''">
+						<xsl:if test="notification_data/file_name !=''">
+						<table role="presentation"  cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; table-layout:fixed; word-wrap:break-word;">
+					
 						<tr>
-							<td>
+							<td style="padding:12px;">
 								<strong> @@file_name@@:  </strong>
 								<xsl:value-of select="notification_data/file_name" />
 							</td>
 						</tr>
-					</xsl:if>
+					
 				</table>
+						</xsl:if>
+
+					
+					</div>
+				</div>
+				
+				<xsl:call-template name="lrGoToAccount" />
+						  <!-- footer.xsl -->
+				<xsl:call-template name="lrPatronFooter" />
 			</body>
 		</html>
 	</xsl:template>
