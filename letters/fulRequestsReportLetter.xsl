@@ -108,12 +108,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								<tr style="text-align:left;">
 									<th>@@title@@</th>
 									<th>@@status@@</th>
+									<th>Held until</th>
 									<th>@@pickup_location@@</th>
 								</tr>
 								<xsl:for-each select="notification_data/hold_shelf_requests/ful_request_interpated">
 								<tr>
 									<td><xsl:value-of select="title_display"/></td>
 									<td><xsl:value-of select="request_status_display"/></td>
+									<td><xsl:value-of select="work_flow_entity/expiration_date" /></td>
 									<td>
 										<!--Some changes for closure situation below - get rid of "circulation desk"-->
 										<!--<xsl:value-of select="pickup_location_display"/>-->
