@@ -35,7 +35,7 @@
               	<xsl:for-each select="notification_data/loans_by_library/library_loans_for_display">
 					<tr>
 						<td>
-							<table  cellspacing="0" cellpadding="5" border="0" align="center" style="background:#fff; table-layout:fixed;">
+							<table  cellspacing="0" cellpadding="5" border="0" align="center" style="background:#fff;">
 								<tr align="center" bgcolor="#f5f5f5">
 									<td colspan="5">
 										<h3><xsl:value-of select="organization_unit/name" /></h3>
