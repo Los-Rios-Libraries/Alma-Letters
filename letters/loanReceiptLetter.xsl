@@ -37,7 +37,7 @@
 						<td>
 							<table  cellspacing="0" cellpadding="5" border="0" align="center" style="background:#fff; table-layout:fixed;">
 								<tr align="center" bgcolor="#f5f5f5">
-									<td colspan="6">
+									<td colspan="5">
 										<h3><xsl:value-of select="organization_unit/name" /></h3>
 									</td>
 								</tr>
