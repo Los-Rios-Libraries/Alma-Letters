@@ -111,11 +111,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								<xsl:choose>
 								<xsl:when test="/notification_data/organization_unit/name = 'American River College Library'">
 									<!-- ARC details -->
-									Please enter campus from College Oak Drive near the stadium/parking garage. <a href="https://arc.losrios.edu/arc/shared/doc/ARC-CAMPUS-MAP-2019.pdf">View campus map.</a>  Follow the signs indicating <strong>ARC Pick Up</strong> to the Portable Village near Davies Hall and the ARC PD Station. Staff will be available to safely approach your vehicle to assist you. Please be prepared with a mask and your ID.
+									<p>Please enter campus from College Oak Drive near the stadium/parking garage. <a href="https://arc.losrios.edu/arc/shared/doc/ARC-CAMPUS-MAP-2019.pdf">View campus map.</a>  Follow the signs indicating <strong>ARC Pick Up</strong> to the Portable Village near Davies Hall and the ARC PD Station. Staff will be available to safely approach your vehicle to assist you. Please be prepared with a mask and your ID.</p>
+									<p>For more details on picking up library materials, please <a href="https://answers.library.losrios.edu/arc/faq/336290">see our web page</a>.</p>
 								</xsl:when>
 								<xsl:when test="/notification_data/organization_unit/name = 'Cosumnes River College Library'">
 									<!-- CRC details -->
-									Pick up your items in front of the maintenance building next to Lot I. <a href="https://drive.google.com/file/d/1a8PWteG_sYsBPAhWNnMOkFc_sbQYrL9O/view?usp=sharing">See campus map</a>.
+									<p>Pick up your items in front of the maintenance building next to Lot I. <a href="https://drive.google.com/file/d/1a8PWteG_sYsBPAhWNnMOkFc_sbQYrL9O/view?usp=sharing">See campus map</a>.</p>
+									<p>For more details on picking up library materials, please <a href="https://answers.library.losrios.edu/crc/faq/335859">see our web page</a>.</p>
 
 								</xsl:when>
 								<xsl:when test="/notification_data/organization_unit/name = 'Folsom Lake College Library'">
@@ -129,6 +131,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 									<p>Pick up your items behind the LRC/Library building by the bookdrop near the &quot;C&quot; parking lot on the south side of campus.</p>
 									<p><a href="https://goo.gl/maps/A7hFryREWurmaVE27" title="View location on Google Maps"><img src="https://libapps.s3.amazonaws.com/accounts/816/images/Chromebook_spot.png" alt="pickup location" /></a></p>
 									<p>When you arrive, please call the library at (916) 558-2301 so we can bring out your items. Please be prepared to tell our staff your student ID number.</p>
+									<p>For more details on picking up library materials, please <a href="https://answers.library.losrios.edu/scc/faq/335622">see our pickup web page</a>.</p>
 
 								</xsl:when>
 								<xsl:otherwise>
