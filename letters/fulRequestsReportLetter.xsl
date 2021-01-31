@@ -27,7 +27,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 12px 12px 15px;table-layout:fixed; word-wrap:break-word;">
 					<tr>
 						<td>
-							<p>@@please_find_below@@</p><br />
+							<p>@@please_find_below@@</p>
 						</td>
 					</tr>
 
