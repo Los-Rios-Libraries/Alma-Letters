@@ -33,7 +33,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 					<xsl:if test="notification_data/non_active_requests/ful_request_interpated">
 					<tr>
-						<td>
+						<td style="padding-top:14px;">
 						<h3>@@not_active@@</h3>
 						</td>
 					</tr>
@@ -58,13 +58,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</xsl:if>
 					<xsl:if test="notification_data/process_requests/ful_request_interpated">
 					<tr>
-						<td>
+						<td style="padding-top:14px;">
 						<h3>@@in_process@@</h3>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<table cellspacing="0" cellpadding="0" border="0" align="center" style="background:#fff; padding: 12px 0 12px 15px;">
+							<table cellspacing="0" cellpadding="5" border="0" align="center" style="background:#fff; padding: 12px 0 12px 15px;">
 								<tr style="text-align:left;">
 									<th>@@title@@</th>
 									<th>@@status@@</th>
