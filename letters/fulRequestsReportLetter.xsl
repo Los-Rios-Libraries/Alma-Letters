@@ -94,6 +94,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							</table>
 						</td>
 					</tr>
+					<td>Please note that any items listed above are <em>not</em> yet ready be picked up. You will receive an email from the library when they are ready.</td>
 					</xsl:if>
 
 					<xsl:if test="notification_data/hold_shelf_requests/ful_request_interpated">
@@ -142,12 +143,26 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							</table>
 						</td>
 					</tr>
-					</xsl:if>
 					<tr>
 						<td style="padding:12px 12px 12px 15px;">
-							<p>Please follow your library&apos;s guidance on picking up library materials during the temporary library closures. You should receive a separate email when items become ready for pickup.</p>
+							<p>Please follow your library&apos;s guidance on picking up library materials during the temporary library closures. See instructions from:</p>
+							<ul>
+								<li>
+									<a href="https://libguides.arc.losrios.edu/closure/library_materials"><abbr title="American River College">ARC</abbr></a>
+								</li>
+								<li>
+									<a href="https://answers.library.losrios.edu/crc/faq/335859"><abbr title="Cosumnes River College">CRC</abbr></a>
+								</li>
+								<li>
+									<a href="https://researchguides.flc.losrios.edu/library_closure/checkout"><abbr title="Folsom Lake College">FLC</abbr></a>
+								</li>
+								<li>
+									<a href="https://answers.library.losrios.edu/scc/faq/335622"><abbr title="Sacramento City College">SCC</abbr></a>
+								</li>
+							</ul>
 						</td>
 					</tr>
+					</xsl:if>
 				</table>
 
 				<!-- footer.xsl -->
