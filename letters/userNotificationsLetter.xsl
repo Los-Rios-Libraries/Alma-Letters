@@ -35,7 +35,7 @@
 								<xsl:when test="notification_data/notification_type = 'NOTIFY_PASSWORD_CHANGE' ">
 									<tr>
 										<td>
-											<h3>@@Line_1@@</h3>
+											<h3>@@Line_19@@</h3>
 											<xsl:value-of select="notification_data/temp_password" />
 										</td>
 
@@ -43,7 +43,7 @@
 									<tr>
 
 										<td>
-											<h3>@@Line_2@@</h3>
+											<h3>@@Line_20@@</h3>
 										</td>
 									</tr>
 								</xsl:when>
