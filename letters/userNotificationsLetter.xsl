@@ -80,55 +80,55 @@
 								<xsl:when test="notification_data/notification_type = 'RETURN_DAYS'">
 									<tr>
 										<td>
-											<p>According to our records, you currently have a Chromebook or laptop on loan from the college, and so far you have not enrolled for the spring 2021 semester. There will be opportunities to return this device beginning next week.</p>
-											<p><em>By returning your device, you will be helping other students during this difficult time.</em></p>
-											<p>Please return your device and any other library materials to the college you checked them out from.</p>
-											<p>If you are continuing as a student for the spring 2021 semester, please keep the device if you still need it. Your due date will be extended.</p>
-											<p>Visit the web pages linked below for information on how to return any devices or library materials:</p>
-											<ul>
-												<li><a href="https://answers.library.losrios.edu/arc/faq/334191">ARC Library returns</a></li>
-												<li><a href="https://answers.library.losrios.edu/crc/faq/320267">CRC Library returns</a></li>
-												<li><a href="https://answers.library.losrios.edu/flc/faq/327551">FLC Library returns</a> </li>
-												<li><a href="https://answers.library.losrios.edu/scc/faq/316527">SCC Library returns</a></li></ul>
+											<p>According to our records, you currently have a calculator on loan from Sacramento City College. If you are no longer a student, or you are continuing but no longer need the calculator, please return it.</p>
+											<p><em>By returning this device, you will be helping other students during this difficult time.</em></p>
+											<p>You may drop the calculator in either of the Book Returns located in front of or behind the Learning Resource Center.</p>
+											<p>For more details on returning items during the campus closure, please see our dedicated page, <a href="https://answers.library.losrios.edu/scc/faq/316527">When and how can I return books and other library materials during the COVID-19 closure?</a></p>
 										</td>
 									</tr>
 									
 								</xsl:when>
-								<xsl:when test="notification_data/notification_type = 'CUSTOM_LETTER_SCC'">
+								<xsl:when test="notification_data/notification_type = 'CUSTOM_LETTER_ARC'">
 									<tr>
 										<td>
-											<p>Thank you for submitting a request for library materials from Sacramento City College.</p>
-											<p>We are working on getting these ready, but given the large number of tasks library personnel are working on in limited hours, we have determined that <strong>your request will not be ready until next week</strong>.</p>
-											<p>When your items are ready for pickup, you will receive a separate email, which will explain the pickup process in more detail.</p>
-											<p>We apologize for the inconvenience and wish you a good start to your semester.</p>
+											<p>@@Line_1@@</p>
+											<p>@@Line_2@@</p>
+											<p>@@Line_3@@</p>
+											<p>@@Line_4@@</p>
 										</td>
 									</tr>
-									
+								</xsl:when>
+								<xsl:when test="notification_data/notification_type = 'CUSTOM_LETTER_CRC'">
+									<tr>
+										<td>
+											<p>@@Line_5@@</p>
+											<p>@@Line_6@@</p>
+											<p>@@Line_7@@</p>
+											<p>@@Line_8@@</p>
+										</td>
+									</tr>
 								</xsl:when>
 								<xsl:when test="notification_data/notification_type = 'CUSTOM_LETTER_FLC'">
 									<tr>
 										<td>
-											<p>Do you need help finding materials for your research paper or projects?</p>
-  
-											<p>Do you have questions about citations?</p>
-											<p style="margin-bottom:10px;">Do you have other general questions?</p>
-											<p>Friendly FLC faculty librarians are here to help you!</p>
-											<ul>
-												<li>Chat with a librarian 24/7 by clicking the "Ask a Librarian" button on the <a href="https://flc.losrios.edu/student-resources/library">FLC Library website</a> or <a href="https://caccl-lrccd.primo.exlibrisgroup.com/discovery/search?vid=01CACCL_LRCCD&#58;flc">OneSearch</a></li>
-												<li><a href="https://www.library.losrios.edu/ask-us/?flc">Send us an email</a></li>
-												<li><a href="https://caccl-lrccd.primo.exlibrisgroup.com/discovery/search?vid=01CACCL_LRCCD&#58;flc">Use OneSearch</a> to find online resources like ebooks, articles, and videos.</li>
-												<li>For more in-depth reference, research, or citations questions, students can book a <a href="https://flc.losrios.edu/student-resources/library/research/research-appointments">Zoom Research Appointment</a> with a librarian.</li>
-												<li><a href="https://lrccd.instructure.com/enroll/EJMM9N">Library Research Tutorials</a> will improve your research skills, including finding sources, evaluating sources for reliability, and MLA or APA citation. You can self-enroll through Canvas and choose which modules to complete.</li>
-											</ul>
-											<p>Please do not reply to this email. Responses will not be monitored.</p>
+											<p>@@Line_9@@</p>
+											<p>@@Line_10@@</p>
+											<p>@@Line_11@@</p>
+											<p>@@Line_12@@</p>
 										</td>
 									</tr>
-									
 								</xsl:when>
-
-
-
-
+								<xsl:when test="notification_data/notification_type = 'CUSTOM_LETTER_SCC'">
+									<tr>
+										<td>
+											<p>@@Line_13@@</p>
+											<p>@@Line_14@@</p>
+											<p>@@Line_15@@</p>
+											<p>@@Line_16@@</p>
+										</td>
+									</tr>
+								</xsl:when>
+								
 							</xsl:choose>
 						</table>
 					</div>
