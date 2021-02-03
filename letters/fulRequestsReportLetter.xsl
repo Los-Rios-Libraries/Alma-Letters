@@ -99,7 +99,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 					<xsl:if test="notification_data/hold_shelf_requests/ful_request_interpated">
 					<tr>
-						<td>
+						<td style="padding-top:14px;">
 						<h3>@@on_hold_shelf@@</h3>
 						</td>
 					</tr>
