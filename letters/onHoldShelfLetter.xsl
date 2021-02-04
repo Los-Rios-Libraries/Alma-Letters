@@ -66,7 +66,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 										<!-- CRC schedule -->
 									<ul>
 										<li>Monday to Thursday, 9:00 am to 1:00 pm</li>
-										<li>Wednesday, 6:00 pm to 8:00 pm</li>
+										<li>Wednesday, 5:00 pm to 8:00 pm</li>
 									</ul>
 									<p>The schedule above is valid <strong>through February 11</strong>. After that date it is subject to change.</p>
 
