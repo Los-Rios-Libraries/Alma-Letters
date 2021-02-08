@@ -67,14 +67,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<tr>
 							<th>@@fee_type@@</th>
 							<th align="right" width="10">@@fee_amount@@</th>
-							<th>@@note@@</th>
+							<xsl:if test="finecomment != ''">
+								<th>@@note@@</th>
+							</xsl:if>
+							
 						</tr>
 					
 						<xsl:for-each select="notification_data/fines_fees_list/user_fines_fees">
 						<tr>
 							<td><xsl:value-of select="fine_fee_type_display"/></td>
 							<td align="right"><xsl:value-of select="fine_fee_ammount/normalized_sum"/>&#160;<xsl:value-of select="fine_fee_ammount/currency"/></td>
-							<td><xsl:value-of select="finecomment"/></td>
+							<xsl:if test="finecomment != ''">
+								<td><xsl:value-of select="finecomment"/></td>
+							</xsl:if>
+							
 						</tr>
 						</xsl:for-each>
 
