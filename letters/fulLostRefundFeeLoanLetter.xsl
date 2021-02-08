@@ -88,8 +88,21 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							<td align="right"><b>@@total@@:</b></td>
 							<td align="right">&#36;<xsl:value-of select="notification_data/total_fines_amount"/></td>
 						</tr>
+						
+						
 
 					</table>
+
+						</td>
+					</tr>
+					<tr>
+							<td>
+								<p>
+								If you have returned all materials and the above still shows a processing fee, please note that this processing fee will be removed. Please check your library account for current balance.
+							</p>
+							</td>
+							
+						</tr>
 				</table>
 				
 				<xsl:call-template name="lrGoToAccount" />
