@@ -47,17 +47,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 					</td>
 					</tr>
+
 					<tr>
 					<td>
-						<br />
-						<div style="height:10px;font-size: 1.5em;">
-				@@eTaskList@@ :
-						</div>
-						<br />
-					</td>
-					</tr>
-					<tr>
 						<table  cellpadding="5" >
+							<caption style="text-align:left; padding-left:12px; font-weight:bold; width:100%;">@@eTaskList@@</caption>
+				
 					<tr>
 						<th>@@title@@</th>
 						<th>@@identifier@@</th>
