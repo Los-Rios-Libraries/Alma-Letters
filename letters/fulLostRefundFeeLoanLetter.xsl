@@ -59,14 +59,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</xsl:for-each>
 					</td>
 </tr>
+					<tr>
+						<td>
+							
+						<table cellspacing="0" cellpadding="0" border="0" align="center"  style="padding: 12px 60px;">
 
-					<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 0 12px 15px;">
-					<xsl:attribute name="style">
-						<xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
-					</xsl:attribute>
-						<tr>
+						<tr style="text-align:left !important;">
 							<th>@@fee_type@@</th>
-							<th align="right" width="10">@@fee_amount@@</th>
+							<th align="right" >@@fee_amount@@</th>
 							<xsl:if test="finecomment != ''">
 								<th>@@note@@</th>
 							</xsl:if>
