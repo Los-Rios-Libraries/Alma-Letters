@@ -87,16 +87,17 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 										<p>Please choose your college to find available pickup times:</p>
 										<ul>
 											<li>
-												<a href="">ARC</a>
+												<a href="https://answers.library.losrios.edu/arc/faq/336290">ARC</a>
 											</li>
 											<li>
-												<a href="">CRC</a>
+												<a href="https://answers.library.losrios.edu/crc/faq/335859">CRC</a>
 											</li>
 											<li>
-												<a href="">FLC/EDC</a>
+												<a href="https://researchguides.flc.losrios.edu/library_closure/checkout
+">FLC/EDC</a>
 											</li>
 											<li>
-												<a href="">SCC</a>
+												<a href="https://answers.library.losrios.edu/scc/faq/335622">SCC</a>
 											</li>
 										</ul>
 									</xsl:otherwise>
