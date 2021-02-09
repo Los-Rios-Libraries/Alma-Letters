@@ -52,17 +52,16 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<tr>
 							<th>@@title@@</th>
 							<th>Barcode</th>
-							<th>@@due_date@@</th>
 							<th>@@library@@</th>
+              <th>@@due_date@@</th>
 						</tr>
 
                 		<xsl:for-each select="notification_data/item_loans/item_loan">
 						<tr>
 							<td><xsl:value-of select="title"/></td>
-	
 							<td><xsl:value-of select="barcode"/></td>
-							<td><xsl:value-of select="due_date"/></td>
 							<td><xsl:value-of select="library_name"/></td>
+              <td><xsl:value-of select="due_date"/></td>
 
 						</tr>
 						</xsl:for-each>
