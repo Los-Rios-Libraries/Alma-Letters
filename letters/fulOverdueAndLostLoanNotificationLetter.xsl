@@ -29,7 +29,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<table cellspacing="0" cellpadding="5" border="0" align="center" width="600" style="width:600px; background:#fff;">
 				<tr>
 				<td style="padding-left:15px;">
-					@@inform_you_item_below@@  @@decalred_as_lost@@
+					<p>@@inform_you_item_below@@</p>
+					<p>@@decalred_as_lost@@</p>
 				</td>
 				</tr>
 				</table>
