@@ -28,19 +28,18 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
           <div class="messageBody">
             <table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 0 12px 15px;">
 				<tr>
-					<td>@@introduction_body_thanks@@ <b><xsl:value-of select="notification_data/trial/title" /></b>.</td>
+					<td><p>@@introduction_body_thanks@@ <b><xsl:value-of select="notification_data/trial/title" /></b>.</p></td>
         </tr>
 				
 				
 				<tr>
-				<tr>
-					<td>@@schedule@@ <xsl:value-of select="notification_data/trial/start_date" />  to <xsl:value-of select="notification_data/trial/end_date" />.</td>
+					<td><p>@@schedule@@ <xsl:value-of select="notification_data/trial/start_date" />  to <xsl:value-of select="notification_data/trial/end_date" />.</p></td>
 				</tr>
 					
 				<xsl:choose >
 					<xsl:when test="/notification_data/reminder='true'">
-						<tr><td>@@reminder_end_thanks@@</td></tr>
-						<tr><td>@@reminder_register_opinion@@</td></tr>
+						<tr><td><p>@@reminder_end_thanks@@</p></td></tr>
+						<tr><td><p>@@reminder_register_opinion@@</p></td></tr>
 					</xsl:when>
           <xsl:otherwise>
             <tr>
