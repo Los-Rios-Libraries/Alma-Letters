@@ -26,7 +26,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         
 		<div class="messageArea">
           <div class="messageBody">
-            <table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 0 12px 15px;">
+            <table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 0 0 12px 15px;">
 				<tr>
 					<td><p>@@introduction_body_thanks@@ <b><xsl:value-of select="notification_data/trial/title" /></b>.</p></td>
         </tr>
