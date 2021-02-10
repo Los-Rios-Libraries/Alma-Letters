@@ -31,20 +31,19 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 			<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; table-layout:fixed; word-wrap:break-word;">
               <tr>
-              	<td>
+              	<td style="padding-left:12px;">
 					<xsl:if test="notification_data/short_loans='true'">
-						<b>@@short_loans_message@@</b>
+						<p>@@short_loans_message@@</p>
 					</xsl:if>
 					<xsl:if test="notification_data/short_loans='false'">
-						<b>@@message@@</b>
+						<p>@@message@@</p>
 					</xsl:if>
-					<br/><br/>
                 </td>
               </tr>
 
 
               <tr>
-                <td>
+                <td style="padding:14px 0;">
                 	<table cellpadding="2" class="listing">
 						<xsl:attribute name="style">
 							<xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
