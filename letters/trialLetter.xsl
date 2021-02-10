@@ -29,22 +29,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             <table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 0 12px 15px;">
 				<tr>
 					<td>@@introduction_body_thanks@@ <b><xsl:value-of select="notification_data/trial/title" /></b>.</td>
-				</tr>
-
+        </tr>
 				
-				<xsl:if  test="notification_data/trial/electronic_collection != ''" >
+				
 				<tr>
-					<td>@@linkToCollection@@ :
-					<a>
-                        <xsl:attribute name="href">
-                         	<xsl:value-of select="notification_data/trial/electronic_collection" />
-                       	</xsl:attribute>
-						<xsl:value-of select="notification_data/poline_description" />
-					</a>
-					</td>
-				</tr>
-				</xsl:if>
-				
 				<tr>
 					<td>@@schedule@@ <xsl:value-of select="notification_data/trial/start_date" />  to <xsl:value-of select="notification_data/trial/end_date" />.</td>
 				</tr>
@@ -65,7 +53,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         <tr>
           
           <td>
-                        <table align="center" cellpadding="0" style="width:auto !important;">
+            <table align="center" cellpadding="0" style="width:auto !important;">
 						<tr>
 							<td>
 								<a style="display:block;color:#ffffff;background:#252d65;font-size:13px;font-weight:bold;text-decoration:none;border:12px solid #252d65;border-radius: 4px;">
