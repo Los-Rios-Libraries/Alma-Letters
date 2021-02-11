@@ -18,7 +18,7 @@
 				</xsl:attribute>
 				<td colspan="2">
 					<div id="mailHeader">
-						<div id="logoContainer" class="alignLeft">
+						<div id="logoContainer" class="alignLeft" style="background:#fff;">
 							<img src="cid:logo.jpg" alt="logo" />
 						</div>
 					</div>
