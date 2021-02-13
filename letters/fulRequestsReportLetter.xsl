@@ -43,11 +43,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								<tr style="text-align:left;">
 									<th>@@title@@</th>
 									<th>@@place_in_queue@@</th>
-									<th>@@pickup_location@@</th>
+									<xsl:if test="pickup_location_display != ''">
+										<th>@@pickup_location@@</th>
+									</xsl:if>
+									
 								</tr>
 								<xsl:for-each select="notification_data/non_active_requests/ful_request_interpated">
 								<tr>
-									<td><xsl:value-of select="title_display"/></td>
+									<td>
 										<xsl:choose>
 											<xsl:when test="string-length(title_display) &gt; 70">
 												<xsl:value-of select="substring(title_display,0,70)" />
@@ -57,8 +60,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 												<xsl:value-of select="title_display"/>
 											</xsl:otherwise>
 										</xsl:choose>
+									</td>
 									<td><xsl:value-of select="place_in_queue"/></td>
-									<td><xsl:value-of select="pickup_location_display"/></td>
+									<xsl:if test="pickup_location_display != ''">
+										<td><xsl:value-of select="pickup_location_display"/></td>
+									</xsl:if>
 								</tr>
 								</xsl:for-each>
 							</table>
