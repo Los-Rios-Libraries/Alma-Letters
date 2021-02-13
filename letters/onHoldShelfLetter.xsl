@@ -145,8 +145,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								</xsl:when>
 								<xsl:when test="/notification_data/organization_unit/name = 'Cosumnes River College Library'">
 									<!-- CRC details -->
-									<p>Pick up your items in front of the maintenance building next to Lot I. <a href="https://drive.google.com/file/d/1a8PWteG_sYsBPAhWNnMOkFc_sbQYrL9O/view?usp=sharing">See campus map</a>.</p>
-									<p>For more details on picking up library materials, please <a href="https://answers.library.losrios.edu/crc/faq/335859">see our web page</a>.</p>
+									<p> Once your items have been assigned to a locker, you will receive an email from support@luxerone.com with instructions for picking up your materials.</p>
+									<p>If you need an accessible locker, please <a href="mailto:library@crc.losrios.edu">email the library at library@crc.losrios.edu</a></p>
+									<p><a href="https://answers.library.losrios.edu/crc/faq/337591">Visit the FAQ for more information </a>on the Library’s Pickup Lockers. </p>
+									
 
 								</xsl:when>
 								<xsl:when test="/notification_data/organization_unit/name = 'Folsom Lake College Library'">
