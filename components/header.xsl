@@ -36,12 +36,12 @@
 							<xsl:value-of select="letter_name" />
 						</h1>
 					</td>
-					<!--	<td align="right">
-		<xsl:value-of select="current_date"/>
-	</td> -->
+					
 				</xsl:for-each>
 
 			</tr>
+			</xsl:if>
+			
 		</table>
 
 
