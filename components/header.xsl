@@ -28,7 +28,8 @@
 				</td>
 			</tr>
 			<!-- END OF LOGO INSERT -->
-			<tr>
+			<xsl:if test="notification_data/general_data/letter_type !='FulPlaceOnHoldShelfLetter'">
+				<tr>
 
 				<xsl:for-each select="notification_data/general_data">
 					<td>
