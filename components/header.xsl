@@ -5,6 +5,9 @@
 
 
 	<xsl:template name="head">
+		<div style="display:none;">
+			<xsl:value-of select="notification_data/general_data/letter_type" />
+		</div>
 		<table cellspacing="0" cellpadding="5" border="0" align="center">
 			<xsl:attribute name="style">
 				<xsl:call-template name="headerTableStyleCss" />
