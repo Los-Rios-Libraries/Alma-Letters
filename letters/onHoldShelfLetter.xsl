@@ -22,6 +22,29 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:attribute>
 
 				<xsl:call-template name="head" /> <!-- header.xsl -->
+					<table cellspacing="0" cellpadding="5" border="0" align="center">
+						<xsl:attribute name="style">
+							<xsl:call-template name="headerTableStyleCss" />
+							<!-- style.xsl -->
+						</xsl:attribute>
+						<tr>
+							<xsl:for-each select="notification_data/general_data">
+								<td>
+									<h1>
+										<xsl:choose>
+											<xsl:when test="/notification_data/organization_unit/name = 'Cosumnes River College Library'">
+												Your library item will be ready soon
+											</xsl:when>
+										
+											<xsl:otherwise>
+												<xsl:value-of select="letter_name" />
+											</xsl:otherwise>
+										</xsl:choose>
+									</h1>
+								</td>
+							</xsl:for-each>
+						</tr>
+					</table>
 				<xsl:call-template name="senderReceiver" /> <!-- SenderReceiver.xsl -->
 
 				<xsl:call-template name="toWhomIsConcerned" /> <!-- mailReason.xsl -->
@@ -33,21 +56,34 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<table cellspacing="0" cellpadding="5" border="0" align="center" width="600" style="width:600px; text-align:left; background:#fff; padding-left:8px; padding-right:8px;">
 						<tr>
 							<td>
-								The following library material(s) you requested  on <xsl:value-of select="notification_data/request/create_date"/> are now available for pickup from the <!--<xsl:value-of select="notification_data/request/assigned_unit_name"/>-->
-								<xsl:value-of select="/notification_data/organization_unit/name" />.
+								The following library material(s) you requested  on <xsl:value-of select="notification_data/request/create_date"/>
+								<xsl:choose>
+									<xsl:when test="/notification_data/organization_unit/name = 'Cosumnes River College Library'">
+										are being processed and will be available for locker pick-up soon.
+									</xsl:when>
+									<xsl:otherwise>
+										are now available for pickup from the <!--<xsl:value-of select="notification_data/request/assigned_unit_name"/>-->
+										<xsl:value-of select="/notification_data/organization_unit/name" />.
+									</xsl:otherwise>
+								</xsl:choose>
+								
+								
 							</td>
 						</tr>
 						<tr>
 							<td style="padding:16px;"><xsl:call-template name="recordTitle" /> <!-- recordTitle.xsl --></td>
 						</tr>
-
-						<xsl:if test="notification_data/request/work_flow_entity/expiration_date">
-						<tr>
-							<td>
-							 The item will be held for you until <xsl:value-of select="notification_data/request/work_flow_entity/expiration_date"/>.
-							 </td>
-						</tr>
+						<xsl:if test="/notification_data/organization_unit/name != 'Cosumnes River College Library'">
+							<xsl:if test="notification_data/request/work_flow_entity/expiration_date">
+								<tr>
+									<td>
+										The item will be held for you until <xsl:value-of select="notification_data/request/work_flow_entity/expiration_date"/>.
+									</td>
+								</tr>
+							</xsl:if>
+							
 						</xsl:if>
+						<xsl:if test="/notification_data/organization_unit/name != 'Cosumnes River College Library'">
 						<!-- pickup schedule -->
 						<tr>
 							<td>
@@ -61,15 +97,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 									<xsl:when test="/notification_data/organization_unit/name = 'American River College Library'">
 										<!-- ARC schedule -->
 										<p>Monday to Friday, 9:00 am to 2:00 pm</p>
-									</xsl:when>
-									<xsl:when test="/notification_data/organization_unit/name = 'Cosumnes River College Library'">
-										<!-- CRC schedule -->
-									<ul>
-										<li>Monday to Thursday, 9:00 am to 1:00 pm</li>
-										<li>Wednesday, 5:00 pm to 8:00 pm</li>
-									</ul>
-									<p>The schedule above is valid <strong>through February 11</strong>. After that date it is subject to change.</p>
-
 									</xsl:when>
 									<xsl:when test="/notification_data/organization_unit/name = 'Folsom Lake College Library'">
 										<!-- FLC schedule -->
@@ -105,6 +132,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							</td>
 						</tr>
 						<!-- end pickup schedule -->
+						</xsl:if>
 						
 						<!-- pickup details -->
 						<tr>
@@ -148,13 +176,16 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							<td>
 								<h2>Safety Reminder</h2>
 								<p>Please do not come to campus if you have a cough or fever or have been in contact with anyone who is sick.</p>
+								<xsl:if test="/notification_data/organization_unit/name != 'Cosumnes River College Library'">
+									<p>If driving, please remain in your car until your materials are placed on the table outside. If you used an alternate form of transportation, please follow these safety guidelines:</p>
+									<ul>
+										<li>Wear a face covering. This is a statewide mandate and a Los Rios requirement.</li>
+										<li>If you must sneeze or cough, do so into a cloth or tissue. If those are not available, use your elbow.</li>
+										<li>Avoid touching your eyes, nose, and mouth.</li>
+									</ul>
+								</xsl:if>
 
-								<p>If driving, please remain in your car until your materials are placed on the table outside. If you used an alternate form of transportation, please follow these safety guidelines:</p>
-								<ul>
-									<li>Wear a face covering. This is a statewide mandate and a Los Rios requirement.</li>
-									<li>If you must sneeze or cough, do so into a cloth or tissue. If those are not available, use your elbow.</li>
-									<li>Avoid touching your eyes, nose, and mouth.</li>
-								</ul>
+								
 
 							</td>
 						</tr>
