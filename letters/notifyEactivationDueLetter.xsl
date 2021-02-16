@@ -53,7 +53,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<table  cellpadding="5" >
 							<caption style="text-align:left; padding-left:12px; font-weight:bold; width:100%;">@@eTaskList@@</caption>
 				
-					<tr>
+					<tr style="text-align:left;">
 						<th>@@title@@</th>
 						<th>@@identifier@@</th>
 						<th>@@dueDate@@</th>
