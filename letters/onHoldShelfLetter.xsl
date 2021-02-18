@@ -160,7 +160,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 									<!-- EDC details -->
 									<p>Pick up your items in front of the Library in Building A. When you arrive, call the library at (530) 642-5695 so we can deliver your items.</p>
 									<p><a href="https://flc.losrios.edu/flc/main/doc/admin/about-us/edc_map.pdf">View campus map</a></p>
-									<p>For more details about curbside pickup, please see the <a href="https://answers.library.losrios.edu/flc/faq/334580">curbside pickup FAQ</a>.</p>
+									<p>For more details about curbside pickup, please see the <a href="https://answers.library.losrios.edu/flc/faq/339048">curbside pickup FAQ</a>.</p>
 								</xsl:when>
 								<xsl:when test="/notification_data/organization_unit/name = 'Folsom Lake College Library'">
 									<!-- FLC details -->
