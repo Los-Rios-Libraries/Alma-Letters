@@ -50,7 +50,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 					<tr>
 					<td>
-						<table  cellpadding="5" >
+						<table cellspacing="0" cellpadding="5" border="0" width="584" style="width:584px; background:#fff; padding:0 8px; table-layout:fixed;" align="center">
 							<caption style="text-align:left; padding-left:12px; font-weight:bold; width:100%;">@@eTaskList@@</caption>
 				
 					<tr style="text-align:left;">
