@@ -47,12 +47,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 					</td>
 					</tr>
-
-					<tr>
-					<td>
-						<table cellspacing="0" cellpadding="5" border="0" width="584" style="width:584px; background:#fff; padding:0 8px; table-layout:fixed;" align="center">
-							<caption style="text-align:left; padding-left:12px; font-weight:bold; width:100%;">@@eTaskList@@</caption>
+</table>
+				<table  cellspacing="0" cellpadding="5" border="0" width="600" style="width:600px; background:#fff; padding:8px; table-layout:fixed;" align="center">
+					<caption style="text-align:left; padding:12px 0 10px 12px; font-weight:bold; background:#fff;">@@eTaskList@@</caption>
 				
+							
 					<tr style="text-align:left;">
 						<th>@@title@@</th>
 						<th>@@identifier@@</th>
@@ -67,8 +66,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 	       </xsl:for-each>
 	</table>
-</td></tr>
-				</table>
+
+				
 				<table cellspacing="0" cellpadding="5" border="0"  width="600" style="width:600px; background:#fff; padding:12px 8px 0 8px; text-align:center;" align="center">
 				<tr>
 					<td>Ready to work on it?</td>
