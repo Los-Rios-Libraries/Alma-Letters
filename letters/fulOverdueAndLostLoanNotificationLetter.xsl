@@ -23,7 +23,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<xsl:call-template name="head" /> <!-- header.xsl -->
 				<xsl:call-template name="senderReceiver" /> <!-- SenderReceiver.xsl -->
 				<xsl:call-template name="toWhomIsConcerned" /> <!-- mailReason.xsl -->
-
+				<div class="messageArea">
+        <div class="messageBody">
 
 
 				<table cellspacing="0" cellpadding="5" border="0" align="center" width="600" style="width:600px; background:#fff;">
@@ -104,6 +105,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						</tr>
 
 				</table>
+		</div>
+				</div>
 
 				<xsl:call-template name="lrGoToAccount" />
         <!-- footer.xsl -->
