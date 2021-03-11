@@ -42,7 +42,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 		              <tr>
 		              	<td>
-							@@overdue_loans@@
+							<h2>@@overdue_loans@@</h2>
 		                </td>
 		              </tr>
 
