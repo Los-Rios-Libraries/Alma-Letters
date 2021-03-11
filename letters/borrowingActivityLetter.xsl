@@ -22,7 +22,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         <xsl:call-template name="head" /><!-- header.xsl -->
         <xsl:call-template name="senderReceiver" /> <!-- SenderReceiver.xsl -->
 
-		<br />
 		<xsl:call-template name="toWhomIsConcerned" /> <!-- mailReason.xsl -->
 
 
@@ -36,7 +35,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	              <tr>
 	              	<td>
 						@@reminder_message@@
-						<br/><br/>
 	                </td>
 	              </tr>
 
@@ -82,7 +80,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								</table>
 							</td>
 						</tr>
-						<hr/><br/>
 					</xsl:for-each>
 				</xsl:if>
 
@@ -124,7 +121,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								</table>
 							</td>
 						</tr>
-						<hr/><br/>
 					</xsl:for-each>
 				</xsl:if>
 
@@ -154,7 +150,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	              <tr>
 	              	<td>
 						@@please_pay_message@@
-						<br/><br/>
 	                </td>
 	              </tr>
 
