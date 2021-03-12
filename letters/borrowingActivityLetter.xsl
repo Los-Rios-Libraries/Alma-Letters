@@ -97,7 +97,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 				  <tr>
 					<td>
-						@@loans@@
+						<h2>@@loans@@</h2>
 					</td>
 				  </tr>
 
