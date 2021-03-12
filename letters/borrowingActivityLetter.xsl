@@ -60,21 +60,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 									</tr>
 									<tr>
 										<th>@@title@@</th>
-										<th>@@description@@</th>
-										<th>@@author@@</th>
 										<th>@@due_date@@</th>
-										<th>@@fine@@</th>
-										<th>@@library@@</th>
+                    <th>@@fine@@</th>									
 									</tr>
 
 									<xsl:for-each select="item_loans/overdue_and_lost_loan_notification_display/item_loan">
 										<tr>
 											<td><xsl:value-of select="title"/></td>
-											<td><xsl:value-of select="description"/></td>
-											<td><xsl:value-of select="author"/></td>
 											<td><xsl:value-of select="due_date"/></td>
-											<td><xsl:value-of select="normalized_fine"/></td>
-											<td><xsl:value-of select="library_name"/></td>
                       <td>
                         <xsl:choose>
                         <xsl:when test="normalized_fine != ''">
@@ -117,15 +110,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 										<th>@@title@@</th>
 										<th>@@due_date@@</th>
 										<th>@@fine@@</th>
-										<th>@@description@@</th>
 									</tr>
 
 									<xsl:for-each select="item_loans/overdue_and_lost_loan_notification_display/item_loan">
 										<tr>
 											<td><xsl:value-of select="title"/></td>
 											<td><xsl:value-of select="due_date"/></td>
-											<td><xsl:value-of select="normalized_fine"/></td>
-											<td><xsl:value-of select="description"/></td>
 											<td>
                         <xsl:choose>
                         <xsl:when test="normalized_fine != ''">
