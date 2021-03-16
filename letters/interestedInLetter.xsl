@@ -64,21 +64,19 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</tr>
 				<tr>
 					<td>
-					<table role="presentation" align="center" cellpadding="0" style="width:auto !important; background:#fff;">
-					<tr>
-						<a style="display:block;color:#ffffff;background:#252d65;font-size:13px;font-weight:bold;text-decoration:none;border:12px solid #252d65;border-radius: 4px;">
-							<xsl:attribute name="href">
-									<xsl:text>https://www.library.losrios.edu/onesearch/?record=</xsl:text>
-									<xsl:value-of  select="notification_data/mms_id"/>
-							</xsl:attribute>
-							View in OneSearch
-						</a>
-					</td>
-					</tr>
-				</table>
-
-
+						<table role="presentation" align="center" cellpadding="0" style="width:auto !important; background:#fff;">
+							<tr>
 								<td align="center" style="text-align:center;">
+									<a style=	"display:block;color:#ffffff;background:#252d65;font-size:13px;font-weight:bold;text-decoration:none;border:12px solid #252d65;border-radius: 4px;">
+										<xsl:attribute name="href">
+											<xsl:text>https://www.library.losrios.edu/onesearch/?record=</xsl:text>
+											<xsl:value-of  select="notification_data/mms_id"/>
+										</xsl:attribute>
+									View in OneSearch
+									</a>
+								</td>
+							</tr>
+						</table>
 					</td>
 				</tr>
 				</table>
