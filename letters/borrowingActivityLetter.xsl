@@ -139,15 +139,28 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	              </tr>
 
 	              <xsl:for-each select="notification_data/organization_fee_list/string">
+                  
 	              	<tr>
-						<td><xsl:value-of select="."/></td>
+						<td>
+              <xsl:call-template name="replace-string">
+              <xsl:with-param name="text" select="."/>
+              <xsl:with-param name="replace" select="' USD'" />
+              <xsl:with-param name="with" select="''"/>
+            </xsl:call-template>
+              
+              </td>
 					</tr>
 	              </xsl:for-each>
 
 				  <tr>
 	              	<td>
 						
-						@@total@@ <xsl:value-of select="notification_data/total_fee"/>
+						@@total@@ &#36;
+            <xsl:call-template name="replace-string">
+              <xsl:with-param name="text" select="notification_data/total_fee"/>
+              <xsl:with-param name="replace" select="' USD'" />
+              <xsl:with-param name="with" select="''"/>
+            </xsl:call-template>
 						
 	                </td>
 	              </tr>
@@ -169,5 +182,26 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:call-template name="lrPatronFooter" />
       </body>
     </html>
+    <!-- replace string template -->
   </xsl:template>
+          <xsl:template name="replace-string">
+                <xsl:param name="text"/>
+                <xsl:param name="replace"/>
+                <xsl:param name="with"/>
+                <xsl:choose>
+                        <xsl:when test="contains($text,$replace)">
+                                <xsl:value-of select="substring-before($text,$replace)"/>
+                                <xsl:value-of select="$with"/>
+                                <xsl:call-template name="replace-string">
+                                        <xsl:with-param name="text" select="substring-after($text,$replace)"/>
+                                        <xsl:with-param name="replace" select="$replace"/>
+                                        <xsl:with-param name="with" select="$with"/>
+                                </xsl:call-template>
+                        </xsl:when>
+                        <xsl:otherwise>
+                                <xsl:value-of select="$text"/>
+                        </xsl:otherwise>
+                </xsl:choose>
+        </xsl:template>
+
 </xsl:stylesheet>
