@@ -32,7 +32,18 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<tr>
 					<td>
 						<ul>
-							<li><strong>@@title@@ </strong> <xsl:value-of select="notification_data/title"/></li>
+							<li>
+								<strong>@@title@@ </strong>
+								<xsl:choose>
+										<xsl:when test="string-length(notification_data/title) &gt; 110">
+											<xsl:value-of select="substring(notification_data/title,0,100)" />
+												<xsl:text>...</xsl:text>
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="notification_data/title"/>
+										</xsl:otherwise>
+									</xsl:choose>	
+							</li>
 							<xsl:if test="notification_data/poline_inventory/call_number">
 								<li style="padding-top:10px;"><strong>Location: </strong> <xsl:value-of select="notification_data/organization_unit/name"/> - <xsl:value-of select="notification_data/poline_inventory/location/location_name_for_display"/></li>
 								<li style="padding-top:10px;"><strong>@@callNumber@@ </strong> <xsl:value-of select="notification_data/poline_inventory/call_number"/></li>
