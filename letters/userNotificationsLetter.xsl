@@ -77,13 +77,21 @@
 									</tr>
 									
 								</xsl:when>
-								<xsl:when test="notification_data/notification_type = 'RETURN_DAYS'">
+								<xsl:when test="notification_data/notification_type = 'COVID_GRANT_LAPTOP'">
 									<tr>
 										<td>
-											<p>According to our records, you currently have a calculator on loan from Sacramento City College. If you are no longer a student, or you are continuing but no longer need the calculator, please return it.</p>
-											<p><em>By returning this device, you will be helping other students during this difficult time.</em></p>
-											<p>You may drop the calculator in either of the Book Returns located in front of or behind the Learning Resource Center.</p>
-											<p>For more details on returning items during the campus closure, please see our dedicated page, <a href="https://answers.library.losrios.edu/scc/faq/316527">When and how can I return books and other library materials during the COVID-19 closure?</a></p>
+											<p>According to our records, you currently have a Chromebook or laptop on loan from the college. We are excited to share with you news that <strong>your loaned device is now yours to keep permanently, free of charge!</strong> You are no longer required to return the device to the library and may continue to use it to support ongoing needs. This loan and any related charges will be removed from your student record in the library system. </p>
+											<p>If you are no longer in need of the device and do not wish to keep it for any reason, you may return it to the library and we will offer it to another student.</p>
+											<p>To transition ownership, your device may need to be reset if it is currently managed by the college; the reset will remove any further access to the device by the college. <strong>You will receive an email the week of May 17, 2021</strong> with additional information about the reset process and what you can expect. </p>
+										</td>
+									</tr>
+									
+								</xsl:when>
+								<xsl:when test="notification_data/notification_type = 'COVID_GRANT_HOTSPOT'">
+									<tr>
+										<td>
+											<p>According to our records, you currently have a mobile hotspot on loan from the college. We are excited to share with you news that <strong>your loaned hotspot is now yours to keep permanently, free of charge!</strong> You are no longer required to return the hotspot to the library and may continue to use it to support ongoing needs. Service for the hotspot will continue as long as you are enrolled at Los Rios. This loan and any related charges will be removed from your student record in the library system. </p>
+											<p>If you are no longer in need of the hotspot and do not wish to keep it for any reason, you may return it to the library and we will offer it to another student.</p>
 										</td>
 									</tr>
 									
