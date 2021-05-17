@@ -99,19 +99,17 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 										<p>Monday to Thursday, 9:00 am to 2:00 pm</p>
 									</xsl:when>
 									<xsl:when test="/notification_data/organization_unit/name = 'El Dorado Center'">
-										<!-- EDC schedule -->
+										<!-- EDC schedule summer -->
 										<ul>
-											<li>Tuesday 10:00 am to 2:00 pm</li>
-											<li>Thursday Noon to 4:00 pm</li>
-										</ul>
-										<p><b>A library staff member will call you to confirm your pickup time.</b></p>
+											<li>Tuesday 11:00 am to 2:00 pm</li>
+											<li>Thursday 11:00 am to 2:00 pm</li>
+										</ul> 
 									</xsl:when>
 									<xsl:when test="/notification_data/organization_unit/name = 'Folsom Lake College Library'">
-										<!-- FLC schedule -->
+										<!-- FLC schedule summer -->
 										<ul>
-											<li>Monday 3:00 to 5:00 pm</li>
-											<li>Thursday 4:00 to 6:00 pm</li>
-											<li>Saturday 11:00 am to 1:00 pm</li>
+											<li>Tuesday 11:00 am to 2:00 pm</li>
+											<li>Thursday 11:00 am to 2:00 pm</li>
 										</ul>
 									</xsl:when>
 									<xsl:when test="/notification_data/organization_unit/name = 'Sacramento City College Library'">
