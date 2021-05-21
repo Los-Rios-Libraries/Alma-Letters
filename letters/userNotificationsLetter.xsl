@@ -96,6 +96,27 @@
 									</tr>
 									
 								</xsl:when>
+								<xsl:when test="notification_data/notification_type = 'COVID_GRANT_DEVICE_RESET'">
+									<tr>
+										<td>
+											<p>On May 14, 2021, you received a message notifying you that your device loaned from a Los Rios college has been granted to you and is now yours to keep permanently. If your device is currently managed by a Los Rios college, read the information below about transferring ownership of the device from the college to you.</p>
+											<h2>How do I know if my device is managed by the college?</h2>
+											<p>There are two (2) easy indicators that your device is being managed by your college:</p>
+											<ol>
+												<li>You can only log into your device with your @apps.losrios.edu account.</li>
+												<li>When you sign in to your device, you see &quot;Managed by apps.losrios.edu.&quot;</li>
+											</ol>
+											<h2>What will happen to my device?</h2>
+											<p>If your device is managed by the college, it will be reset so that the college no longer has access to your device. After it is reset, you will have full control and ownership of the device.</p>
+
+											<p>If your device is <em>not</em> managed by the college, there is nothing for you to do; the device is yours and you can continue to use it as you have.</p>
+
+											<h2>What do I need to do to prepare for the device reset?</h2>
+											<p>The device reset will delete all data you currently have stored on the device. Prior to the reset, make sure that you backup your data by uploading it to the cloud or an external drive (for instance, a USB drive). The reset will delete information such as bookmarks, apps, and other preferences set on the device. Once reset, it will be like you have a new device.</p>
+										</td>
+									</tr>
+									
+								</xsl:when>
 								<xsl:when test="notification_data/notification_type = 'CUSTOM_LETTER_ARC'">
 									<tr>
 										<td>
