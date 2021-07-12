@@ -115,7 +115,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 									<xsl:when test="/notification_data/organization_unit/name = 'Sacramento City College Library'">
 										<!-- SCC schedule -->
 										<p>Tuesdays and Saturdays, from 11:00 am to 1:00 pm.</p>
-										<p><strong>Note: there will be no pickups on Saturday, July 3.</strong></p>
 									</xsl:when>
 									<xsl:otherwise>
 										<p>Please choose your college to find available pickup times:</p>
