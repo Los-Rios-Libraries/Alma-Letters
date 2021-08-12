@@ -100,17 +100,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 									</xsl:when>
 									<xsl:when test="/notification_data/organization_unit/name = 'El Dorado Center'">
 										<!-- EDC schedule summer -->
-										<ul>
-											<li>Tuesday 11:00 am to 2:00 pm</li>
-											<li>Thursday 11:00 am to 2:00 pm</li>
-										</ul> 
+										<p>Mondays to Thursdays, 9:00 am to 3:00 pm.</p> 
 									</xsl:when>
 									<xsl:when test="/notification_data/organization_unit/name = 'Folsom Lake College Library'">
 										<!-- FLC schedule summer -->
-										<ul>
-											<li>Tuesday 11:00 am to 2:00 pm</li>
-											<li>Thursday 11:00 am to 2:00 pm</li>
-										</ul>
+										<p>Mondays to Thursdays, 9:00 am to 3:00 pm.</p>
 									</xsl:when>
 									<xsl:when test="/notification_data/organization_unit/name = 'Sacramento City College Library'">
 										<!-- SCC schedule -->
