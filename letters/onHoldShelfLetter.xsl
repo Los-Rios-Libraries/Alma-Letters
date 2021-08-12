@@ -56,13 +56,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<table cellspacing="0" cellpadding="5" border="0" align="center" width="600" style="width:600px; text-align:left; background:#fff; padding-left:8px; padding-right:8px;">
 						<tr>
 							<td>
-								The following library material(s) you requested  on <xsl:value-of select="notification_data/request/create_date"/>
+								The following library material you requested  on <xsl:value-of select="notification_data/request/create_date"/>
 								<xsl:choose>
 									<xsl:when test="/notification_data/organization_unit/name = 'Cosumnes River College Library'">
-										are being processed and will be available for locker pick-up soon.
+										is being processed and will be available for locker pick-up soon.
 									</xsl:when>
 									<xsl:otherwise>
-										are now available for pickup from the <!--<xsl:value-of select="notification_data/request/assigned_unit_name"/>-->
+										is now available for pickup from the <!--<xsl:value-of select="notification_data/request/assigned_unit_name"/>-->
 										<xsl:value-of select="/notification_data/organization_unit/name" />.
 									</xsl:otherwise>
 								</xsl:choose>
