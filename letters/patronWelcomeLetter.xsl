@@ -56,7 +56,7 @@
                                         <ul>
                                             <li>Your <a href="https://library.losrios.edu">library website</a>, where you&apos;ll find current information regarding library services.</li>
                                             <li><a href="https://library.losrios.edu/onesearch">OneSearch</a>, your main search tool for finding books, articles, video and other library materials.</li>
-                                            <li><a href="https://library.losrios.edu/resources/databases/">Research Databases</a> providing online resources in various subject areas.
+                                            <li><a href="https://library.losrios.edu/databases/">Research Databases</a> providing online resources in various subject areas.
                                             <xsl:if test="/notification_data/receivers/receiver/user/user_group = 'STUDENT'">
                                                 <em>Note:</em> access to databases may not be available between semesters.
                                             </xsl:if> </li>
