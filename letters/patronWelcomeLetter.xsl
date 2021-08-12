@@ -63,7 +63,7 @@
                                             <li>Your <a href="https://library.losrios.edu/my-account">library account</a>, which will allow you to monitor your loans, renew items, and store favorite searches and articles.</li>
                                         </ul>
                                     </p>
-                                    <p>Once the semester has started, you can ask librarians questions 24/7 using the Ask a Librarian icons you&apos;ll find on your library&apos;s website, in OneSearch, and certain other places. If a Los Rios librarian is not available when you ask, a professional librarian from another college will field your questions. </p>
+                                    <p>Once the semester has started, you can ask librarians questions 24/7 using the Ask a Librarian icons you&apos;ll find on your library&apos;s website and in OneSearch. If a Los Rios librarian is not available when you ask, a professional librarian from another college will field your questions. </p>
                                     <p>During the pandemic, access to print library materials is more limited than normal. Please check your library website and read messages in OneSearch for updated information.</p>
                                     <p>@@closing_message@@</p>
                                 </td>
