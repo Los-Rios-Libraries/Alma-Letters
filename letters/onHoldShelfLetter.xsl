@@ -182,17 +182,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<tr>
 							<td>
 								<h2>Safety Reminder</h2>
-								<p>Please do not come to campus if you have a cough or fever or have been in contact with anyone who is sick.</p>
-								<xsl:if test="/notification_data/organization_unit/name != 'Cosumnes River College Library'">
-									<p>If driving, please remain in your car until your materials are placed on the table outside. If you used an alternate form of transportation, please follow these safety guidelines:</p>
-									<ul>
-										<li>Wear a face covering. This is a statewide mandate and a Los Rios requirement.</li>
-										<li>If you must sneeze or cough, do so into a cloth or tissue. If those are not available, use your elbow.</li>
-										<li>Avoid touching your eyes, nose, and mouth.</li>
-									</ul>
-								</xsl:if>
-
-								
+								<p>Please do not come to campus if you have a cough or fever or have been in contact with anyone who is sick. When picking up your materials, be sure to wear a face covering.</p>								
 
 							</td>
 						</tr>
