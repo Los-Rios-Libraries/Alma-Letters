@@ -199,7 +199,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 									contact us at <a href="mailto:library@crc.losrios.edu">library@crc.losrios.edu</a>
 								</xsl:when>
 								<xsl:when test="/notification_data/organization_unit/name = 'Folsom Lake College Library'">
-									<a href="https://www.library.losrios.edu/ask-us/?flc">submit your question at our website</a>.
+									contact the Circulation Department at (916) 608-6613 or <a href="https://library.losrios.edu/ask-us/?flc">submit your question at our website</a>.
 									
 								</xsl:when>
 								<xsl:when test="/notification_data/organization_unit/name = 'Sacramento City College Library'">
