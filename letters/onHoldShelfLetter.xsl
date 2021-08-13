@@ -139,8 +139,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								<xsl:choose>
 								<xsl:when test="/notification_data/organization_unit/name = 'American River College Library'">
 									<!-- ARC details -->
-									<p>Please enter campus from College Oak Drive near the stadium/parking garage. <a href="https://arc.losrios.edu/arc/shared/doc/ARC-CAMPUS-MAP-2019.pdf">View campus map.</a>  Follow the signs indicating <strong>ARC Pick Up</strong> to the Portable Village near Davies Hall and the ARC PD Station. Staff will be available to safely approach your vehicle to assist you. Please be prepared with a mask and your ID.</p>
+									<p>Pick up items at the Library service window (on the north side of the Library). Enter campus from Myrtle Avenue, Parking Lot A/B entrance. Students should park in student/general parking. Parking permits are not required at this time. The ARC Library is located west of the Student Center Building and east of the Welcome and Support Center.</p>
 									<p>For more details on picking up library materials, please <a href="https://answers.library.losrios.edu/arc/faq/336290">see our web page</a>.</p>
+									<p><img style="width:560px;" width="560" src="https://library.losrios.edu/arc/librarymap.JPG" alt="Map showing route from Myrtle Avenue to Library" /></p>
 								</xsl:when>
 								<xsl:when test="/notification_data/organization_unit/name = 'Cosumnes River College Library'">
 									<!-- CRC details -->
