@@ -208,7 +208,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 								</xsl:when>
 								<xsl:otherwise>
-									<a href="https://www.library.losrios.edu/ask-us/">contact your library</a>.
+									<a href="https://library.losrios.edu/ask-us/">contact your library</a>.
 								</xsl:otherwise>
 							</xsl:choose>
 								
