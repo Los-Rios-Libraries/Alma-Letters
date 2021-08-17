@@ -108,7 +108,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 									</xsl:when>
 									<xsl:when test="/notification_data/organization_unit/name = 'Sacramento City College Library'">
 										<!-- SCC schedule -->
-										<p>Tuesdays and Saturdays, from 11:00 am to 1:00 pm.</p>
+										<p>Monday to Thursday, 9:00 am to 3:00 pm.</p>
 									</xsl:when>
 									<xsl:otherwise>
 										<p>Please choose your college to find available pickup times:</p>
@@ -164,10 +164,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								</xsl:when>
 								<xsl:when test="/notification_data/organization_unit/name = 'Sacramento City College Library'">
 									<!-- SCC details -->
-									<p>Pick up your items behind the LRC/Library building by the bookdrop near the &quot;C&quot; parking lot on the south side of campus.</p>
-									<p><a href="https://goo.gl/maps/A7hFryREWurmaVE27" title="View location on Google Maps"><img src="https://libapps.s3.amazonaws.com/accounts/816/images/Chromebook_spot.png" alt="pickup location" /></a></p>
-									<p>When you arrive, please call the library at (916) 558-2301 so we can bring out your items. Please be prepared to tell our staff your student ID number.</p>
-									<p>For more details on picking up library materials, please <a href="https://answers.library.losrios.edu/scc/faq/335622">see our pickup web page</a>.</p>
+									<p>Pick up your requested materials at the Circulation Desk on the 2nd floor of the Learning Resource Center.</p>
 
 								</xsl:when>
 								<xsl:otherwise>
