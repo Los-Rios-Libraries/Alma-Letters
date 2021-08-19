@@ -120,7 +120,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 												<a href="https://answers.library.losrios.edu/crc/faq/335859">CRC</a>
 											</li>
 											<li>
-												<a href="https://researchguides.flc.losrios.edu/library_closure/checkout">FLC/EDC</a>
+												<a href="https://answers.library.losrios.edu/flc/faq/352822">FLC/EDC</a>
 											</li>
 											<li>
 												<a href="https://answers.library.losrios.edu/scc/faq/335622">SCC</a>
@@ -152,16 +152,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								<xsl:when test="/notification_data/organization_unit/name = 'El Dorado Center'">
 									<!-- EDC details -->
 									<p>During library open hours, please go to the circulation desk in Building A.</p>
-									<p>Pick up your items in front of the Library in Building A. When you arrive, call the library at (530) 642-5695 so we can deliver your items.</p>
 									<p><a href="https://flc.losrios.edu/flc/main/doc/admin/about-us/edc_map.pdf">View campus map</a></p>
-									<p>For more details about curbside pickup, please see the <a href="https://answers.library.losrios.edu/flc/faq/339048">curbside pickup FAQ</a>.</p>
+									</p>
 								</xsl:when>
 								<xsl:when test="/notification_data/organization_unit/name = 'Folsom Lake College Library'">
 									<!-- FLC details -->
 									<p>During library open hours, please go to the circulation desk in Aspen Hall.</p>
-									<p>Pick up your items in front of Aspen Hall. When you arrive, call the library at (916) 608-6613 so we can bring your items to the table outside.</p>
 									<p><a href="https://flc.losrios.edu/flc/main/doc/admin/about-us/folsom_map.pdf">View campus map</a></p>
-									<p>For more details about curbside pickup, please see the <a href="https://answers.library.losrios.edu/flc/faq/334580">curbside pickup FAQ</a>.</p>
+									</p>
 									
 								</xsl:when>
 								<xsl:when test="/notification_data/organization_unit/name = 'Sacramento City College Library'">
