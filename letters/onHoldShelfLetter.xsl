@@ -96,7 +96,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								<xsl:choose>
 									<xsl:when test="/notification_data/organization_unit/name = 'American River College Library'">
 										<!-- ARC schedule -->
-										<p>Monday to Thursday, 9:00 am to 2:00 pm</p>
+										<p>Monday to Thursday, 9:00 am to 4:30 pm</p>
 									</xsl:when>
 									<xsl:when test="/notification_data/organization_unit/name = 'El Dorado Center'">
 										<!-- EDC schedule summer -->
