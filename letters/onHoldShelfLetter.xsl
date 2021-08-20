@@ -153,13 +153,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 									<!-- EDC details -->
 									<p>Pick up your requested materials at the Circulation Desk in Building A.</p>
 									<p><a href="https://flc.losrios.edu/flc/main/doc/admin/about-us/edc_map.pdf">View campus map</a></p>
-									</p>
 								</xsl:when>
 								<xsl:when test="/notification_data/organization_unit/name = 'Folsom Lake College Library'">
 									<!-- FLC details -->
 									<p>Pick up your requested materials at the Circulation Desk in Aspen Hall.</p>
-									<p><a href="https://flc.losrios.edu/flc/main/doc/admin/about-us/folsom_map.pdf">View campus map</a></p>
-									</p>
+									<p><a href="https://flc.losrios.edu/flc/main/doc/admin/about-us/folsom_map.pdf">View campus map</a></p>									
 								</xsl:when>
 								<xsl:when test="/notification_data/organization_unit/name = 'Sacramento City College Library'">
 									<!-- SCC details -->
