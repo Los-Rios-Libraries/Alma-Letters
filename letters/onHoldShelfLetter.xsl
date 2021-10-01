@@ -32,7 +32,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								<td>
 									<h1>
 										<xsl:choose>
-											<xsl:when test="/notification_data/organization_unit/name = 'Cosumnes River College Library'">
+											<xsl:when test="/notification_data/request/delivery_address = 'Cosumnes River College Library'">
 												Your library item will be ready soon
 											</xsl:when>
 										
@@ -58,12 +58,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							<td>
 								The following library material you requested  on <xsl:value-of select="notification_data/request/create_date"/>
 								<xsl:choose>
-									<xsl:when test="/notification_data/organization_unit/name = 'Cosumnes River College Library'">
+									<xsl:when test="/notification_data/request/delivery_address = 'Cosumnes River College Library'">
 										is being processed and will be available for locker pick-up soon.
 									</xsl:when>
 									<xsl:otherwise>
 										is now available for pickup from the <!--<xsl:value-of select="notification_data/request/assigned_unit_name"/>-->
-										<xsl:value-of select="/notification_data/organization_unit/name" />.
+										<xsl:value-of select="/notification_data/request/delivery_address" />.
 									</xsl:otherwise>
 								</xsl:choose>
 								
@@ -73,7 +73,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<tr>
 							<td style="padding:16px;"><xsl:call-template name="recordTitle" /> <!-- recordTitle.xsl --></td>
 						</tr>
-						<xsl:if test="/notification_data/organization_unit/name != 'Cosumnes River College Library'">
+						<xsl:if test="/notification_data/request/delivery_address != 'Cosumnes River College Library'">
 							<xsl:if test="notification_data/request/work_flow_entity/expiration_date">
 								<tr>
 									<td>
@@ -83,7 +83,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							</xsl:if>
 							
 						</xsl:if>
-						<xsl:if test="/notification_data/organization_unit/name != 'Cosumnes River College Library'">
+						<xsl:if test="/notification_data/request/delivery_address != 'Cosumnes River College Library'">
 						<!-- pickup schedule -->
 						<tr>
 							<td>
@@ -94,19 +94,19 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							<td>
 								<p>You may pick up materials during the following days and times (holidays excluded):</p>
 								<xsl:choose>
-									<xsl:when test="/notification_data/organization_unit/name = 'American River College Library'">
+									<xsl:when test="/notification_data/request/delivery_address = 'American River College Library'">
 										<!-- ARC schedule -->
 										<p>Monday to Thursday, 9:00 am to 4:30 pm</p>
 									</xsl:when>
-									<xsl:when test="/notification_data/organization_unit/name = 'El Dorado Center'">
+									<xsl:when test="/notification_data/request/delivery_address = 'El Dorado Center'">
 										<!-- EDC schedule summer -->
 										<p>Mondays to Thursdays, 9:00 am to 3:00 pm.</p> 
 									</xsl:when>
-									<xsl:when test="/notification_data/organization_unit/name = 'Folsom Lake College Library'">
+									<xsl:when test="/notification_data/request/delivery_address = 'Folsom Lake College Library'">
 										<!-- FLC schedule summer -->
 										<p>Mondays to Thursdays, 9:00 am to 3:00 pm.</p>
 									</xsl:when>
-									<xsl:when test="/notification_data/organization_unit/name = 'Sacramento City College Library'">
+									<xsl:when test="/notification_data/request/delivery_address = 'Sacramento City College Library'">
 										<!-- SCC schedule -->
 										<p>Monday to Thursday, 9:00 am to 3:00 pm.</p>
 									</xsl:when>
@@ -137,29 +137,29 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<tr>
 							<td>
 								<xsl:choose>
-								<xsl:when test="/notification_data/organization_unit/name = 'American River College Library'">
+								<xsl:when test="/notification_data/request/delivery_address = 'American River College Library'">
 									<!-- ARC details -->
 									<p>Pick up items at the Library service window (on the north side of the Library). Enter campus from Myrtle Avenue, Parking Lot A/B entrance. Students should park in student/general parking. Parking permits are not required at this time. The ARC Library is located west of the Student Center Building and east of the Welcome and Support Center.</p>
 									<p>For more details on picking up library materials, please <a href="https://answers.library.losrios.edu/arc/faq/336290">see our web page</a>.</p>
 									<p><img style="width:560px;" width="560" src="https://library.losrios.edu/arc/librarymap.JPG" alt="Map showing route from Myrtle Avenue to Library" /></p>
 								</xsl:when>
-								<xsl:when test="/notification_data/organization_unit/name = 'Cosumnes River College Library'">
+								<xsl:when test="/notification_data/request/delivery_address = 'Cosumnes River College Library'">
 									<!-- CRC details -->
 									<p> Once your items have been assigned to a locker, you will receive an email from support@luxerone.com with instructions for picking up your materials.</p>
 									<p>If you need an accessible locker, please <a href="mailto:library@crc.losrios.edu">email the library at library@crc.losrios.edu</a></p>
 									<p><a href="https://answers.library.losrios.edu/crc/faq/337591">Visit the FAQ for more information </a>on the Library’s Pickup Lockers. </p>
 								</xsl:when>
-								<xsl:when test="/notification_data/organization_unit/name = 'El Dorado Center'">
+								<xsl:when test="/notification_data/request/delivery_address = 'El Dorado Center'">
 									<!-- EDC details -->
 									<p>Pick up your requested materials at the Circulation Desk in Building A.</p>
 									<p><a href="https://flc.losrios.edu/flc/main/doc/admin/about-us/edc_map.pdf">View campus map</a></p>
 								</xsl:when>
-								<xsl:when test="/notification_data/organization_unit/name = 'Folsom Lake College Library'">
+								<xsl:when test="/notification_data/request/delivery_address = 'Folsom Lake College Library'">
 									<!-- FLC details -->
 									<p>Pick up your requested materials at the Circulation Desk in Aspen Hall.</p>
 									<p><a href="https://flc.losrios.edu/flc/main/doc/admin/about-us/folsom_map.pdf">View campus map</a></p>									
 								</xsl:when>
-								<xsl:when test="/notification_data/organization_unit/name = 'Sacramento City College Library'">
+								<xsl:when test="/notification_data/request/delivery_address = 'Sacramento City College Library'">
 									<!-- SCC details -->
 									<p>Pick up your requested materials at the Circulation Desk on the 2nd floor of the Learning Resource Center.</p>
 
@@ -184,19 +184,19 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							<td>
 								<p>If you have questions regarding your library request, please 
 								<xsl:choose>
-								<xsl:when test="/notification_data/organization_unit/name = 'American River College Library'">
+								<xsl:when test="/notification_data/request/delivery_address = 'American River College Library'">
 									<!-- ARC contact -->
 									contact Jane Hoff, Lead Library Technician at <a href="mailto:HoffJ@arc.losrios.edu">HoffJ@arc.losrios.edu</a> or (916) 484-8744. 
 								</xsl:when>
-								<xsl:when test="/notification_data/organization_unit/name = 'Cosumnes River College Library'">
+								<xsl:when test="/notification_data/request/delivery_address = 'Cosumnes River College Library'">
 									<!-- CRC contact -->
 									contact us at <a href="mailto:library@crc.losrios.edu">library@crc.losrios.edu</a>
 								</xsl:when>
-								<xsl:when test="/notification_data/organization_unit/name = 'Folsom Lake College Library'">
+								<xsl:when test="/notification_data/request/delivery_address = 'Folsom Lake College Library'">
 									contact the Circulation Department at (916) 608-6613 or <a href="https://library.losrios.edu/ask-us/?flc">submit your question at our website</a>.
 									
 								</xsl:when>
-								<xsl:when test="/notification_data/organization_unit/name = 'Sacramento City College Library'">
+								<xsl:when test="/notification_data/request/delivery_address = 'Sacramento City College Library'">
 									<!-- SCC contact -->
 									contact the Circulation Department at (916) 558-2301 or <a href="mailto:circlib@scc.losrios.edu">circlib@scc.losrios.edu</a>
 
