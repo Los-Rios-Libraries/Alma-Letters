@@ -25,7 +25,7 @@
 		<div class="messageArea">
         <div class="messageBody">
 
-        	<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 0 12px 15px;table-layout:fixed; word-wrap:break-word;">
+        	<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 0 12px 15px;table-layout:fixed; word-wrap:break-word;" role="presentation">
 				<tr>
 					<td>
 						<p>@@inform_loaned_items@@ <xsl:value-of select="notification_data/organization_unit/name" />:</p>
