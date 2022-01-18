@@ -28,6 +28,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							<!-- style.xsl -->
 						</xsl:attribute>
 						<tr>
+							<td>
+								<xsl:for-each select="notification_data">
+									<xsl:if test="organization_unit/code='FLOCKERS' or organization_unit/code='SLOCKERS'">
+										<xsl:message terminate="yes">Locker delivery - message not sent</xsl:message>
+									</xsl:if>
+								</xsl:for-each>
+							</td>
+						</tr>
+						<tr>
 							<xsl:for-each select="notification_data/general_data">
 								<td>
 									<h1>
