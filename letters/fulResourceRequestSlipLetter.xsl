@@ -37,6 +37,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				
 
 			</p>
+					<p>
+						<xsl:for-each select="notification_data/user_for_printing/identifiers/code_value">
+							<xsl:if test="code='Primary Identifier'">
+								<xsl:value-of select="value" />
+							</xsl:if>
+							
+						</xsl:for-each>
+					</p>
 
 					 <table cellspacing="0" cellpadding="5" border="0">
 						<xsl:if  test="notification_data/request/selected_inventory_type='ITEM'" >
