@@ -19,7 +19,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
           <xsl:call-template name="bodyStyleCss" />
           <!-- style.xsl -->
         </xsl:attribute>
- <h1>@@letterName@@</h1>
+								<div style="background:#fff;">
+									<h1>@@letterName@@</h1>
 	
 		
 
@@ -206,7 +207,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 
 
-
+								</div>
 
 </body>
 </html>
