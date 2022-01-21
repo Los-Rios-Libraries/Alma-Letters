@@ -44,6 +44,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 											<xsl:when test="/notification_data/request/delivery_address = 'Cosumnes River College Library'">
 												Your library item will be ready soon
 											</xsl:when>
+											<xsl:when test="/notification_data/request/delivery_address = 'SCC Lockers'">
+												Your library item is awaiting an available locker
+											</xsl:when>
 										
 											<xsl:otherwise>
 												<xsl:value-of select="letter_name" />
@@ -70,6 +73,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 									<xsl:when test="/notification_data/request/delivery_address = 'Cosumnes River College Library'">
 										is being processed and will be available for locker pick-up soon.
 									</xsl:when>
+									<xsl:when test="/notification_data/request/delivery_address = 'SCC Lockers'">
+										has been set aside for you and will be placed in a locker when one becomes available.
+									</xsl:when>
 									<xsl:otherwise>
 										is now available for pickup from the <!--<xsl:value-of select="notification_data/request/assigned_unit_name"/>-->
 										<xsl:value-of select="/notification_data/request/delivery_address" />.
@@ -82,7 +88,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<tr>
 							<td style="padding:16px;"><xsl:call-template name="recordTitle" /> <!-- recordTitle.xsl --></td>
 						</tr>
-						<xsl:if test="/notification_data/request/delivery_address != 'Cosumnes River College Library'">
+						<xsl:if test="/notification_data/request/delivery_address != 'Cosumnes River College Library' and /notification_data/request/delivery_address != 'SCC Lockers'">
 							<xsl:if test="notification_data/request/work_flow_entity/expiration_date">
 								<tr>
 									<td>
@@ -92,7 +98,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							</xsl:if>
 							
 						</xsl:if>
-						<xsl:if test="/notification_data/request/delivery_address != 'Cosumnes River College Library'">
+						<xsl:if test="/notification_data/request/delivery_address != 'Cosumnes River College Library' and /notification_data/request/delivery_address != 'SCC Lockers'">
 						<!-- pickup schedule -->
 						<tr>
 							<td>
@@ -172,6 +178,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 									<!-- SCC details -->
 									<p>Pick up your requested materials at the Circulation Desk on the 2nd floor of the Learning Resource Center.</p>
 
+								</xsl:when>
+								<xsl:when test="/notification_data/request/delivery_address = 'SCC Lockers'">
+									<p>When the Library is open, you may come in to pick up these items instead of waiting for a locker. Please <a href="https://scc.losrios.edu/student-resources/library/library-daily-hours">check our open hours</a>.</p>
+									<p>If you no longer need the items, please cancel your request by <a href="https://library.losrios.edu/my-account">visiting your library account online</a> or calling the Circulation Desk at (916) 558-2301.</p>
 								</xsl:when>
 								<xsl:otherwise>
 									
