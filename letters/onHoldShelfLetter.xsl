@@ -30,7 +30,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<tr>
 							<td>
 								<xsl:for-each select="notification_data">
-									<xsl:if test="organization_unit/code='FLOCKERS' or organization_unit/code='SLOCKERS'">
+									<xsl:if test="request/delivery_address ='FLC Lockers'">
 										<xsl:message terminate="yes">Locker delivery - message not sent</xsl:message>
 									</xsl:if>
 								</xsl:for-each>
