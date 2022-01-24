@@ -190,6 +190,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<tr>
 							<td><b>@@request_type@@: </b><xsl:value-of select="notification_data/request_type"/></td>
 						</tr>
+						<tr>
+							<td><b>Request date: </b><xsl:value-of select="notification_data/request/create_date"/></td>
+						</tr>
 
 						<xsl:if test="notification_data/request/system_notes != ''">
 							<tr>
