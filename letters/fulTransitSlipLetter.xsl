@@ -115,6 +115,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                     <b>Name: </b><xsl:value-of select="notification_data/user_for_printing/name" />
                   </td>
                 </tr>
+              <xsl:for-each select="notification_data/user_for_printing/identifiers/code_value">
+                <xsl:if test="code='Primary Identifier'">
+                  <tr>
+                    <td>
+                      <b>ID: </b><xsl:value-of select="value" />
+                    </td>
+                  </tr>
+                </xsl:if>
+              </xsl:for-each>
                 <xsl:if test="notification_data/user_for_printing/email">
                   <tr>
                     <td><b>@@email@@: </b>
