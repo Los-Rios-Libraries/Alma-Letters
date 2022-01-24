@@ -16,10 +16,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       </head>
       <body>
         <xsl:attribute name="style">
-          <xsl:call-template name="bodyStyleCss" />
+          <xsl:call-template name="slipStyleCss" />
           <!-- style.xsl -->
         </xsl:attribute>
-								<div style="background:#fff;">
+								
 									<h1>@@letterName@@</h1>
 	
 		
@@ -215,7 +215,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 
 
-								</div>
+								
 
 </body>
 </html>

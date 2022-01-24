@@ -32,6 +32,9 @@ h3 {font-size:100%; margin:0;}
 <xsl:template name="bodyStyleCss">
 font-family: "Helvetica neue", Verdana, Arial, sans-serif; color:#333; margin:0; padding:10px 0 10px 0; font-size:110% ; background:#EEEDF2; /* darken this?*/
 </xsl:template>
+<xsl:template name="slipStyleCss">
+ font-family: "Helvetica neue", Verdana, Arial, sans-serif; margin:0; padding: 12pt 0; background:#fff; font-size:16pt;
+</xsl:template>
 
 <xsl:template name="listStyleCss">
 list-style: none; margin:0 0 0 1em; padding:0;

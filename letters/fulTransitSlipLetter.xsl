@@ -14,7 +14,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       </head>
       <body>
         <xsl:attribute name="style">
-          <xsl:call-template name="bodyStyleCss" />
+          <xsl:call-template name="slipStyleCss" />
           <!-- style.xsl -->
         </xsl:attribute>
        <!-- <xsl:call-template name="head" />-->
