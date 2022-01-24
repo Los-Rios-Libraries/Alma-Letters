@@ -112,7 +112,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                 </tr>
                 <tr>
                   <td>
-                    <xsl:value-of select="notification_data/user_for_printing/name" />
+                    <b>Name: </b><xsl:value-of select="notification_data/user_for_printing/name" />
                   </td>
                 </tr>
                 <xsl:if test="notification_data/user_for_printing/email">
