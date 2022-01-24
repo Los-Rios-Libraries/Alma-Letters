@@ -42,8 +42,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 
 			<!-- footer.xsl -->
-			<xsl:call-template name="lrGoToAccount" />
-			<xsl:call-template name="lrPatronFooter" />
+			<xsl:call-template name="lrStaffFooter" />
 
 
 </body>
