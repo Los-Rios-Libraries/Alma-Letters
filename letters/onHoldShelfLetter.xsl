@@ -114,12 +114,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 										<p>Monday to Thursday, 9:00 am to 4:30 pm</p>
 									</xsl:when>
 									<xsl:when test="/notification_data/request/delivery_address = 'El Dorado Center'">
-										<!-- EDC schedule summer -->
-										<p>Mondays to Thursdays, 9:00 am to 3:00 pm.</p> 
+										<!-- EDC schedule spring 2022 -->
+										<p>Mondays to Thursdays, 8:00 am to 4:00 pm.</p> 
 									</xsl:when>
 									<xsl:when test="/notification_data/request/delivery_address = 'Folsom Lake College Library'">
-										<!-- FLC schedule summer -->
-										<p>Mondays to Thursdays, 9:00 am to 3:00 pm.</p>
+										<!-- FLC schedule spring 2022 -->
+										<p>Mondays to Thursdays, 8:00 am to 5:00 pm.</p>
 									</xsl:when>
 									<xsl:when test="/notification_data/request/delivery_address = 'Sacramento City College Library'">
 										<!-- SCC schedule -->
@@ -168,11 +168,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 									<!-- EDC details -->
 									<p>Pick up your requested materials at the Circulation Desk in Building A.</p>
 									<p><a href="https://flc.losrios.edu/flc/main/doc/admin/about-us/edc_map.pdf">View campus map</a></p>
+									<p>If you no longer need the items, please cancel your request by <a href="https://library.losrios.edu/my-account">visiting your library account online</a> or calling the Circulation Desk at (530) 642-5695.</p>
 								</xsl:when>
 								<xsl:when test="/notification_data/request/delivery_address = 'Folsom Lake College Library'">
 									<!-- FLC details -->
 									<p>Pick up your requested materials at the Circulation Desk in Aspen Hall.</p>
-									<p><a href="https://flc.losrios.edu/flc/main/doc/admin/about-us/folsom_map.pdf">View campus map</a></p>									
+									<p><a href="https://flc.losrios.edu/flc/main/doc/admin/about-us/folsom_map.pdf">View campus map</a></p>	
+									<p>If you no longer need the items, please cancel your request by <a href="https://library.losrios.edu/my-account">visiting your library account online</a> or calling the Circulation Desk at (916) 608-6613.</p>
 								</xsl:when>
 								<xsl:when test="/notification_data/request/delivery_address = 'Sacramento City College Library'">
 									<!-- SCC details -->
