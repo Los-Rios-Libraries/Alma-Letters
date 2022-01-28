@@ -183,7 +183,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								</xsl:when>
 								<xsl:when test="/notification_data/request/delivery_address = 'SCC Lockers'">
 									<p>When the Library is open, you may come in to pick up these items instead of waiting for a locker. Please <a href="https://scc.losrios.edu/student-resources/library/library-daily-hours">check our open hours</a>.</p>
-									<p>If you no longer need the items, please cancel your request by <a href="https://library.losrios.edu/my-account">visiting your library account online</a> or calling the Circulation Desk at (916) 558-2301.</p>
+									<p>If you need a wheelchair-accessible locker, please contact us at (916) 558-2301 or circlib@scc.losrios.edu (include your Los Rios student ID number).</p>
+									<p>If you no longer need the items, please cancel your request by <a href="https://library.losrios.edu/my-account">visiting your library account online</a> or contacting us via phone or email. Doing so will allow other students get access to the materials more quickly.</p>
 								</xsl:when>
 								<xsl:otherwise>
 									
