@@ -63,7 +63,17 @@
 
 								<xsl:for-each select="item_loans/overdue_and_lost_loan_notification_display/item_loan">
 									<tr>
-										<td><xsl:value-of select="title"/></td>
+										<td>
+                      <xsl:choose>
+                        <xsl:when test="string-length(title) &gt; 110">
+                        	<xsl:value-of select="substring(title,0,100)" />
+                          <xsl:text>...</xsl:text>
+                        </xsl:when>
+                        <xsl:otherwise>
+                        	<xsl:value-of select="title"/>
+                      	</xsl:otherwise>
+                    	</xsl:choose>	
+                    </td>
                     <xsl:if test="author !=''">
                       <td><xsl:value-of select="author"/></td>
                     </xsl:if>
