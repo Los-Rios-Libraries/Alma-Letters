@@ -80,6 +80,18 @@
           <tr>
             <td>
               <p>Watch for an email from <i>support@luxerone.com</i> that will include your locker access code.</p>
+              <p>
+                If you need a wheelchair-accessible locker, please
+                <xsl:choose>
+                  <xsl:when test="/notification_data/organization_unit/code = 'FLOCKERS'">
+                   contact the library at (916) 608-6613
+                  </xsl:when>
+                   <xsl:when test="/notification_data/organization_unit/code = 'SLOCKERS'">
+                    call us at (916) 558-2301 or email us at circlib@scc.losrios.edu
+                    </xsl:when>
+                </xsl:choose>
+                , and we will make sure your library materials are placed in a locker you can reach.
+              </p>
               <p>For more information about picking up items from library lockers, please
                 <xsl:choose>
                   <xsl:when test="/notification_data/organization_unit/code = 'FLOCKERS'">
