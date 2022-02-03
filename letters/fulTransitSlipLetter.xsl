@@ -24,6 +24,31 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
           <div class="messageBody">
             <table cellspacing="0" cellpadding="5" border="0">
               <tr>
+                <td>
+                  <div style="border:1px solid #ccc; padding:12pt; font-size:18pt;">
+                     <table cellspacing="0" cellpadding="5" border="0">
+                    <tr>
+                      <td>
+                        <b>@@from@@: </b>
+                      </td>
+                      <td>
+                       <xsl:value-of select="notification_data/request/assigned_unit_name" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <b>@@to@@: </b>
+                        </td>
+                      <td>
+                         <xsl:value-of select="notification_data/request/calculated_destination_name" />
+                      </td>
+                    </tr>
+                  </table>
+                  </div>
+                 
+                 </td>
+              </tr>
+              <tr>
                 <td><b>@@print_date@@: </b>
                 <xsl:value-of select="notification_data/request/create_date" />-
 
@@ -45,14 +70,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
               </tr>
               <tr>
                 <td>@@we_are_transferring_item_below@@</td>
-              </tr>
-              <tr>
-                <td><b>@@from@@: </b>
-                <xsl:value-of select="notification_data/request/assigned_unit_name" /></td>
-              </tr>
-              <tr>
-                <td><b>@@to@@: </b>
-                <xsl:value-of select="notification_data/request/calculated_destination_name" /></td>
               </tr>
               <tr>
                 <td><b>@@transfer_date@@: </b>
