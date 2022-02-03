@@ -32,51 +32,95 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         <xsl:call-template name="head" /><!-- header.xsl -->
         <xsl:call-template name="senderReceiver" /> <!-- SenderReceiver.xsl -->
 
-		<br />
 		<xsl:call-template name="toWhomIsConcerned" /> <!-- mailReason.xsl -->
 
         <div class="messageArea">
           <div class="messageBody">
 
-			<table role='presentation' >
+			<table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; table-layout:fixed; word-wrap:break-word;">
 				<xsl:variable name="registrationStatus"><xsl:value-of select="notification_data/delivery_registration/status"/></xsl:variable>
 				<xsl:choose>
 					<xsl:when test="$registrationStatus = 'REGISTERED'">
-						<tr><td>@@register_successfully@@ &#34;<xsl:value-of select="notification_data/delivery_registration/title"></xsl:value-of>&#34; </td></tr>
-						<tr><td>@@current_queue_position@@ <xsl:value-of select="notification_data/delivery_registration/number_in_queue"/> @@in_queue@@</td></tr>
-						<tr><td> </td></tr>
-						<tr><td>@@notification_sent@@ @@you_will_have@@ <xsl:value-of select="notification_data/delivery_registration/grace_period"></xsl:value-of> @@within_minutes@@</td></tr>
+						<tr>
+              <td style="padding-left:12px;">
+                <p>
+                @@register_successfully@@ &#34;<xsl:value-of select="notification_data/delivery_registration/title"></xsl:value-of>&#34; @@current_queue_position@@ <xsl:value-of select="notification_data/delivery_registration/number_in_queue"/> @@in_queue@@
+               </p>
+             </td>
+            </tr>
+						<tr>
+              <td style="padding-left:12px;">
+                <p>
+                  @@notification_sent@@
+                </p>
+                <p>
+                  @@you_will_have@@ <xsl:value-of select="notification_data/delivery_registration/grace_period"></xsl:value-of> @@within_minutes@@
+              </p>
+            </td>
+            </tr>
 					</xsl:when>				
 					<xsl:when test="$registrationStatus = 'ITEM_AVAILABLE'">						
 						<xsl:variable name="deliveryUrl"><xsl:value-of select="notification_data/delivery_registration/delivery_url"/></xsl:variable>
-						<tr><td>&#34;<xsl:value-of select="notification_data/delivery_registration/title"></xsl:value-of>&#34; @@item_available@@</td></tr>
-						<tr><td><strong><a href="{$deliveryUrl}" target="_blank">@@here@@</a></strong>&#160;</td></tr>
-						<tr><td>@@you_have@@ <xsl:value-of select="notification_data/delivery_registration/grace_period"></xsl:value-of> @@within_minutes@@</td></tr>
+						<tr>
+              <td style="padding-left:12px;">
+                <p>
+                   &#34;<xsl:value-of select="notification_data/delivery_registration/title"></xsl:value-of>&#34; @@item_available@@
+                </p>
+              </td>
+            </tr>
+						<tr>
+              <td style="padding-left:12px;">
+               <p>
+                <strong><a href="{$deliveryUrl}" target="_blank">@@here@@</a></strong>&#160;
+               </p>
+              </td>
+            </tr>
+						<tr>
+              <td style="padding-left:12px;">
+               <p>
+                @@you_have@@ <xsl:value-of select="notification_data/delivery_registration/grace_period"></xsl:value-of> @@within_minutes@@
+               </p>
+              </td>
+            </tr>
 					</xsl:when>				
 					<xsl:when test="$registrationStatus = 'GRACE_PERIOD_EXPIRED'">						
 						<xsl:variable name="deliveryUrl"><xsl:value-of select="notification_data/delivery_registration/delivery_url"/></xsl:variable>
-						<tr><td>@@time_accessing@@ &#34;<xsl:value-of select="notification_data/delivery_registration/title"></xsl:value-of>&#34; @@has_expired@@</td></tr>
-						<tr><td>@@you_can_reregister@@ </td></tr>
-						<tr><td><strong><a href="{$deliveryUrl}" target="_blank">@@register@@</a></strong>&#160;</td></tr>
+						<tr>
+              <td  style="padding-left:12px;">
+                <p>
+                  @@time_accessing@@ &#34;<xsl:value-of select="notification_data/delivery_registration/title"></xsl:value-of>&#34; @@has_expired@@
+                </p>
+              </td>
+            </tr>
+						<tr>
+              <td  style="padding-left:12px;">
+                <p>@@you_can_reregister@@</p>
+              </td>
+            </tr>
+						<tr>
+              <td  style="padding-left:12px;">
+                <p>
+                  <strong>
+                    <a href="{$deliveryUrl}" target="_blank">
+                      @@register@@
+                    </a>
+                 </strong>&#160;
+                </p>
+              </td>
+            </tr>
 					</xsl:when>
 					<xsl:otherwise>
 					</xsl:otherwise>
 				</xsl:choose>
 			</table>
-			<br />
 
-			<table role='presentation' >
-				<tr><td>@@sincerely@@</td></tr>
-				<tr><td>@@department@@</td></tr>
-			</table>
 
           </div>
         </div>
 
+        <xsl:call-template name="lrGoToAccount" />
         <!-- footer.xsl -->
-        <xsl:call-template name="lastFooter" />
-        <xsl:call-template name="myAccount" />
-		<xsl:call-template name="contactUs" />
+        <xsl:call-template name="lrPatronFooter" />
       </body>
     </html>
   </xsl:template>
