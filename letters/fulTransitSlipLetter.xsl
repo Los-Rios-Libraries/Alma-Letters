@@ -98,29 +98,33 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                 </tr>
               </xsl:if>
               <xsl:if test="notification_data/request/system_notes">
-                <tr>
-                  <td>
-                    <b>@@system_notes@@:</b>
-                  </td>
+                <xsl:if test="notification_data/request/system_notes != ''">
+                  <tr>
+                    <td>
+                     <b>@@system_notes@@:</b>
+                   </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <xsl:value-of select="notification_data/request/system_notes" />
+                    </td>
                 </tr>
-                <tr>
-                  <td>
-                    <xsl:value-of select="notification_data/request/system_notes" />
-                  </td>
-                </tr>
+                </xsl:if> 
               </xsl:if>
               <xsl:if test="notification_data/request/note">
-				<tr>
-					<td>
-						<b>@@request_note@@:</b>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<xsl:value-of select="notification_data/request/note" />
-					</td>
-				</tr>
-			  </xsl:if>
+                <xsl:if test="notification_data/request/note != ''">
+                	<tr>
+                    <td>
+                			<b>@@request_note@@:</b>
+                		</td>
+              		</tr>
+              		<tr>
+              			<td>
+              				<xsl:value-of select="notification_data/request/note" />
+              			</td>
+                	</tr>        
+                </xsl:if>
+      			  </xsl:if>
               <xsl:if test="notification_data/user_for_printing/name">
                 <tr>
                   <td>
