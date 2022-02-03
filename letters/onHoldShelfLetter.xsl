@@ -110,8 +110,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								<p>You may pick up materials during the following days and times (holidays excluded):</p>
 								<xsl:choose>
 									<xsl:when test="/notification_data/request/delivery_address = 'American River College Library'">
-										<!-- ARC schedule -->
-										<p>Monday to Thursday, 9:00 am to 4:30 pm</p>
+										<!-- ARC schedule spring 2022 -->
+										<ul>
+											<li>Monday to Thursday, 8:30 am to 5:00 pm</li>
+											<li>Saturday, 10:00 am to 4:00 pm</li>
+										</ul>
 									</xsl:when>
 									<xsl:when test="/notification_data/request/delivery_address = 'El Dorado Center'">
 										<!-- EDC schedule spring 2022 -->
