@@ -128,7 +128,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
               <xsl:if test="notification_data/user_for_printing/name">
                 <tr>
                   <td>
-                    <b>@@requested_for@@:</b>
+                    <div style="text-decoration:underline;font-size:18pt;">@@requested_for@@</div>
                   </td>
                 </tr>
                 <tr>
