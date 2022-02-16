@@ -71,7 +71,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<tr>
               <td style="padding-left:12px;">
                <p>
-                <strong><a href="{$deliveryUrl}" target="_blank">@@here@@</a></strong>&#160;
+                <strong>
+                  <a>
+                    <xsl:attribute name="href">https://caccl-lrccd.primo.exlibrisgroup.com/view/delivery/01CACCL_LRCCD/<xsl:value-of select="notification_data/delivery_registration/rep_id"/>
+                    </xsl:attribute>
+                    @@here@@
+                  </a></strong>&#160;
                </p>
               </td>
             </tr>
@@ -101,7 +106,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
               <td  style="padding-left:12px;">
                 <p>
                   <strong>
-                    <a href="{$deliveryUrl}" target="_blank">
+                    <a>
+                      <xsl:attribute name="href">https://caccl-lrccd.primo.exlibrisgroup.com/view/delivery/01CACCL_LRCCD/<xsl:value-of select="notification_data/delivery_registration/rep_id"/>
+                      </xsl:attribute>
                       @@register@@
                     </a>
                  </strong>&#160;
