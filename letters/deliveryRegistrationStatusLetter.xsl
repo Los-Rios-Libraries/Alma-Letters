@@ -125,7 +125,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
           </div>
         </div>
 
-        <xsl:call-template name="lrGoToAccount" />
         <!-- footer.xsl -->
         <xsl:call-template name="lrPatronFooter" />
       </body>
