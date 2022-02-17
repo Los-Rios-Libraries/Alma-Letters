@@ -70,7 +70,7 @@
 			</tr>
 			<tr>
 				<td style="text-align:center; padding-top:12px;">
-					Please do not reply to this email. Instead, <a href="https://www.library.losrios.edu/ask-us">contact your library</a>.
+					Please do not reply to this email. Instead, <a href="https://library.losrios.edu/ask-us">contact your library</a>.
 				</td>
 			</tr>
 		</table>
@@ -90,7 +90,7 @@
 			<tr>
 
 				<td>
-					Sent by the <a href="https://www.library.losrios.edu/">Los Rios Libraries</a> on <xsl:value-of select="notification_data/general_data/current_date"/></td>
+					Sent by the <a href="https://library.losrios.edu/">Los Rios Libraries</a> on <xsl:value-of select="notification_data/general_data/current_date"/></td>
 			</tr>
 			<tr>
 				<td>
