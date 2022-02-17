@@ -126,7 +126,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 									</xsl:when>
 									<xsl:when test="/notification_data/request/delivery_address = 'Sacramento City College Library'">
 										<!-- SCC schedule -->
-										<p>Monday to Thursday, 9:00 am to 3:00 pm.</p>
+										<p>Monday to Thursday, 9:00 am to 7:00 pm.</p>
 									</xsl:when>
 									<xsl:otherwise>
 										<p>Please choose your college to find available pickup times:</p>
