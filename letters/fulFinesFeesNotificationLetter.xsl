@@ -93,8 +93,28 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; table-layout:fixed; word-wrap:break-word;">
 					<tr>
 						<td style="padding:16px 0 16px 15px;">
-							<b>@@please_settle@@</b>
-
+							<p>Most fines and fees are the result of unreturned library materials.</p>
+							<p><strong>Current students need these materials.</strong> Please return them.</p>
+							<p>If you return your library materials, we will be able to greatly reduce these fees or eliminate them entirely.</p>
+							<p>To find out details about what needs to be returned, please contact the library&apos;s circulation desk.</p>
+							<ul>
+								<li>ARC Library: (916) 484-8455</li>
+								<li>CRC Library: (916) 691-7266</li>
+								<li>FLC Library: (916) 608-6613</li>
+								<li>SCC Library: (916) 558-2301</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td style="padding:16px 0 16px 15px;">
+							<h2>How to return items</h2>
+							<ul>
+								<li><a href="https://answers.library.losrios.edu/arc/faq/334191">ARC returns</a></li>
+								<li><a href="https://answers.library.losrios.edu/crc/faq/320267">CRC returns</a></li>
+								<li><a href="https://answers.library.losrios.edu/flc/faq/327551">FLC returns</a></li>
+								<li><a href="https://answers.library.losrios.edu/scc/faq/316527">SCC returns</a></li>
+							</ul>
+							<p>You may return items at any of these locations.</p>
 						</td>
 					</tr>
 					
