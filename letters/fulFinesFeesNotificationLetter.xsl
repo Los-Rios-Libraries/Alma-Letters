@@ -103,7 +103,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</table>
 				 
 
-				<xsl:call-template name="lrGoToAccount" />
+				<!--<xsl:call-template name="lrGoToAccount" />-->
         <!-- footer.xsl -->
         <xsl:call-template name="lrPatronFooter" />
 			</body>
