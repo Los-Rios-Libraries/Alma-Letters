@@ -30,15 +30,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
           <table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 0 12px 15px;table-layout:fixed; word-wrap:break-word;" role="presentation">  
                   <tr>
                     <td>
-                        <h>@@message@@</h>
+						<xsl:if test="/notification_data/request/delivery_address = 'Cosumnes River College Library'">
+							<xsl:message terminate="yes">CRC, letter not sent</xsl:message>
+						</xsl:if>
+                        <p>@@following_items_awaiting_pickup@@</p>
                     </td>
                   </tr>
                   
-                  <tr>
-                    <td>
-                        <h>@@following_items_awaiting_pickup@@</h>
-                    </td>
-                  </tr>
 
                   <xsl:for-each select="notification_data/requests_by_library/library_requests_for_display">
                         <tr>
