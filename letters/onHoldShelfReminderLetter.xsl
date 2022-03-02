@@ -66,7 +66,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                             </td>
                         </tr>
                     </xsl:for-each>
-                    
+                    <!-- part below is about resource sharing so should not be needed currently -->
                     <xsl:if test="notification_data/out_of_institution_requests/request_for_display">
                         <tr>
                             <td>
