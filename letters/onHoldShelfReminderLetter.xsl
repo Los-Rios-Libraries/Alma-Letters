@@ -22,13 +22,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         <xsl:call-template name="head" /><!-- header.xsl -->
         <xsl:call-template name="senderReceiver" /> <!-- SenderReceiver.xsl -->
 
-        <br />
         <xsl:call-template name="toWhomIsConcerned" /> <!-- mailReason.xsl -->
 
         <div class="messageArea">
           <div class="messageBody">
 
-            <table role='presentation' cellspacing="0" cellpadding="5" border="0">  
+          <table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 0 12px 15px;table-layout:fixed; word-wrap:break-word;" role="presentation">  
                   <tr>
                     <td>
                         <h>@@message@@</h>
@@ -44,10 +43,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                   <xsl:for-each select="notification_data/requests_by_library/library_requests_for_display">
                         <tr>
                             <td>
-                                <table cellpadding="5" class="listing">
-                                    <xsl:attribute name="style">
-                                        <xsl:call-template name="mainTableStyleCss" />
-                                    </xsl:attribute>
+                                <table cellspacing="0" cellpadding="5" border="0" align="center" style="background:#fff;">
                                     <tr align="center" bgcolor="#f5f5f5">
                                         <td colspan="4">
                                             <h3><xsl:value-of select="organization_unit/name" /></h3>
@@ -71,7 +67,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                                 </table>
                             </td>
                         </tr>
-                        <br/>
                     </xsl:for-each>
                     
                     <xsl:if test="notification_data/out_of_institution_requests/request_for_display">
@@ -118,18 +113,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                   
             </table>
       
-            <br />
-            <table role='presentation' >
-                <tr><td>@@sincerely@@</td></tr>
-                <tr><td>@@department@@</td></tr>
-            </table>
           </div>
         </div>
 
-        <!-- footer.xsl -->
-        <xsl:call-template name="lastFooter" />
-        <xsl:call-template name="myAccount" />
-        <xsl:call-template name="contactUs" />
+        <xsl:call-template name="lrGoToAccount" />
+		
+		<!-- footer.xsl -->
+        
+		<xsl:call-template name="lrPatronFooter" />
       </body>
     </html>
   </xsl:template>
