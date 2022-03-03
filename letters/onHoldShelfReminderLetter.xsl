@@ -41,8 +41,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                   <xsl:for-each select="notification_data/requests_by_library/library_requests_for_display">
                         <tr>
                             <td>
-                                <table cellspacing="0" cellpadding="5" border="0" align="center" style="background:#fff;">
-                                    <tr align="center" bgcolor="#f5f5f5">
+                                <table cellspacing="0" cellpadding="5" border="0" align="center" style="background:#fff; width:500px;margin-top:10px;">
                                    <!-- <tr align="center" bgcolor="#f5f5f5">
                                         <td colspan="4">
                                             <h3><xsl:value-of select="organization_unit/name" /></h3>
