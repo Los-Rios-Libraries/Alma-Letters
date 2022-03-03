@@ -58,8 +58,36 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                                         <tr>
                                             <td><xsl:value-of select="phys_item_display/title"/></td>
                                             <td><xsl:value-of select="phys_item_display/author"/></td>
-                                            <td><xsl:value-of select="request/assigned_unit_name"/></td>
-                                            <td><xsl:value-of select="request/work_flow_entity/expiration_date"/></td>
+                                            <td>
+                                            	<xsl:variable name="library" select="request/assigned_unit_name" />
+                                            	<xsl:choose>
+                                            		<xsl:when test="substring($library,1,1) = 'A' or substring($library,1,1) = 'F' or substring($library,1,1) = 'S'">
+                                            			<a>
+                                                    <xsl:attribute name="title">View Library Hours</xsl:attribute>
+                                            				<xsl:choose>
+                                            					<xsl:when test="substring($library,1,1)= 'A'">
+                                            						<xsl:attribute name="href"> https://arc.losrios.edu/student-resources/library/about-the-library/library-hours</xsl:attribute>
+                                            					</xsl:when>
+                                            					<xsl:when test="substring($library,1,1)='F'">
+                                            						<xsl:attribute name="href"> https://flc.losrios.edu/student-resources/library/about-the-library/library-hours</xsl:attribute>
+                                            					</xsl:when>
+                                            					<xsl:when test="substring($library,1,1)='S'">
+                                            						<xsl:attribute name="href">https://scc.losrios.edu/student-resources/library/library-daily-hours</xsl:attribute>
+                                            					</xsl:when>
+                                            				</xsl:choose>
+
+                                            				<xsl:value-of select="$library" />
+                                            			</a>
+                                            		</xsl:when>
+                                                <xsl:otherwise>
+                                                	<xsl:value-of select="$library" />
+                                                </xsl:otherwise>
+                                            	</xsl:choose>
+                                            	
+
+
+
+                                            </td>                                            <td><xsl:value-of select="request/work_flow_entity/expiration_date"/></td>
                                         </tr>
                                     </xsl:for-each>
                                 </table>
