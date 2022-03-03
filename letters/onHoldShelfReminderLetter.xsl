@@ -43,10 +43,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                             <td>
                                 <table cellspacing="0" cellpadding="5" border="0" align="center" style="background:#fff;">
                                     <tr align="center" bgcolor="#f5f5f5">
+                                   <!-- <tr align="center" bgcolor="#f5f5f5">
                                         <td colspan="4">
                                             <h3><xsl:value-of select="organization_unit/name" /></h3>
                                         </td>
-                                    </tr>
+                                    </tr>-->
                                     <tr>
                                         <th>@@title@@</th>
                                         <th>@@author@@</th>
