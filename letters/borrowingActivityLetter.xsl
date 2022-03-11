@@ -178,7 +178,48 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         </div>
 
         <!-- footer.xsl -->
-		<xsl:call-template name="lrGoToAccount" />
+        <!--Only show account button if user is unexpired -->
+					<xsl:if test="notification_data/general_data/current_date">
+							<xsl:param name="currentDateEC" select="notification_data/general_data/current_date" />
+							<xsl:param name="expiryDateEC" select="notification_data/receivers/receiver/user/expiry_date" />
+							<xsl:choose>
+								<xsl:when test="$expiryDateEC != ''">
+								<!--Split the current date-->
+								<xsl:variable name="CMONEC" select="substring($currentDateEC,1,2)" />
+								<xsl:variable name="CDAYEC" select="substring($currentDateEC,4,2)" />
+								<xsl:variable name="CYEAEC" select="substring($currentDateEC,7,4)" />
+								<!--Split the expiry date-->
+								<xsl:variable name="EMONEC" select="substring($expiryDateEC,1,2)" />
+								<xsl:variable name="EDAYEC" select="substring($expiryDateEC,4,2)" />
+								<xsl:variable name="EYEAEC" select="substring($expiryDateEC,7,4)" />
+								<!--Create dates for checking-->
+								<xsl:variable name="currentDate" select="concat($CYEAEC,$CMONEC,$CDAYEC)" />
+								<xsl:variable name="expireddate" select="concat($EYEAEC,$EMONEC,$EDAYEC)" />
+                <xsl:choose>
+                  <!-- exp date in future -->
+                  <xsl:when test="$currentDate &lt; $expireddate">
+                    <xsl:call-template name="lrGoToAccount" />
+                	</xsl:when>
+                  <xsl:otherwise>
+                    <table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 0 12px 15px;" role="presentation">
+                      <tr>
+                        <td>
+                          <p><em>To discuss your loans further, please contact your library.</em></p>
+                        </td>
+                      </tr>
+                    </table>
+                  </xsl:otherwise>
+                </xsl:choose>
+							</xsl:when>
+								<xsl:otherwise>
+                  <!-- no exp date -->
+									<xsl:call-template name="lrGoToAccount" />
+								</xsl:otherwise>
+								
+							</xsl:choose>
+							
+						</xsl:if>
+		
 		<xsl:call-template name="lrPatronFooter" />
       </body>
     </html>
