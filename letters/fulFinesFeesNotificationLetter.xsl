@@ -129,7 +129,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<tr>
 						<td style="padding:16px 0 16px 15px;">
 							<h2>How to return items</h2>
-							<p>You may return items at any Los Rios Library locations.</p>
+							<p>You may return items at any Los Rios Library location.</p>
 							<ul>
 								<li><a href="https://answers.library.losrios.edu/arc/faq/334191">ARC returns</a></li>
 								<li><a href="https://answers.library.losrios.edu/crc/faq/320267">CRC returns</a></li>
