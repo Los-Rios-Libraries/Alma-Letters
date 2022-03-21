@@ -93,16 +93,37 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; table-layout:fixed; word-wrap:break-word;">
 					<tr>
 						<td style="padding:16px 0 16px 15px;">
+							<!-- first letter will make later conditional easier to read -->
+							<xsl:variable name="feeLibraryFirstLetter" select="substring(notification_data/organization_unit/name,1,1)" />
 							<p>Most fines and fees are the result of unreturned library materials.</p>
 							<p><strong>Current students need these materials.</strong> Please return them.</p>
 							<p>If you return your library materials, we will be able to greatly reduce these fees or eliminate them entirely.</p>
-							<p>To find out details about what needs to be returned, please contact the library&apos;s circulation desk.</p>
-							<ul>
-								<li>ARC Library: (916) 484-8455</li>
-								<li>CRC Library: (916) 691-7266</li>
-								<li>FLC Library: (916) 608-6613</li>
-								<li>SCC Library: (916) 558-2301</li>
-							</ul>
+							<p>To find out details about what needs to be returned, please call the library&apos;s circulation desk:</p>
+							<xsl:choose>
+								<xsl:when test="$feeLibraryFirstLetter = 'A'">
+									(916) 484-8455.
+								</xsl:when>
+								<xsl:when test="$feeLibraryFirstLetter = 'C'">
+									(916) 691-7266.
+								</xsl:when>
+								<xsl:when test="$feeLibraryFirstLetter = 'F'">
+									(916) 608-6613.
+								</xsl:when>
+								<xsl:when test="$feeLibraryFirstLetter = 'S'">
+									(916) 558-2301.
+								</xsl:when>
+								<xsl:otherwise>
+									<ul>
+										<li>ARC Library: (916) 484-8455</li>
+										<li>CRC Library: (916) 691-7266</li>
+										<li>FLC Library: (916) 608-6613</li>
+										<li>SCC Library: (916) 558-2301</li>
+									</ul>
+								</xsl:otherwise>
+							</xsl:choose>
+							
+
+							
 						</td>
 					</tr>
 					<tr>
