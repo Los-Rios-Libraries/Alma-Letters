@@ -181,6 +181,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								<xsl:when test="/notification_data/request/delivery_address = 'Sacramento City College Library'">
 									<!-- SCC details -->
 									<p>Pick up your requested materials at the Circulation Desk on the 2nd floor of the Learning Resource Center.</p>
+									<p>For more details on picking up library materials, please <a href="https://answers.library.losrios.edu/scc/faq/335622">see our web page</a>.</p>
 
 								</xsl:when>
 								<xsl:when test="/notification_data/request/delivery_address = 'SCC Lockers'">
