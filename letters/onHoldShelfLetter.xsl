@@ -108,6 +108,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<tr>
 							<td>
 								<p>You may pick up materials during the following days and times (holidays excluded):</p>
+								<xsl:variable name="pickupLocation" select="/notification_data/request/delivery_address" />
 								<xsl:choose>
 									<xsl:when test="/notification_data/request/delivery_address = 'American River College Library'">
 										<!-- ARC schedule spring 2022 -->
