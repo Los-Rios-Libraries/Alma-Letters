@@ -164,7 +164,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 									<!-- CRC details -->
 									<p> Once your items have been assigned to a locker, you will receive an email from support@luxerone.com with instructions for picking up your materials.</p>
 									<p>If you need an accessible locker, please <a href="mailto:library@crc.losrios.edu">email the library at library@crc.losrios.edu</a></p>
-									<p><a href="https://answers.library.losrios.edu/crc/faq/337591">Visit the FAQ for more information </a>on the Library’s Pickup Lockers. </p>
+									<p><a href="https://answers.library.losrios.edu/crc/faq/337591">Visit the FAQ for more information</a> on the Library&apos;s Pickup Lockers. </p>
 								</xsl:when>
 								<xsl:when test="/notification_data/request/delivery_address = 'El Dorado Center'">
 									<!-- EDC details -->
