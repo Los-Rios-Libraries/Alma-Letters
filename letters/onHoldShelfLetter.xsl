@@ -107,33 +107,31 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						</tr>
 						<tr>
 							<td>
-								<p>You may pick up materials during the following days and times (holidays excluded):</p>
 								<xsl:variable name="pickupLocation" select="/notification_data/request/delivery_address" />
+								<p style="display:inline;">To find out when to pick up your materials,</p>
 								<xsl:choose>
-									<xsl:when test="/notification_data/request/delivery_address = 'American River College Library'">
-										<!-- ARC schedule spring 2022 -->
-										<ul>
-											<li>Monday to Thursday, 8:30 am to 5:00 pm</li>
-											<li>Saturday, 10:00 am to 4:00 pm</li>
-										</ul>
+									<xsl:when test="$pickupLocation = 'American River College Library'">
+										<!-- ARC -->
+										<a href="https://arc.losrios.edu/student-resources/library/about-the-library/library-hours">view our open and service window hours page</a>.
 									</xsl:when>
-									<xsl:when test="/notification_data/request/delivery_address = 'El Dorado Center'">
-										<!-- EDC schedule spring 2022 -->
-										<p>Mondays to Thursdays, 8:00 am to 4:00 pm.</p> 
+									<xsl:when test="$pickupLocation = 'El Dorado Center' or $pickupLocation = 'Folsom Lake College Library'">
+										<!-- EDC/FLC -->
+										<a href="https://flc.losrios.edu/student-resources/library/about-the-library/library-hours">view our open hours page</a>. 
 									</xsl:when>
-									<xsl:when test="/notification_data/request/delivery_address = 'Folsom Lake College Library'">
-										<!-- FLC schedule spring 2022 -->
-										<p>Mondays to Thursdays, 8:00 am to 5:00 pm.</p>
+									<xsl:when test="$pickupLocation = 'Natomas Center'">
+										<!-- Natomas Center -->
+										<a href="https://www.saclibrary.org/Locations/North-Natomas">view our open hours page</a>.
 									</xsl:when>
-									<xsl:when test="/notification_data/request/delivery_address = 'Sacramento City College Library'">
-										<!-- SCC schedule -->
-										<p>Monday to Thursday, 9:00 am to 7:00 pm.</p>
+									<xsl:when test="$pickupLocation = 'Sacramento City College Library'">
+										<!-- SCC -->
+										<a href="https://scc.losrios.edu/student-resources/library/library-daily-hours">view our open hours page</a>.
 									</xsl:when>
 									<xsl:otherwise>
-										<p>Please choose your college to find available pickup times:</p>
+										<p style="display:inline;">please choose your college:</p>
 										<ul>
 											<li>
 												<a href="https://answers.library.losrios.edu/arc/faq/336290">ARC</a>
+												<p style="margin-left:10px;"><a href="https://www.saclibrary.org/Locations/North-Natomas">ARC Natomas Center</a></p>
 											</li>
 											<li>
 												<a href="https://answers.library.losrios.edu/crc/faq/335859">CRC</a>
