@@ -47,10 +47,39 @@
 										</td>
 									</tr>
 								</xsl:when>
+								<xsl:when test="notification_data/notification_type = 'END_TERM_RETURNS'">
 									<tr>
 										<td>
+											<p>You are receiving this message because you have one or more items on loan from a Los Rios Community College library.</p>
+
+											<p>We hope you have enjoyed the use of these materials. Please note that all materials are due by Wednesday, May 18.</p>
+
+											<p>When returning items, please return them to the library that they were borrowed from. If you have any questions, please contact your library.</p>
+
+											<h2>Return and contact information</h2>
+											<h3>American River College</h3>
 											<ul>
+												<li>Contact: Jane Hoff HoffJ@arc.losrios.edu (916) 484-8744</li>
+												<li>Return information: <a href="https://answers.library.losrios.edu/arc/faq/334191">https://answers.library.losrios.edu/arc/faq/334191</a></li>
 											</ul>
+
+											<h3>Cosumnes River College</h3>
+											<ul>
+												<li>Contact: Emily Bond bonde@crc.losrios.edu</li>
+												<li>Return information: <a href="https://answers.library.losrios.edu/crc/faq/320267">https://answers.library.losrios.edu/crc/faq/320267</a> </li>
+											</ul>
+											<h3>Folsom Lake College</h3>
+											<ul>
+												<li>Contact: (916) 608-6613</li>
+												<li>Return information: <a href="https://answers.library.losrios.edu/flc/faq/327551">https://answers.library.losrios.edu/flc/faq/327551</a></li>
+											</ul>
+
+											<h3>Sacramento City College</h3>
+											<ul>
+												<li>Contact: (916) 558-2301</li>
+												<li>Return information: <a href="https://answers.library.losrios.edu/scc/faq/316527">https://answers.library.losrios.edu/scc/faq/316527</a></li>
+											</ul>
+
 
 										</td>
 									</tr>
