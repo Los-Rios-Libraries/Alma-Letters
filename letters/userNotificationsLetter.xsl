@@ -47,75 +47,13 @@
 										</td>
 									</tr>
 								</xsl:when>
-								<xsl:when test="notification_data/notification_type = 'DO_CHROMEBOOK_EXCHANGE'">
 									<tr>
 										<td>
-											<p>The Los Rios district has a limited number of refurbished desktop computers. You may be eligible to trade your Chromebook loan in for a desktop computer that will be yours to keep.</p>
-											<p>Desktop specs:</p>
 											<ul>
-												<li>23&quot; screen</li>
-												<li>30 lbs.</li>
-												<li>compact, all-in-one device (no separate tower)</li>
-												<li>Windows 10</li>
-												<li>enough memory and disk space for additional software.</li>
 											</ul>
-											<p>If you are interested in exchanging your Chromebook for a desktop, please fill out a request form.</p>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<table align="center" cellpadding="0" style="width:auto !important;">
-												<tr>
-													<td>
-														<a style="display:block;color:#ffffff;background:#252d65;font-size:13px;font-weight:bold;text-decoration:none;border:12px solid #252d65;border-radius: 4px; text-align:center;" href="https://hub.losrios.edu/secure/forms/studentDeviceRequest/exchange.php">Computer Exchange Request</a>
-													</td>
-												</tr>
-											</table>
-											<p>If desktops are available we will make arrangements for you to come in to pick it up.</p>
 
 										</td>
 									</tr>
-									
-								</xsl:when>
-								<xsl:when test="notification_data/notification_type = 'COVID_GRANT_LAPTOP'">
-									<tr>
-										<td>
-											<p>According to our records, you currently have a Chromebook or laptop on loan from the college. We are excited to share with you news that <strong>your loaned device is now yours to keep permanently, free of charge!</strong> You are no longer required to return the device to the library and may continue to use it to support ongoing needs. This loan and any related charges will be removed from your student record in the library system. </p>
-											<p>If you are no longer in need of the device and do not wish to keep it for any reason, you may return it to the library and we will offer it to another student.</p>
-											<p>To transition ownership, your device may need to be reset if it is currently managed by the college; the reset will remove any further access to the device by the college. <strong>You will receive an email the week of May 17, 2021</strong> with additional information about the reset process and what you can expect. </p>
-										</td>
-									</tr>
-									
-								</xsl:when>
-								<xsl:when test="notification_data/notification_type = 'COVID_GRANT_HOTSPOT'">
-									<tr>
-										<td>
-											<p>According to our records, you currently have a mobile hotspot on loan from the college. We are excited to share with you news that <strong>your loaned hotspot is now yours to keep permanently, free of charge!</strong> You are no longer required to return the hotspot to the library and may continue to use it to support ongoing needs. Service for the hotspot will continue as long as you are enrolled at Los Rios. This loan and any related charges will be removed from your student record in the library system. </p>
-											<p>If you are no longer in need of the hotspot and do not wish to keep it for any reason, you may return it to the library and we will offer it to another student.</p>
-										</td>
-									</tr>
-									
-								</xsl:when>
-								<xsl:when test="notification_data/notification_type = 'COVID_GRANT_DEVICE_RESET'">
-									<tr>
-										<td>
-											<p>On May 14, 2021, you received a message notifying you that your device loaned from a Los Rios college has been granted to you and is now yours to keep permanently. If your device is currently managed by a Los Rios college, read the information below about transferring ownership of the device from the college to you.</p>
-											<h2>How do I know if my device is managed by the college?</h2>
-											<p>There are two (2) easy indicators that your device is being managed by your college:</p>
-											<ol>
-												<li>You can only log into your device with your @apps.losrios.edu account.</li>
-												<li>When you sign in to your device, you see &quot;Managed by apps.losrios.edu.&quot;</li>
-											</ol>
-											<h2>What will happen to my device?</h2>
-											<p>If your device is managed by the college, it will be reset so that the college no longer has access to your device. After it is reset, you will have full control and ownership of the device.</p>
-
-											<p>If your device is <em>not</em> managed by the college, there is nothing for you to do; the device is yours and you can continue to use it as you have.</p>
-
-											<h2>What do I need to do to prepare for the device reset?</h2>
-											<p>The device reset will delete all data you currently have stored on the device. Prior to the reset, make sure that you backup your data by uploading it to the cloud or an external drive (for instance, a USB drive). The reset will delete information such as bookmarks, apps, and other preferences set on the device. Once reset, it will be like you have a new device.</p>
-										</td>
-									</tr>
-									
 								</xsl:when>
 								<xsl:when test="notification_data/notification_type = 'CUSTOM_LETTER_ARC'">
 									<tr>
