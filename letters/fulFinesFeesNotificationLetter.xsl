@@ -29,35 +29,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<tr>
 				<td style="padding:16px 0 16px 15px;">
 					<!--Only send letter if user is expired-->
-					<xsl:if test="notification_data/general_data/current_date">
-							<xsl:param name="currentDateEC" select="notification_data/general_data/current_date" />
-							<xsl:param name="expiryDateEC" select="notification_data/receivers/receiver/user/expiry_date" />
-							<xsl:choose>
-								<xsl:when test="$expiryDateEC != ''">
-								<!--Split the current date-->
-								<xsl:variable name="CMONEC" select="substring($currentDateEC,1,2)" />
-								<xsl:variable name="CDAYEC" select="substring($currentDateEC,4,2)" />
-								<xsl:variable name="CYEAEC" select="substring($currentDateEC,7,4)" />
-								<!--Split the expiry date-->
-								<xsl:variable name="EMONEC" select="substring($expiryDateEC,1,2)" />
-								<xsl:variable name="EDAYEC" select="substring($expiryDateEC,4,2)" />
-								<xsl:variable name="EYEAEC" select="substring($expiryDateEC,7,4)" />
-								<!--Create dates for checking-->
-								<xsl:variable name="currentDate" select="concat($CYEAEC,$CMONEC,$CDAYEC)" />
-								<xsl:variable name="expireddate" select="concat($EYEAEC,$EMONEC,$EDAYEC)" />
-								<xsl:if test="$currentDate &lt; $expireddate">
-									<h4>User Expired - do not send email</h4>
-									<xsl:message terminate="yes">user has expired </xsl:message>
-								</xsl:if>
-							</xsl:when>
-								<xsl:otherwise>
-									<h4>User Expired - do not send email</h4>
-									<xsl:message terminate="yes">user has expired </xsl:message>
-								</xsl:otherwise>
-								
-							</xsl:choose>
-							
-						</xsl:if>
+
 					@@we_would_like@@  @@debt_of@@ &#36;<xsl:value-of select="notification_data/total_fines_amount"/> because of fines or fees incurred at the <xsl:value-of select="notification_data/organization_unit/name"/>. Details&#58;
 				</td>
 				</tr>
@@ -98,7 +70,35 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							<p>Most fines and fees are the result of unreturned library materials.</p>
 							<p><strong>Current students need these materials.</strong> Please return them.</p>
 							<p>If you return your library materials, we will be able to greatly reduce these fees or eliminate them entirely.</p>
-							<p>To find out details about what needs to be returned, please call the library&apos;s circulation desk:</p>
+							<xsl:if test="notification_data/general_data/current_date">
+								<xsl:param name="currentDateEC" select="notification_data/general_data/current_date" />
+								<xsl:param name="expiryDateEC" select="notification_data/receivers/receiver/user/expiry_date" />
+								<xsl:choose>
+									<xsl:when test="$expiryDateEC != ''">
+										<!--Split the current date-->
+										<xsl:variable name="CMONEC" select="substring($currentDateEC,1,2)" />
+										<xsl:variable name="CDAYEC" select="substring($currentDateEC,4,2)" />
+										<xsl:variable name="CYEAEC" select="substring($currentDateEC,7,4)" />
+										<!--Split the expiry date-->
+										<xsl:variable name="EMONEC" select="substring($expiryDateEC,1,2)" />
+										<xsl:variable name="EDAYEC" select="substring($expiryDateEC,4,2)" />
+										<xsl:variable name="EYEAEC" select="substring($expiryDateEC,7,4)" />
+										<!--Create dates for checking-->
+										<xsl:variable name="currentDate" select="concat($CYEAEC,$CMONEC,$CDAYEC)" />
+										<xsl:variable name="expireddate" select="concat($EYEAEC,$EMONEC,$EDAYEC)" />
+										<xsl:if test="$currentDate &lt; $expireddate">
+											<p>To see what materials you still have on loan, please <a href="https://library.losrios.edu/my-account">view your library account</a> or contact your library:</p>
+										</xsl:if>
+										<xsl:if test="$currentDate &gt; $expireddate">
+											<p>To find out details about what needs to be returned, please call the library&apos;s circulation desk:</p>
+										</xsl:if>
+									</xsl:when>
+									<xsl:otherwise>
+										<p>To see what materials you still have on loan, please <a href="https://library.losrios.edu/my-account">view your library account</a> or contact your library:</p>
+									</xsl:otherwise>
+								</xsl:choose>
+							</xsl:if>
+							
 							<xsl:choose>
 								<xsl:when test="$feeLibraryFirstLetter = 'A'">
 									(916) 484-8455.
