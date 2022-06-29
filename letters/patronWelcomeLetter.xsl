@@ -45,6 +45,9 @@
                                      <xsl:when test="/notification_data/receivers/receiver/user/user_group = 'EMPLOYEE'">
                                          an employee
                                     </xsl:when>
+                                     <xsl:when test="/notification_data/receivers/receiver/user/user_group = 'EMERITI'">
+                                         an Emeriti Association member
+                                    </xsl:when>
                                      <xsl:otherwise>
                                         a student or employee
                                      </xsl:otherwise>
@@ -59,7 +62,10 @@
                                             <li><a href="https://library.losrios.edu/databases/">Research Databases</a> providing online resources in various subject areas.
                                             <xsl:if test="/notification_data/receivers/receiver/user/user_group = 'STUDENT'">
                                                 <em>Note:</em> access to databases may not be available between semesters.
-                                            </xsl:if> </li>
+                                            </xsl:if>
+                                            <xsl:if test="/notification_data/receivers/receiver/user/user_group = 'EMERITI'">
+                                                <em>Note:</em> access to databases for Emeriti Association members is limited to those providers whose licenses allow it and provide practical means to provide such access. You may need to obtain user names and passwords from the library.
+                                            </xsl:if></li>
                                             <li>Your <a href="https://library.losrios.edu/my-account">library account</a>, which will allow you to monitor your loans, renew items, and store favorite searches and articles.</li>
                                         </ul>
                                     </p>
