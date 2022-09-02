@@ -208,7 +208,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<tr>
 							<td>
 								<h2>Safety Reminder</h2>
-								<p>Please do not come to campus if you have a cough or fever or have been in contact with anyone who is sick. When picking up your materials, be sure to wear a face covering.</p>								
+								<p>Please do not come to campus if you have a cough or fever or have been in contact with anyone who is sick. Masks are strongly recommended but not required in all district facilities, regardless of vaccination status.</p>								
 
 							</td>
 						</tr>
