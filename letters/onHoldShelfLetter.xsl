@@ -113,6 +113,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 										<!-- ARC -->
 										<a href="https://arc.losrios.edu/student-resources/library/about-the-library/library-hours">view our open and service window hours page</a>.
 									</xsl:when>
+									<xsl:when test="$pickupLocation = 'Elk Grove Center'">
+										<!-- EGC -->
+										<a href="https://crc.losrios.edu/student-resources/library/about-the-library/elk-grove-center-library-services">view our open hours and information page</a>. 
+									</xsl:when>
 									<xsl:when test="$pickupLocation = 'El Dorado Center' or $pickupLocation = 'Folsom Lake College Library'">
 										<!-- EDC/FLC -->
 										<a href="https://flc.losrios.edu/student-resources/library/about-the-library/library-hours">view our open hours page</a>. 
@@ -165,6 +169,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 									<p>If you need an accessible locker, please <a href="mailto:library@crc.losrios.edu">email the library at library@crc.losrios.edu</a></p>
 									<p><a href="https://answers.library.losrios.edu/crc/faq/337591">Visit the FAQ for more information</a> on the Library&apos;s Pickup Lockers. </p>
 								</xsl:when>
+								<xsl:when test="$pickupLocation = 'Elk Grove Center'">
+									<!-- EGC details -->
+									<p>Pick up your items from the Learning Resource Center (EGA 204) at the Elk Grove Center (10051 Big Horn Road, Elk Grove, CA 95757). </p>
+								</xsl:when>
 								<xsl:when test="$pickupLocation = 'El Dorado Center'">
 									<!-- EDC details -->
 									<p>Pick up your requested materials at the Circulation Desk in Building A.</p>
@@ -204,37 +212,42 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 							</td>
 						</tr>
-						<tr>
-							<td>
-								<p>If you have questions regarding your library request, please 
-								<xsl:choose>
-								<xsl:when test="$pickupLocation = 'American River College Library'">
-									<!-- ARC contact -->
-									contact Jane Hoff, Lead Library Technician at <a href="mailto:HoffJ@arc.losrios.edu">HoffJ@arc.losrios.edu</a> or (916) 484-8744. 
-								</xsl:when>
-								<xsl:when test="$pickupLocation = 'Cosumnes River College Library'">
-									<!-- CRC contact -->
-									contact us at <a href="mailto:library@crc.losrios.edu">library@crc.losrios.edu</a>
-								</xsl:when>
-								<xsl:when test="$pickupLocation = 'Folsom Lake College Library'">
-									contact the Circulation Department at (916) 608-6613 or <a href="https://library.losrios.edu/ask-us/?flc">submit your question at our website</a>.
+						<xsl:if test="$pickupLocation != 'Elk Grove Center'">
+							<tr>
+								<td>
+									<p>If you have questions regarding your library request, please 
+										<xsl:choose>
+										<xsl:when test="$pickupLocation = 'American River College Library'">
+											<!-- ARC contact -->
+											contact Jane Hoff, Lead Library Technician at <a href="mailto:HoffJ@arc.losrios.edu">HoffJ@arc.losrios.edu</a> or (916) 484-8744. 
+										</xsl:when>
+										<xsl:when test="$pickupLocation = 'Cosumnes River College Library'">
+											<!-- CRC contact -->
+											contact us at <a href="mailto:library@crc.losrios.edu">library@crc.losrios.edu</a>
+										</xsl:when>
+										<xsl:when test="$pickupLocation = 'Folsom Lake College Library'">
+										contact the Circulation Department at (916) 608-6613 or <a href="https://library.losrios.edu/ask-us/?flc">submit your question at our website</a>.
 									
-								</xsl:when>
-								<xsl:when test="$pickupLocation = 'Sacramento City College Library'">
-									<!-- SCC contact -->
-									contact the Circulation Department at (916) 558-2301 or <a href="mailto:circlib@scc.losrios.edu">circlib@scc.losrios.edu</a>
+										</xsl:when>
+										<xsl:when test="$pickupLocation = 'Sacramento City College Library'">
+											<!-- SCC contact -->
+											contact the Circulation Department at (916) 558-2301 or <a href="mailto:circlib@scc.losrios.edu">circlib@scc.losrios.edu</a>
 
-								</xsl:when>
-								<xsl:otherwise>
-									<a href="https://library.losrios.edu/ask-us/">contact your library</a>.
-								</xsl:otherwise>
-							</xsl:choose>
+										</xsl:when>
+									<xsl:otherwise>
+										<a href="https://library.losrios.edu/ask-us/">contact your library</a>.
+									</xsl:otherwise>
+								</xsl:choose>
 								
 								
 								
-								</p>
-							</td>
-						</tr>
+							</p>
+						</td>
+					</tr>
+							
+							
+						</xsl:if>
+						
 						<xsl:if test="notification_data/request/system_notes != ''">
 						<tr>
 							<td><b>Note: </b><xsl:value-of select="notification_data/request/system_notes"/></td>

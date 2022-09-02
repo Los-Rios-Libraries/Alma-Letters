@@ -61,7 +61,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                                             <td>
                                             	<xsl:variable name="library" select="request/assigned_unit_name" />
                                             	<xsl:choose>
-                                            		<xsl:when test="substring($library,1,1) = 'A' or substring($library,1,1) = 'F' or substring($library,1,1) = 'S'">
+                                            		<xsl:when test="substring($library,1,1) = 'A' or substring($library,1,1) = 'F' or substring($library,1,1) = 'S' or substring($library,1,2) = 'El'">
                                             			<a>
                                                     <xsl:attribute name="title">View Library Hours</xsl:attribute>
                                             				<xsl:choose>
@@ -73,6 +73,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                                             					</xsl:when>
                                             					<xsl:when test="substring($library,1,1)='S'">
                                             						<xsl:attribute name="href">https://scc.losrios.edu/student-resources/library/library-daily-hours</xsl:attribute>
+                                            					</xsl:when>
+                                                      <xsl:when test="substring($library,1,2)='El'">
+                                            						<xsl:attribute name="href">https://crc.losrios.edu/student-resources/library/about-the-library/elk-grove-center-library-services</xsl:attribute>
                                             					</xsl:when>
                                             				</xsl:choose>
 
