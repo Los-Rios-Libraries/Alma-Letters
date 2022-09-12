@@ -217,9 +217,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								<td>
 									<p>If you have questions regarding your library request, please 
 										<xsl:choose>
-										<xsl:when test="$pickupLocation = 'American River College Library'">
+										<xsl:when test="$pickupLocation = 'American River College Library' or $pickupLocation = 'Natomas Center'">
 											<!-- ARC contact -->
-											contact Jane Hoff, Lead Library Technician at <a href="mailto:HoffJ@arc.losrios.edu">HoffJ@arc.losrios.edu</a> or (916) 484-8744. 
+											contact the ARC Library Circulation Desk at (916) 484-8455. If you need to leave a voicemail, please include your w#. 
 										</xsl:when>
 										<xsl:when test="$pickupLocation = 'Cosumnes River College Library'">
 											<!-- CRC contact -->
