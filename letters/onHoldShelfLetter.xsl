@@ -231,7 +231,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 										</xsl:when>
 										<xsl:when test="$pickupLocation = 'Sacramento City College Library'">
 											<!-- SCC contact -->
-											contact the Circulation Department at (916) 558-2301 or <a href="mailto:circlib@scc.losrios.edu">circlib@scc.losrios.edu</a>
+											contact the Circulation Department at (916) 558-2301 or <a href="mailto:circlib@scc.losrios.edu">circlib@scc.losrios.edu</a> .
 
 										</xsl:when>
 									<xsl:otherwise>
