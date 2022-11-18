@@ -72,11 +72,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
               <td style="padding-left:12px;">
                <p>
                 <strong>
-                  <a>
-                    <xsl:attribute name="href">https://library.losrios.edu/digital-lending/redirect.php?resource=<xsl:value-of select="notification_data/delivery_registration/rep_id"/>
-                    </xsl:attribute>
-                    @@here@@
-                  </a></strong>&#160;
+                  <a href="{$deliveryUrl}" target="_blank">@@here@@</a></strong>&#160;
                </p>
               </td>
             </tr>
@@ -106,9 +102,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
               <td  style="padding-left:12px;">
                 <p>
                   <strong>
-                    <a>
-                      <xsl:attribute name="href">https://library.losrios.edu/digital-lending/redirect.php?resource=<xsl:value-of select="notification_data/delivery_registration/rep_id"/>
-                      </xsl:attribute>
+                    <a href="{$deliveryUrl}" target="_blank">
                       @@register@@
                     </a>
                  </strong>&#160;
