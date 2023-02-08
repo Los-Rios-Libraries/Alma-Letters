@@ -26,7 +26,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
         <div class="messageArea">
           <div class="messageBody">
-			<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; padding: 12px 0 12px 15px;">
+			<table cellspacing="0" cellpadding="5" border="0" align="center" width="600" style="width:600px; background:#fff;">
               <tr>
               	<td>
 					<p>@@message@@</p>
@@ -40,21 +40,28 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
               <tr>
                 <td>
-                	<table cellpadding="5" class="listing">
+                </td>
+              </tr>
+      </table>
+       <table class="listing" cellspacing="0" cellpadding="0" border="0" align="center" width="600">
+
 						<xsl:attribute name="style">
 							<xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
 						</xsl:attribute>
 						<!--reorder columns, date to right-->
-						<tr>
+            <thead>
+						<tr style="font-size:0.9em;">
 							<th>@@title@@</th>
 							<!--<th>@@description@@</th>-->
 							<th>@@author@@</th>
 							<th>@@library@@</th>
 							<th>@@due_date@@</th>
 						</tr>
+            </thead>
+            <tbody>
 
                 		<xsl:for-each select="notification_data/item_loans/item_loan">
-						<tr>
+						<tr style="font-size:0.9em;">
 							<td><xsl:value-of select="title"/></td>
 							<!--<td><xsl:value-of select="description"/></td>-->
 							<td><xsl:value-of select="author"/></td>
@@ -62,10 +69,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							<td><xsl:value-of select="due_date"/></td>
 						</tr>
 						</xsl:for-each>
+            </tbody>
                 	</table>
-                </td>
-              </tr>
-             </table>
               <xsl:call-template name="returns" /> <!-- mailReason.xsl -->
              
 				<!--
