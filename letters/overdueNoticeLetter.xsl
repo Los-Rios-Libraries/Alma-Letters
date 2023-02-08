@@ -66,6 +66,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                 </td>
               </tr>
              </table>
+              <xsl:call-template name="returns" /> <!-- mailReason.xsl -->
+             
 				<!--
 				@@additional_info_1@@
 				@@additional_info_2@@
