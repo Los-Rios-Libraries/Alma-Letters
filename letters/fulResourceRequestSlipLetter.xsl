@@ -45,7 +45,17 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							
 						</xsl:for-each>
 					</p>
+					<xsl:if test="notification_data/request/system_notes != ''">
+						<p style="display:inline-block; padding:8px; border: 2px solid #000; font-size:12pt;">
+							<b>@@system_notes@@:</b>&#160;<xsl:value-of select="notification_data/request/system_notes"/>
+						</p>
+						</xsl:if>
 
+						<xsl:if test="notification_data/request/note != ''">
+							<p style="display:inline-block; padding:8px; border: 2px solid #000; font-size:12pt;">
+							<b>@@request_note@@:</b>&#160;<xsl:value-of select="notification_data/request/note"/>
+						</p>
+						</xsl:if>
 					 <table cellspacing="0" cellpadding="5" border="0">
 						<xsl:if  test="notification_data/request/selected_inventory_type='ITEM'" >
 						<tr>
@@ -193,20 +203,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<tr>
 							<td><b>Request date: </b><xsl:value-of select="notification_data/request/create_date"/></td>
 						</tr>
-
-						<xsl:if test="notification_data/request/system_notes != ''">
-							<tr>
-							<td><b>@@system_notes@@:</b><xsl:value-of select="notification_data/request/system_notes"/></td>
-						</tr>
-						</xsl:if>
-
-						<xsl:if test="notification_data/request/note != ''">
-							<tr>
-							<td><b>@@request_note@@:</b> <xsl:value-of select="notification_data/request/note"/></td>
-						</tr>
-						</xsl:if>
-
-
 					</table>
 				</div>
 			</div>
