@@ -178,10 +178,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						@@please_pay_message@@
 	                </td>
 	              </tr>
-
 			  </xsl:if>
             </table>
-
+       <xsl:if test="notification_data/overdue_loans_by_library/library_loans_for_display">
+        <xsl:call-template name="returns" /> <!-- mailReason.xsl -->
+      </xsl:if>
           </div>
         </div>
 
