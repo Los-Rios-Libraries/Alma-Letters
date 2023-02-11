@@ -70,6 +70,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:when test="normalized_fine != ''">
                           <xsl:value-of select="normalized_fine"/>
                         </xsl:when>
+                        <xsl:when test="../total_fines_amount != ''">
+                          <xsl:text>$</xsl:text>
+                          <xsl:value-of select="../total_fines_amount"/>
+                        </xsl:when>
                         <xsl:otherwise>
                           0
                         </xsl:otherwise>
@@ -114,6 +118,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:choose>
                         <xsl:when test="normalized_fine != ''">
                           <xsl:value-of select="normalized_fine"/>
+                        </xsl:when>
+                        <xsl:when test="../total_fines_amount != ''">
+                          <xsl:text>$</xsl:text>
+                          <xsl:value-of select="../total_fines_amount"/>
                         </xsl:when>
                         <xsl:otherwise>
                           0
