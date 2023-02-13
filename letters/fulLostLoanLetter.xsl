@@ -66,7 +66,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</table>
 				</xsl:for-each>
 
-				<table cellspacing="0" cellpadding="5" border="0" align="center" width="600" class="listing">
+				<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" class="listing">
 				<xsl:attribute name="style">
 					<xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
 				</xsl:attribute>
