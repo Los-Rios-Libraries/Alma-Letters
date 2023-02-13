@@ -42,8 +42,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							<ul style="list-style-type:none;">
 								<li><b>@@lost_item@@:</b>&#160; <xsl:value-of select="item_loan/title"/></li>
 						 
-						
-						<li><b> @@by@@:</b>&#160;<xsl:value-of select="item_loan/author"/></li>
+						<xsl:if test="item_loan/author != ''">
+							<li><b> @@by@@:</b>&#160;<xsl:value-of select="item_loan/author"/></li>
+						</xsl:if>
 						
 						<li><b>@@library@@:</b>&#160;<xsl:value-of select="organization_unit/name"/></li>
 					
