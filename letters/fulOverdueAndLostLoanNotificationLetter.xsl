@@ -59,7 +59,17 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 									<xsl:for-each select="item_loans/overdue_and_lost_loan_notification_display">
 										<tr>
-											<td><xsl:value-of select="item_loan/title"/></td>
+											<td>
+												<xsl:choose>
+													<xsl:when test="string-length(item_loan/title) &gt; 110">
+														<xsl:value-of select="substring(item_loan/title,0,100)" />
+														<xsl:text>...</xsl:text>
+													</xsl:when>
+													<xsl:otherwise>
+														<xsl:value-of select="item_loan/title"/>
+													</xsl:otherwise>
+												</xsl:choose>
+											</td>
 											<td><xsl:value-of select="item_loan/due_date"/></td>
 											<td><xsl:value-of select="item_loan/barcode"/></td>
 											<td>
