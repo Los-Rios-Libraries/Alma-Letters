@@ -96,6 +96,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					
 
 				</table>
+				 <xsl:call-template name="returns" /> <!-- mailReason.xsl -->
 				<table cellspacing="0" cellpadding="5" border="0" align="center" width="600" style="width:600px; background:#fff; padding-left:12px;">
 						<tr>
 							<td>
