@@ -104,7 +104,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								<h2>When and where to pick up</h2>
 							</td>
 						</tr>
-						<xsl:if test="$pickupLocation != 'American River College Library'">
 						<tr>
 							<td>
 								
@@ -151,7 +150,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								</xsl:choose>
 							</td>
 						</tr>
-						</xsl:if>
 						<!-- end pickup schedule -->
 						</xsl:if>
 						
@@ -161,12 +159,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								<xsl:choose>
 								<xsl:when test="$pickupLocation = 'American River College Library'">
 									<!-- ARC details -->
-									<!-- <p>Pick up items at the Library service window (on the north side of the Library). Enter campus from Myrtle Avenue, Parking Lot A/B entrance. Students should park in student/general parking. Parking permits are not required at this time. The ARC Library is located west of the Student Center Building and east of the Welcome and Support Center.</p>
+									<p>Pick up items at the Library service window (on the north side of the Library). Enter campus from Myrtle Avenue, Parking Lot A/B entrance. Students should park in student/general parking. Parking permits are not required at this time. The ARC Library is located west of the Student Center Building and east of the Welcome and Support Center.</p>
 									<p>For more details on picking up library materials, please <a href="https://answers.library.losrios.edu/arc/faq/336290">see our web page</a>.</p>
-									<p><img style="width:560px;" width="560" src="https://library.losrios.edu/arc/librarymap.JPG" alt="Map showing route from Myrtle Avenue to Library" /></p> -->
-									<p>Due to maintenance issues the ARC Library is currently closed.</p>
-									<p>Pick up items at the <strong>Learning Resource Center (LRC)</strong>. Please see the <a href="https://arc.losrios.edu/student-resources/learning-resource-center/learning-resource-center-computer-lab">LRC&apos;s</a> website for open hours. Use this <a href="https://wayfind.arc.losrios.edu/">Campus Map app</a> to navigate your way around the ARC campus.</p>
-
+									<p><img style="width:560px;" width="560" src="https://library.losrios.edu/arc/librarymap.JPG" alt="Map showing route from Myrtle Avenue to Library" /></p>
 								</xsl:when>
 								<xsl:when test="$pickupLocation = 'Cosumnes River College Library'">
 									<!-- CRC details -->
@@ -224,7 +219,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 										<xsl:choose>
 										<xsl:when test="$pickupLocation = 'American River College Library' or $pickupLocation = 'Natomas Center'">
 											<!-- ARC contact -->
-											contact the ARC Library Research Help Desk at (916) 484-8458. If you need to leave a voicemail, please include your w#. 
+											contact the ARC Library Circulation Desk at (916) 484-8455. If you need to leave a voicemail, please include your w#. 
 										</xsl:when>
 										<xsl:when test="$pickupLocation = 'Cosumnes River College Library'">
 											<!-- CRC contact -->

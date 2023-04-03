@@ -59,14 +59,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                                             <td><xsl:value-of select="phys_item_display/title"/></td>
                                             <td><xsl:value-of select="phys_item_display/author"/></td>
                                             <td>
-                                            <xsl:variable name="library" select="request/assigned_unit_name" />
-                                            <xsl:choose>
-
-                                                <xsl:when test="substring($library,1,1) = 'A'">
-                                                <a href="https://arc.losrios.edu/student-resources/learning-resource-center/learning-resource-center-computer-lab" title="View pickup hours">ARC - LRC</a>
-                                                </xsl:when>
-                                                <xsl:otherwise>
-                                                
                                             	<xsl:variable name="library" select="request/assigned_unit_name" />
                                             	<xsl:choose>
                                             		<xsl:when test="substring($library,1,1) = 'A' or substring($library,1,1) = 'F' or substring($library,1,1) = 'S' or substring($library,1,2) = 'El'">
@@ -94,8 +86,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                                                 	<xsl:value-of select="$library" />
                                                 </xsl:otherwise>
                                             	</xsl:choose>
-                                                </xsl:otherwise>
-                                            </xsl:choose>
                                             	
 
 
