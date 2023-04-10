@@ -111,7 +111,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								<xsl:choose>
 									<xsl:when test="$pickupLocation = 'American River College Library'">
 										<!-- ARC -->
-										<a href="https://arc.losrios.edu/student-resources/library/about-the-library/library-hours">view our open and service window hours page</a>.
+										see our resource page: <a href="https://answers.library.losrios.edu/arc/faq/336290">When and where can I pick up library materials I&apos;ve requested?</a>.
 									</xsl:when>
 									<xsl:when test="$pickupLocation = 'Elk Grove Center'">
 										<!-- EGC -->
@@ -159,9 +159,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								<xsl:choose>
 								<xsl:when test="$pickupLocation = 'American River College Library'">
 									<!-- ARC details -->
-									<p>Pick up items at the Library service window (on the north side of the Library). Enter campus from Myrtle Avenue, Parking Lot A/B entrance. Students should park in student/general parking. Parking permits are not required at this time. The ARC Library is located west of the Student Center Building and east of the Welcome and Support Center.</p>
-									<p>For more details on picking up library materials, please <a href="https://answers.library.losrios.edu/arc/faq/336290">see our web page</a>.</p>
-									<p><img style="width:560px;" width="560" src="https://library.losrios.edu/arc/librarymap.JPG" alt="Map showing route from Myrtle Avenue to Library" /></p>
 								</xsl:when>
 								<xsl:when test="$pickupLocation = 'Cosumnes River College Library'">
 									<!-- CRC details -->
