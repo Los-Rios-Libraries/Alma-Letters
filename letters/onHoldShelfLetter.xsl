@@ -202,7 +202,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						</tr>
 						
 						<!-- end pickup details -->
-						<xsl:if test="$pickupLocation != 'Natomas Center'">
+						<xsl:if test="$pickupLocation != 'Natomas Center' and $pickupLocation != 'American River College Library'">
 						<tr>
 							<td>
 								<h2>Safety Reminder</h2>
