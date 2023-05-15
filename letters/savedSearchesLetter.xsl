@@ -11,11 +11,7 @@
 			<table cellpadding="0" cellspacing="0" style="margin: auto; width: 600px;">
 				<tr>
 					<td style="background-color: #4d6b82; border-top-left-radius: 15px; border-top-right-radius: 15px;">
-						<img alt="The library Logo" style="width: 100px; height: 35px; padding: .85em;">
-							<xsl:attribute name="src">
-								<xsl:value-of select="/notification_data/logo_path"/>
-							</xsl:attribute>
-						</img>
+						<img alt="Los Rios Libraries" style="width: 100px; height: 35px; padding: .85em;" src="cid:logo.jpg" />
 					</td>
 				</tr>
 				<tr>
