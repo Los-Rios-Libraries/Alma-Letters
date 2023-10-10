@@ -195,7 +195,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<b></b>
 
 						<tr>
-							<td><b>@@move_to_library@@: </b><xsl:value-of select="notification_data/destination"/></td>
+						<xsl:choose>
+							<xsl:when test="notification_data/destination = 'Rancho Cordova Center Lockers'">
+								<td><b>@@move_to_library@@: </b>Folsom Lake College Library (RCC Lockers)</td>
+							</xsl:when>
+							<xsl:otherwise>
+								<td><b>@@move_to_library@@: </b><xsl:value-of select="notification_data/destination"/></td>	
+							</xsl:otherwise>
+						</xsl:choose>
+							
 						</tr>
 						<tr>
 							<td><b>@@request_type@@: </b><xsl:value-of select="notification_data/request_type"/></td>

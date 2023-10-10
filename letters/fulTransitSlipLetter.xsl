@@ -40,7 +40,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <b>@@to@@: </b>
                         </td>
                       <td>
-                         <xsl:value-of select="notification_data/request/calculated_destination_name" />
+                      <xsl:choose>
+                        <xsl:when test="notification_data/request/calculated_destination_name = 'Rancho Cordova Center Lockers'">
+                          Folsom Lake College Library (RCC Lockers)
+                        </xsl:when>
+                        <xsl:otherwise>
+                          <xsl:value-of select="notification_data/request/calculated_destination_name" />
+                        </xsl:otherwise>
+                      </xsl:choose>
                       </td>
                     </tr>
                   </table>
