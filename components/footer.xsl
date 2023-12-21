@@ -61,7 +61,7 @@
 			<tr>
 
 				<td>
-					Sent by the <a href="https://www.library.losrios.edu/">Los Rios Libraries</a> on <xsl:value-of select="notification_data/general_data/current_date"/></td>
+					Sent to user account <xsl:value-of select="notification_data/receivers/receiver/user/user_name"/> by the <a href="https://www.library.losrios.edu/">Los Rios Libraries</a> on <xsl:value-of select="notification_data/general_data/current_date"/></td>
 			</tr>
 			<tr>
 				<td>
@@ -90,7 +90,7 @@
 			<tr>
 
 				<td>
-					Sent by the <a href="https://library.losrios.edu/">Los Rios Libraries</a> on <xsl:value-of select="notification_data/general_data/current_date"/></td>
+					Sent to user account <xsl:value-of select="notification_data/receivers/receiver/user/user_name"/> by the <a href="https://library.losrios.edu/">Los Rios Libraries</a> on <xsl:value-of select="notification_data/general_data/current_date"/></td>
 			</tr>
 			<tr>
 				<td>
@@ -113,7 +113,7 @@
 			<tr>
 
 				<td style="text-align:center;">
-					Sent by the <a href="https://losrios.edu/">Los Rios Community College District</a> on <xsl:value-of select="notification_data/general_data/current_date"/></td>
+					Sent to user account <xsl:value-of select="notification_data/receivers/receiver/user/user_name"/> by the <a href="https://losrios.edu/">Los Rios Community College District</a> on <xsl:value-of select="notification_data/general_data/current_date"/></td>
 			</tr>
 			<tr>
 				<td style="text-align:center; padding-top:12px;">
