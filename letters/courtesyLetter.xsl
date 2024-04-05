@@ -63,6 +63,18 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
               <td><xsl:value-of select="due_date"/></td>
 
 						</tr>
+            <xsl:choose>
+              <xsl:when test="renew_status!=''">
+                <tr>
+                  <td colspan="4"><em>Reason: <xsl:value-of select="renew_status" /></em></td>
+                </tr>
+              </xsl:when>
+              <xsl:when test="process_status='RECALL'">
+                <tr>
+                 <td colspan="4"><em>Reason: item is needed by another library patron</em></td>
+                </tr>
+              </xsl:when>
+            </xsl:choose>
 						</xsl:for-each>
 
                 	</table>
