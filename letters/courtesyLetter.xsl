@@ -63,10 +63,26 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
               <td><xsl:value-of select="due_date"/></td>
 
 						</tr>
+            <xsl:variable name="renewStatus">
+              <xsl:value-of select="renew_status" />
+            </xsl:variable>
             <xsl:choose>
-              <xsl:when test="renew_status!=''">
-                <tr>
-                  <td colspan="4"><em>Reason: <xsl:value-of select="renew_status" /></em></td>
+              <xsl:when test="$renewStatus!=''">
+              <tr>
+                  <td colspan="4" style="padding-bottom:18px;"><em>Reason: 
+                <xsl:choose>
+                  <xsl:when test="contains($renewStatus, 'Overdue block')">
+                  Your account is blocked because of unreturned library items. Please return your items or pay any associated fees connected with lost items. You will not be able to renew your loans until you have resolved these account problems.
+
+                  </xsl:when>
+                  <xsl:when test="contains($renewStatus, 'Recalled')">
+                  This item has been requested by another library patron. Items needed by others cannot be renewed.
+                  </xsl:when>
+                  <xsl:otherwise>
+                  <xsl:value-of select="$renewStatus" />
+                  </xsl:otherwise>
+                  </xsl:choose>
+               </em></td>
                 </tr>
               </xsl:when>
               <xsl:when test="process_status='RECALL'">
