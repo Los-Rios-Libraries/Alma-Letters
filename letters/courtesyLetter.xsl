@@ -57,7 +57,17 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
                 		<xsl:for-each select="notification_data/item_loans/item_loan">
 						<tr>
-							<td><xsl:value-of select="title"/></td>
+							<td>
+              <xsl:choose>
+                <xsl:when test="string-length(title) &gt; 110">
+                  <xsl:value-of select="substring(title,0,100)" />
+                  <xsl:text>...</xsl:text>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:value-of select="title"/>
+                </xsl:otherwise>
+              </xsl:choose>	
+              </td>
 							<td><xsl:value-of select="barcode"/></td>
 							<td><xsl:value-of select="library_name"/></td>
               <td><xsl:value-of select="due_date"/></td>
