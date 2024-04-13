@@ -88,6 +88,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                   <xsl:when test="contains($renewStatus, 'Recalled')">
                   This item has been requested by another library patron. Items needed by others cannot be renewed.
                   </xsl:when>
+
+                  <xsl:when test="contains($renewStatus, 'Overdue Recalls')">
+                  You have at least one overdue loan. In order to renew the above item, you will need to first return any overdue loans.
+
+                  </xsl:when>
                   <xsl:otherwise>
                   <xsl:value-of select="$renewStatus" />
                   </xsl:otherwise>
