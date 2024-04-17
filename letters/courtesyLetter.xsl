@@ -93,6 +93,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                   You have at least one overdue loan. In order to renew the above item, you will need to first return any overdue loans.
 
                   </xsl:when>
+
+                  <xsl:when test="contains($renewStatus, 'Patron card will expire soon')">
+                  All materials are due no later than the end of the semester. If you withdraw from your classes, you must return any materials you have borrowed from the library.
+                  </xsl:when>
+
                   <xsl:otherwise>
                   <xsl:value-of select="$renewStatus" />
                   </xsl:otherwise>
