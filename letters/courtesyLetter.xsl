@@ -120,6 +120,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       <table cellspacing="0" cellpadding="5" border="0" align="center" width="600" style="width:600px; background:#fff; padding-left:12px;">
 						<tr>
 							<td>
+                <p>
+                  To discuss these loans further, please contact the circulation desk of the library the item is checked out from.
+                </p>
 								<p>
 									@@additional_info_1@@
 								</p>
