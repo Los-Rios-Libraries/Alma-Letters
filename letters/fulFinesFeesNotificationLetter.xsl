@@ -68,7 +68,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							<!-- first letter will make later conditional easier to read -->
 							<xsl:variable name="feeLibraryFirstLetter" select="substring(notification_data/organization_unit/name,1,1)" />
 							<p>Most fines and fees are the result of unreturned library materials.</p>
-							<p><strong>Current students need these materials.</strong> Please return them.</p>
+							<p><strong>Current students need these materials.</strong> If you still have them, please return them.</p>
 							<p>If you return your library materials, we will be able to greatly reduce these fees or eliminate them entirely.</p>
 							<xsl:if test="notification_data/general_data/current_date">
 								<xsl:param name="currentDateEC" select="notification_data/general_data/current_date" />
