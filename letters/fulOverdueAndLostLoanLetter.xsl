@@ -31,6 +31,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<td style="padding-left:15px;">
 					@@inform_you_item_below@@  @@decalred_as_lost@@.
 				</td>
+				<xsl:if test="notification_data/receivers/receiver/user/user_group = 'STUDENT'">
+					<tr>
+						<td style="padding-left:15px;">
+							These fees will soon be posted to your student account in eServices.
+						</td>
+					</tr>
+				</xsl:if>
 				</tr>
 				</table>
 

@@ -67,6 +67,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<td style="padding:16px 0 16px 15px;">
 							<!-- first letter will make later conditional easier to read -->
 							<xsl:variable name="feeLibraryFirstLetter" select="substring(notification_data/organization_unit/name,1,1)" />
+						<xsl:if test="notification_data/user_for_printing/user_group = 'STUDENT'">
+							<p>You may pay any fees listed here via <a href="https://ps.losrios.edu/student/signon.html">eServices</a> or by visiting your college&apos;s Business Services Office.</p>
+						</xsl:if>
 							<p>Most fines and fees are the result of unreturned library materials.</p>
 							<p><strong>Current students need these materials.</strong> If you still have them, please return them.</p>
 							<p>If you return your library materials, we will be able to greatly reduce these fees or eliminate them entirely.</p>
