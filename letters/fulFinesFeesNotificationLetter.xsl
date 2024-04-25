@@ -24,6 +24,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<xsl:call-template name="senderReceiver" /> <!-- SenderReceiver.xsl -->
 				<xsl:call-template name="toWhomIsConcerned" />
 
+				<xsl:variable name="feeLibraryFirstLetter" select="substring(notification_data/organization_unit/code,1,1)" />
+				<xsl:variable name="libraryCode" select="notification_data/organization_unit/code" />
+
 	
 		<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; table-layout:fixed; word-wrap:break-word;">
 				<tr>
@@ -65,8 +68,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<table cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; table-layout:fixed; word-wrap:break-word;">
 					<tr>
 						<td style="padding:16px 0 16px 15px;">
-							<!-- first letter will make later conditional easier to read -->
-							<xsl:variable name="feeLibraryFirstLetter" select="substring(notification_data/organization_unit/name,1,1)" />
 						<xsl:if test="notification_data/user_for_printing/user_group = 'STUDENT'">
 							<p>You may pay any fees listed here via <a href="https://ps.losrios.edu/student/signon.html">eServices</a> or by visiting your college&apos;s Business Services Office.</p>
 						</xsl:if>
@@ -103,16 +104,16 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							</xsl:if>
 							
 							<xsl:choose>
-								<xsl:when test="$feeLibraryFirstLetter = 'A'">
+								<xsl:when test="$feeLibraryFirstLetter = 'A' or $libraryCode = 'NAT'">
 									(916) 484-8455.
 								</xsl:when>
-								<xsl:when test="$feeLibraryFirstLetter = 'C'">
+								<xsl:when test="$feeLibraryFirstLetter = 'C' or $libraryCode = 'EGC'">
 									(916) 691-7266.
 								</xsl:when>
-								<xsl:when test="$feeLibraryFirstLetter = 'F'">
+								<xsl:when test="$feeLibraryFirstLetter = 'F' or $libraryCode = 'EDC' or $libraryCode = 'RCC'">
 									(916) 608-6613.
 								</xsl:when>
-								<xsl:when test="$feeLibraryFirstLetter = 'S'">
+								<xsl:when test="$feeLibraryFirstLetter = 'S' or $libraryCode = 'DVC' or $libraryCode = 'WSC'">
 									(916) 558-2301.
 								</xsl:when>
 								<xsl:otherwise>
