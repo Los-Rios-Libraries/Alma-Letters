@@ -21,7 +21,7 @@
 						</h2>
 						<h3 style="font-size: 1rem; margin: 0 0 30px 0; font-weight: normal;">
 							<xsl:value-of select="/notification_data/alert_heading"/>
-							<a style="font-style: italic; text-decoration: none;">
+							<a style="font-style: italic; text-decoration: underline; color:#fff;">
 								<xsl:attribute name="href">
 									<xsl:value-of select="/notification_data/link/node()"/>
 								</xsl:attribute>
