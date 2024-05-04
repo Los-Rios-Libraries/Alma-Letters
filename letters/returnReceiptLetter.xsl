@@ -53,7 +53,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 									<!-- th>@@author@@</th> -->
 									<th>@@due_date@@</th>
 									<th>@@return_date@@</th>
-									<th>@@fine@@</th>
+									<!-- <th>@@fine@@</th> -->
 								<!--	<th>@@library@@</th> -->
 								</tr>
 
@@ -65,7 +65,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 										<!-- <td><xsl:value-of select="author"/></td> -->
 										<td><xsl:value-of select="new_due_date_str"/></td>
 										<td><xsl:value-of select="return_date_str"/></td>
-										<td><xsl:value-of select="normalized_fine"/></td>
+										<!-- <td><xsl:value-of select="normalized_fine"/></td> -->
 										<!-- <td><xsl:value-of select="library_name"/></td> -->
 									</tr>
 								</xsl:for-each>
