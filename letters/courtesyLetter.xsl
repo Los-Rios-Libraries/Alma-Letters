@@ -81,6 +81,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
               <tr>
                   <td colspan="4" style="padding-bottom:18px;"><em>Reason: 
                 <xsl:choose>
+                  <xsl:when test="contains($renewStatus, 'policy is no renewals')">
+                  The item policy does not allow renewals.
+
+                  </xsl:when>
                   <xsl:when test="contains($renewStatus, 'Overdue block')">
                   Your account is blocked because of unreturned library items. Please return your items or pay any associated fees connected with lost items. You will not be able to renew your loans until you have resolved these account problems.
 
@@ -95,7 +99,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                   </xsl:when>
 
                   <xsl:when test="contains($renewStatus, 'Patron card will expire soon')">
-                  All materials are due no later than the end of the semester. If you withdraw from your classes, you must return any materials you have borrowed from the library.
+                  All materials are due no later than the end of the semester.<br />
+                  If you withdraw from your classes, you must return any materials you have borrowed from the library.
                   </xsl:when>
 
                   <xsl:otherwise>
