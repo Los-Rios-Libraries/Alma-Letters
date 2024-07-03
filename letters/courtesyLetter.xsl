@@ -70,7 +70,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
               </td>
 							<td><xsl:value-of select="barcode"/></td>
 							<td><xsl:value-of select="library_name"/></td>
-              <td><xsl:value-of select="due_date"/></td>
+              <td><xsl:value-of select="new_due_date_str"/></td>
 
 						</tr>
             <xsl:variable name="renewStatus">
