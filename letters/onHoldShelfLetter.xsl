@@ -168,7 +168,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								</xsl:when>
 								<xsl:when test="$pickupLocation = 'Elk Grove Center'">
 									<!-- EGC details -->
-									<p>Pick up your items from the Learning Resource Center (EGA 204) at the Elk Grove Center (10051 Big Horn Road, Elk Grove, CA 95757). </p>
+									<p>Pick up your items from the Learning Resource Center (EGB 113) at the Elk Grove Center (10051 Big Horn Road, Elk Grove, CA 95757). </p>
 								</xsl:when>
 								<xsl:when test="$pickupLocation = 'El Dorado Center'">
 									<!-- EDC details -->
