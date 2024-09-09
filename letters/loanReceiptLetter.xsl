@@ -32,6 +32,9 @@
               <xsl:when test="/notification_data/organization_unit/code != 'FLOCKERS' and /notification_data/organization_unit/code != 'SLOCKERS' and /notification_data/organization_unit/code != 'RCC'">
                 <p>@@inform_loaned_items@@ <xsl:value-of select="notification_data/organization_unit/name" />:</p>
               </xsl:when>
+              <xsl:when test="/notification_data/organization_unit/code = 'RCC' and starts-with(/notification_data/items/item_loan/location_code, 'r')">
+                <p>@@inform_loaned_items@@ <xsl:value-of select="notification_data/organization_unit/name" />:</p>
+              </xsl:when>
               <xsl:otherwise>
                 Your recent library request has been checked out to you and will be placed in the <xsl:value-of select="/notification_data/organization_unit/name" /> shortly:
 
@@ -86,7 +89,7 @@
 						</td>
 					</tr>
 				</xsl:for-each>
-        <xsl:if test="/notification_data/organization_unit/code = 'FLOCKERS' or /notification_data/organization_unit/code = 'SLOCKERS' or /notification_data/organization_unit/code = 'RCC'">
+        <xsl:if test="/notification_data/organization_unit/code = 'FLOCKERS' or /notification_data/organization_unit/code = 'SLOCKERS' or (/notification_data/organization_unit/code = 'RCC' and not(starts-with(/notification_data/items/item_loan/location_code, 'r' )))">
           <tr>
             <td>
               <p>Watch for an email from <i>support@luxerone.com</i> that will include your locker access code.</p>
