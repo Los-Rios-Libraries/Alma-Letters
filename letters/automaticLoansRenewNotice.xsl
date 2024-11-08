@@ -59,8 +59,8 @@
                                         </xsl:attribute>
                                         <tr>
                                             <th>@@title@@</th>
-                                            <th>@@description@@</th>
-                                            <th>@@author@@</th>
+                                            <!-- <th>@@description@@</th>
+                                            <th>@@author@@</th> -->
                                             <th>@@due_date@@</th>
                                             <!-- <th>@@library@@</th> -->
                                         </tr>
@@ -68,8 +68,8 @@
                                         <xsl:for-each select="notification_data/item_loans/item_loan">
                                             <tr>
                                                 <td><xsl:value-of select="title"/></td>
-                                                <td><xsl:value-of select="description"/></td>
-                                                <td><xsl:value-of select="author"/></td>
+                                                <!-- <td><xsl:value-of select="description"/></td>
+                                                <td><xsl:value-of select="author"/></td> -->
                                                 <td><xsl:value-of select="due_date"/></td>
                                                 <!-- <td><xsl:value-of select="library_name"/></td> -->
 
