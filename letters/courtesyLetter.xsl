@@ -102,12 +102,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                   </xsl:when>
 
 
-                  <xsl:when test="contains($renewStatus, 'Patron card will expire soon')">
+                  <xsl:when test="contains($renewStatus, 'card will expire soon')">
                   All materials are due no later than the end of the semester.<br />
                   If you withdraw from your classes, you must return any materials you have borrowed from the library.
                   </xsl:when>
 
-                  <xsl:when test="contains($renewStatus, 'Patrons card has expired')">
+                  <xsl:when test="contains($renewStatus, 'card has expired')">
                   Your library account is not showing as current. Only current students and employees are permitted to borrow and renew items.
                   </xsl:when>
 
