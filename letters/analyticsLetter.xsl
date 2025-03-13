@@ -26,8 +26,9 @@
 						<table cellspacing="0" cellpadding="5" border="0" align="center" width="600" style="width:600px; background:#fff; padding:8px; ">
 							<tr>
 								<td>
+								    <p>@@deepLinkLetterText@@</p>
 									@@letterText@@
-									&#160;Now, what was it you ordered up? Oh, right:
+								
 									
 								</td>
 							</tr>
