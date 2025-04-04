@@ -124,12 +124,35 @@
 										</td>
 									</tr>
 								</xsl:when>
+								<xsl:when test="notification_data/notification_type = 'SCC_SURVEY'">
+									<tr>
+										<td>
+											<p>Thank you for using the Sacramento City College Library! According to our records, you&apos;ve checked out at least one book with us this semester. We would love to hear about your experience.</p>
+
+											<p>We&apos;re conducting our annual Library Survey to gather feedback from people who have used our services. Your input will help us improve our services for the whole campus community.</p>
+
+											<p>The survey takes only a few minutes to complete.</p>
+
+											<table align="center" cellpadding="0" style="width:auto !important;">
+												<tr>
+													<td>
+														<a style="display:block;color:#ffffff;background:#8a0028;font-size:13px;font-weight:bold;text-decoration:none;border:12px solid #8a0028;border-radius: 4px;" href="https://www.surveymonkey.com/r/FW5CYBL">Open the survey</a>
+													</td>
+												</tr>
+											</table>
+
+
+										</td>
+									</tr>
+								</xsl:when>
 								
 							</xsl:choose>
 						</table>
 					</div>
 				</div>
-				<xsl:call-template name="lrGoToAccount" />
+				<xsl:if test="notification_data/notification_type != 'SCC_SURVEY'">
+					<xsl:call-template name="lrGoToAccount" />
+				</xsl:if>
 				<xsl:call-template name="lrPatronFooter" />
 				<!--<xsl:call-template name="lrDOFooter" />-->
 
