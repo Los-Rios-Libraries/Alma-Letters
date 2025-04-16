@@ -133,7 +133,7 @@
 
 											<p>The survey takes only a few minutes to complete.</p>
 
-											<table align="center" cellpadding="0" style="width:auto !important;">
+											<table align="center" cellpadding="0" style="width:auto !important;" role="presentation">
 												<tr>
 													<td>
 														<a style="display:block;color:#ffffff;background:#8a0028;font-size:13px;font-weight:bold;text-decoration:none;border:12px solid #8a0028;border-radius: 4px;" href="https://www.surveymonkey.com/r/FW5CYBL">Open the survey</a>
