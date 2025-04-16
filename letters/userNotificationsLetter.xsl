@@ -145,12 +145,74 @@
 										</td>
 									</tr>
 								</xsl:when>
+								<xsl:when test="notification_data/notification_type = 'FEE_PAYMENT'">
+									<tr>
+										<td>
+											<p>
+												According to our records, one or more library fees you had incurred for unreturned library items were paid last week. We are reaching out to you to confirm that we have received the payment.
+											</p>
+											<p>
+												In some cases fees are paid in eServices by credits to your student account, so you might not be aware that the fees were paid.</p>
+												<xsl:if test="notification_data/general_data/current_date">
+													<xsl:param name="currentDateEC" select="notification_data/general_data/current_date" />
+													<xsl:param name="expiryDateEC" select="notification_data/receivers/receiver/user/expiry_date" />
+													<xsl:choose>
+														<xsl:when test="$expiryDateEC != ''">
+															<!--Split the current date-->
+															<xsl:variable name="CMONEC" select="substring($currentDateEC,1,2)" />
+															<xsl:variable name="CDAYEC" select="substring($currentDateEC,4,2)" />
+															<xsl:variable name="CYEAEC" select="substring($currentDateEC,7,4)" />
+															<!--Split the expiry date-->
+															<xsl:variable name="EMONEC" select="substring($expiryDateEC,1,2)" />
+															<xsl:variable name="EDAYEC" select="substring($expiryDateEC,4,2)" />
+															<xsl:variable name="EYEAEC" select="substring($expiryDateEC,7,4)" />
+															<!--Create dates for checking-->
+															<xsl:variable name="currentDate" select="concat($CYEAEC,$CMONEC,$CDAYEC)" />
+															<xsl:variable name="expireddate" select="concat($EYEAEC,$EMONEC,$EDAYEC)" />
+															<xsl:if test="$currentDate &lt; $expireddate">
+																<p>To see which fees were cleared, please <a href="https://library.losrios.edu/my-account?section=fines">view your library account</a> and, under the Fees section, switch the dropdown to <i>Closed</i>.</p>
+															</xsl:if>
+										<xsl:if test="$currentDate &gt; $expireddate">
+											<p>If you need information about which items fees were paid for, contact your library:</p>
+											<ul>
+												<li>
+													ARC: (916) 484-8455
+												</li>
+												<li>
+													CRC: (916) 691-7266
+												</li>
+												<li>
+													FLC: (916) 608-6613
+												</li>
+												<li>
+													SCC: (916) 558-2301
+												</li>
+
+											</ul>
+											
+										</xsl:if>
+									</xsl:when>
+									<xsl:otherwise>
+										<p>To see which fees were cleared, please <a href="https://library.losrios.edu/my-account?section=fines">view your library account</a> and, under the Fees section, switch the dropdown to <i>Closed</i>.</p>
+									</xsl:otherwise>
+								</xsl:choose>
+							</xsl:if>
+							<p><strong>If you return these items promptly in good condition, we will coordinate a refund for you.</strong></p>
+
+										
+										</td>
+										
+									</tr>
+									<xsl:call-template name="returns" />
+
+
+								</xsl:when>
 								
 							</xsl:choose>
 						</table>
 					</div>
 				</div>
-				<xsl:if test="notification_data/notification_type != 'SCC_SURVEY'">
+				<xsl:if test="notification_data/notification_type != 'SCC_SURVEY' and notification_data/notification_type != 'FEE_PAYMENT'">
 					<xsl:call-template name="lrGoToAccount" />
 				</xsl:if>
 				<xsl:call-template name="lrPatronFooter" />
