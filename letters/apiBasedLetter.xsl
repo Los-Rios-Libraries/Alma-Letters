@@ -28,11 +28,18 @@
                 </xsl:attribute>
 
                 <xsl:call-template name="head" /> <!-- From header.xsl -->
+                <xsl:call-template name="senderReceiver" /> <!-- SenderReceiver.xsl -->
+
 
                 <div class="messageArea">
                     <div class="messageBody">
-                        <table role='presentation'  cellspacing="0" cellpadding="5" border="0">
-                            <xsl:value-of select="notification_data/message" disable-output-escaping="yes"/>
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="width:600px; background:#fff; table-layout:fixed; word-wrap:break-word;">
+                        <tr>
+                        <td style="padding-left:12px;">
+                         <xsl:value-of select="notification_data/message" disable-output-escaping="yes"/>
+                        </td>
+                        </tr>
+                           
                         </table>
                     </div>
                 </div>
