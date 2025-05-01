@@ -43,7 +43,7 @@
                         </table>
                     </div>
                 </div>
-                <xsl:call-template name="lastFooter" /> <!-- From footer.xsl -->
+               
             </body>
         </html>
 
