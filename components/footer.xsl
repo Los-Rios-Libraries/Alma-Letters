@@ -15,7 +15,7 @@
 					<table align="center" cellpadding="0" style="width:auto !important;">
 						<tr>
 							<td>
-								<a style="display:block;color:#ffffff;background:#252d65;font-size:13px;font-weight:bold;text-decoration:none;border:12px solid #252d65;border-radius: 4px;" href="https://caccl-lrccd.alma.exlibrisgroup.com/SAML/idpCode/LRCCD">Go to Alma</a>
+								<a style="display:block;color:#ffffff;background:#252d65;font-size:13px;font-weight:bold;text-decoration:none;border:12px solid #252d65;border-radius: 4px;" href="https://caccl-lrccd.alma.exlibrisgroup.com/mng/login?auth=SAML&amp;idpCode=OKTA-LRCCD">Go to Alma</a>
 							</td>
 						</tr>
 					</table>
