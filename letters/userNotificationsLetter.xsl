@@ -144,6 +144,40 @@
 
 										</td>
 									</tr>
+								</xsl:when><xsl:when test="notification_data/notification_type = 'SCC_SURVEY'">
+									<tr>
+										<td>
+											<p>Thank you for using the Sacramento City College Library! According to our records, you&apos;ve checked out at least one book with us this semester. We would love to hear about your experience.</p>
+
+											<p>We&apos;re conducting our annual Library Survey to gather feedback from people who have used our services. Your input will help us improve our services for the whole campus community.</p>
+
+											<p>The survey takes only a few minutes to complete.</p>
+
+											<table align="center" cellpadding="0" style="width:auto !important;" role="presentation">
+												<tr>
+													<td>
+														<a style="display:block;color:#ffffff;background:#8a0028;font-size:13px;font-weight:bold;text-decoration:none;border:12px solid #8a0028;border-radius: 4px;" href="https://www.surveymonkey.com/r/FW5CYBL">Open the survey</a>
+													</td>
+												</tr>
+											</table>
+
+
+										</td>
+									</tr>
+								</xsl:when>
+								<xsl:when test="notification_data/notification_type = 'SCC_SEMESTER_RETURNS'">
+									<tr>
+										<td>
+											<p>We are contacting you because you currently have a Chromebook or other laptop checked out from the SCC Library for the full summer term. We hope that this equipment has been helpful to you in your studies.</p>
+
+											<p>Please be aware that all items are due back to the library by the end of the summer term: Thursday, August 7 at 6:00 pm. Items that are not returned by a certain point will generate a Lost Item Replacement Fee in eServices. Please avoid hassles by returning your items! For details on returning items, <a href="https://answers.library.losrios.edu/scc/faq/316527">see our FAQ</a>.</p>
+
+											<p>If you are enrolled in fall courses and would like to continue using the equipment, you may request that your loan be extended.</p>
+											
+											<p>To request an extension of your loan, please call the Circulation Desk at (916) 558-2301. Staff will look up your account and verify that you are enrolled in fall semester classes before extending the loan.</p>
+
+										</td>
+									</tr>
 								</xsl:when>
 								<xsl:when test="notification_data/notification_type = 'FEE_PAYMENT'">
 									<tr>
