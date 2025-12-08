@@ -168,13 +168,14 @@
 								<xsl:when test="notification_data/notification_type = 'SCC_SEMESTER_RETURNS'">
 									<tr>
 										<td>
-											<p>We are contacting you because you currently have a Chromebook or other laptop checked out from the SCC Library for the full summer term. We hope that this equipment has been helpful to you in your studies.</p>
+											<p>We are contacting you because you currently have a Chromebook or other laptop checked out from the SCC Library for the full fall semester. We hope that this equipment has been helpful to you in your studies.</p>
 
-											<p>Please be aware that all items are due back to the library by the end of the summer term: Thursday, August 7 at 6:00 pm. Items that are not returned by a certain point will generate a Lost Item Replacement Fee in eServices. Please avoid hassles by returning your items! For details on returning items, <a href="https://answers.library.losrios.edu/scc/faq/316527">see our FAQ</a>.</p>
+											<p>Please be aware that all items are due back to the library by the end of the fall semester: Thursday, December 18 at 8:00 pm. Items that are not returned by a certain point will generate a Lost Item Replacement Fee in eServices. Avoid hassles by returning your items! For details on returning items, <a href="https://answers.library.losrios.edu/scc/faq/316527">see our FAQ</a>.</p>
 
-											<p>If you are enrolled in fall courses and would like to continue using the equipment, you may request that your loan be extended.</p>
+											<p>If you are enrolled in spring 2026 courses and would like to continue using the equipment, and your library account is in good standing with no overdue materials, you may request that your loan be extended.</p>
 											
-											<p>To request an extension of your loan, please call the Circulation Desk at (916) 558-2301. Staff will look up your account and verify that you are enrolled in fall semester classes before extending the loan.</p>
+											<p>To request an extension of your loan, please call the Circulation Desk at (916) 558-2301. Staff will look up your account and verify that you are fully enrolled in at least one spring semester class before extending the loan.</p>
+											<p><strong>This offer to extend your loan is only available for a limited period.</strong> Do not wait to make your request!</p>
 
 										</td>
 									</tr>
