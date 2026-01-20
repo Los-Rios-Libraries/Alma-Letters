@@ -32,8 +32,8 @@
               <xsl:when test="/notification_data/organization_unit/code != 'FLOCKERS' and /notification_data/organization_unit/code != 'SLOCKERS' and /notification_data/organization_unit/code != 'RCC'">
                 <p>@@inform_loaned_items@@ <xsl:value-of select="notification_data/organization_unit/name" />:</p>
               </xsl:when>
-              <xsl:when test="/notification_data/organization_unit/code = 'RCC' and starts-with(/notification_data/items/item_loan/location_code, 'r')">
-                <p>@@inform_loaned_items@@ <xsl:value-of select="notification_data/organization_unit/name" />:</p>
+              <xsl:when test="/notification_data/organization_unit/code = 'RCC'">
+                <p>Your recent library request has been checked out to you and will be held at the Rancho Cordova Center front desk:</p>
               </xsl:when>
               <xsl:otherwise>
                 Your recent library request has been checked out to you and will be placed in the <xsl:value-of select="/notification_data/organization_unit/name" /> shortly:
@@ -89,14 +89,14 @@
 						</td>
 					</tr>
 				</xsl:for-each>
-        <xsl:if test="/notification_data/organization_unit/code = 'FLOCKERS' or /notification_data/organization_unit/code = 'SLOCKERS' or (/notification_data/organization_unit/code = 'RCC' and not(starts-with(/notification_data/items/item_loan/location_code, 'r' )))">
+        <xsl:if test="/notification_data/organization_unit/code = 'FLOCKERS' or /notification_data/organization_unit/code = 'SLOCKERS'">
           <tr>
             <td>
               <p>Watch for an email from <i>support@luxerone.com</i> that will include your locker access code.</p>
               <p>
                 If you need a wheelchair-accessible locker, please
                 <xsl:choose>
-                  <xsl:when test="/notification_data/organization_unit/code = 'FLOCKERS' or /notification_data/organization_unit/code = 'RCC'">
+                  <xsl:when test="/notification_data/organization_unit/code = 'FLOCKERS'">
                    contact the library at (916) 608-6613
                   </xsl:when>
                    <xsl:when test="/notification_data/organization_unit/code = 'SLOCKERS'">
@@ -107,7 +107,7 @@
               </p>
               <p>For more information about picking up items from library lockers, please
                 <xsl:choose>
-                  <xsl:when test="/notification_data/organization_unit/code = 'FLOCKERS' or /notification_data/organization_unit/code = 'RCC'">
+                  <xsl:when test="/notification_data/organization_unit/code = 'FLOCKERS'">
                     <a href="https://answers.library.losrios.edu/flc/faq/361527">see our instructions.</a>
                   </xsl:when>
                    <xsl:when test="/notification_data/organization_unit/code = 'SLOCKERS'">
